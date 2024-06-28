@@ -1,0 +1,21 @@
+.scrollContainer {
+  border-radius: 5px;
+  overflow: hidden;
+  white-space: nowrap; /* Prevent line breaks */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.scrollText {
+  display: inline-block; /* Ensure the text is inline to scroll */
+  padding-left: 100%; /* Start from the right */
+  animation: scroll-text 12s linear infinite; /* Infinite scrolling animation */
+}
+
+@keyframes scroll-text {
+  from {
+    transform: translateX(0%); /* Start from the right */
+  }
+  to {
+    transform: translateX(-100%); /* End at the left */
+  }
+}

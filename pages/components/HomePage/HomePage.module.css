@@ -1,0 +1,37 @@
+.backphoto {
+    background-image: url('/sampleldc/public/logocar.jpg');
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    /* background: red; */
+  }
+  /* .bss
+  {
+    color: red;
+    background: red;
+  } */
+
+  .widthscreenset
+  {
+    width: 80vw;
+  }
+ 
+.backimgr {
+  /* background-color: red; */
+  /* background: linear-gradient(37deg,#fff 30%,#ff5722  70%),linear-gradient(57deg,#fff 60%,#e91e63 60%); */
+}
+
+.backimgr{
+  /* background: linear-gradient(
+    to right,
+    red,
+    red 1rem,
+    transparent 1rem,
+    transparent 100%
+  ); */
+}
+.triangleElement {
+  /* width: 760px; */
+  /* height: 500px; */
+  background: linear-gradient(to bottom right, #fff 0%, #fff 50%, orange 50%, orange 100%);
+}
