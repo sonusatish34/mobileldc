@@ -294,10 +294,10 @@ export default function Homepage({ data }) {
                     <div className='text-black flex justify-center font-semibold'>For Booking</div>
                     <div className='flex justify-around gap-1 pb-2 text-white'>
                       <button className='bg-green-500 rounded-full p-2'>
-                        <Link href="https://api.whatsapp.com/send?phone=9000478478" target='_blank'>
+                        <Link href="https://api.whatsapp.com/send?phone=+919000478478&text=Hi%21" target='_blank'>
                           <p className=' flex gap-1 text-sm'><span><FaWhatsapp size={20} /></span> <span>Whatsapp</span></p>
                         </Link>
-                      </button>
+                      </button> 
                       <button className='bg-blue-500 rounded-full p-2'>
                         <Link href="tel:9000478478" target='_blank'>
                           <p className=' flex gap-1 text-sm'><span><BiPhoneCall size={20} /></span> <span>Call Us</span></p>
