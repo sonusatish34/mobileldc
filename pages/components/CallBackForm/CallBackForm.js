@@ -5,30 +5,18 @@ import carphotot from '../../images/rightimg.png';
 function CallBackForm() {
 
     return (
-        <div>
-            <div className=' flex justify-center bg-orange-200 items-center pb-5 pt-5 text-white'>
-            <Image
-            className='hidden'
-            src={carphotot}
-            height={200}
-            width={200}
-            />
-
-                <div className=' p-4'>
-                    <h2>Can't find the perfect car</h2>
-                    <p>Let us help you on a quick call</p>
-
-                    <form className='mt-6 flex rounded'> 
-                        <input type='text' placeholder='mobile no' />
-                        <button className='bg-orange-400 ml-0 pl-2 rounded'>Get Callback</button>
+        <div className='bg-white'>
+            <div className='flex lg:mx-[77px] p-5 xl:mx-[98px] mx-3 rounded-md justify-center bg-orange-400  items-center pb-5 lg:pt-5 text-white shadow-md'>
+                <div className='lg:flex lg:flex-col lg:justify-center lg:items-center xl:p-5 lg:w-2/3 xl:w-2/5 xs:p-4 lg:p-0'>
+                    <div className='  xl:px-6 lg:py-3'>
+                        <h2 className='md:text-3xl md:font-semibold sm:text-lg font-semibold xs:text-center'>Can't find the perfect? </h2>
+                        <p className='text-base pl-9 pt-2 font-normal'>Let us help you on a quick call</p>
+                    </div>
+                    <form className=' lg:px-6 lg:pb-2 pt-2 flex rounded-m'>
+                        <input maxLength={10} className='border-2 border-gray-400 lg:p-2 text-black px-2 rounded' type='text' placeholder='mobile no' />
+                        <button className='bg-green-400 ml-0 border-2 border-gray-400 lg:p-2 text-xs px-2 rounded'>Get Callback</button>
                     </form>
                 </div>
-                <Image
-                className='hidden'
-            src={carphotot}
-            height={200}
-            width={200}
-            />
             </div>
         </div>
     )

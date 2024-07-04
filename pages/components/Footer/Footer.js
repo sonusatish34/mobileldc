@@ -9,22 +9,24 @@ import android from '../../images/playstore.png'
 // import apple from '../../images/appstore.png'
 function Footer() {
     return (
-        <div className='lg:p-16 bg-gray-800'>
+        // <div style={{backgroundImage:"url('https://assets.website-files.com/60801cda8fa75d1cf863cacd/60801cda8fa75da2d963cc65_header%202.png')", backgroundRepeat:'no-repeat', backgroundSize:"cover", backgroundPosition:"center top", opacity:""}} className='lg:p-16 text-white'>
+        // <div className='lg:p-16 text-white bg-black'>
+        <div style={{backgroundImage:"url('/hyd.gif')",backgroundRepeat:'no-repeat', backgroundSize:"cover", backgroundPosition:" center", opacity:"",backgroundRepeat:'no-repeat'}} className='lg:p-16 text-white bg-black'>
             {/* <div>
                 <Image
                     className='bg-white p-2  rounded-sm'
-                    src={logo}
-                    alt="carrr"
+                src={logo}
+                alt="carrr"
                     width={400}
                     height={300
                 />
  
             </div> */}
-            <footer className="flex flex-wrap justify-between gap-3 bg-gray-800 text-white p-4 lg:px-28 border-b-2 border-b-blue-400">
+            <footer className="flex pb-28 flex-wrap justify-between gap-3 b0 text-white z-10 p-4 lg:px-28 xl:px-2 border-b-2 border-b-blue-400">
                 <div className='lg:w-3/6'>
-                    <h2 className='text-left font-newfont font-bold text-xl mb-1'>About Long Drive Cars</h2>
+                    {/* <h2 className='text-left font-newfont font-bold text-xl mb-1'>About Long Drive Cars</h2> */}
                     <div className='flex flex-col text-lef'>
-                        <p className='leadi'>Long drive cars a leading car rental company offers rental cars for self drive in Hyderabad and various other cities. Currently operational in Hyderabad, Warangal and Bangalore, Long drive cars offer a huge selection of cars ranging from luxury suvs or a sensible sedan.</p>
+                        <p className='lg:text-lg xs:text-sm xs:font-medium lg:font-bold'>Long drive cars a leading car rental company offers rental cars for self drive in Hyderabad and various other cities. Currently operational in Hyderabad, Warangal and Bangalore, Long drive cars offer a huge selection of cars ranging from luxury suvs or a sensible sedan.</p>
                     </div>
                 </div>
                 <div>
@@ -32,34 +34,34 @@ function Footer() {
                     <div className='flex flex-col text-left text-lg gap-2'>
                         <div className='flex items-center'>
                             <ul >
-                                <li>Telangana, AP</li>
-                                <li className=' text-xl'>9000-478-478</li>
+                                <li className='text-base'>Telangana, AP</li>
+                                <li className='text-2xl font-bold'><Link href="tel:9000478478" target='_blank'>9000-478-478</Link></li>
                             </ul>
                         </div>
                         <div className='flex items-center'>
                             <ul>
-                                <li>Bangalore</li>
-                                <li className=' text-xl'>912-912-25-25</li>
+                                <li className='text-base'>Bangalore</li>
+                                <li className='text-2xl font-bold'><Link href="tel:9000478478" target='_blank'>912-912-25-25</Link></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                {/* <div className='flex bg-black'>
+                {/* <div className='flex bg-white'>
                     <Image
                     src={android}
                     height={200}
                     width={300}
-                    className='bg-black'
+                    className='bg-white'
                     />
                     <Image
-                    className='bg-black'
+                    className='bg-white'
                     src={apple}
                     height={200}
                     width={300}
                     />
                 </div> */}
             </footer>
-            <div >
+            <div  >
                 <ul className='flex flex-wrap items-center justify-around py-5 gap-5 text-white flex-grow'>
                     <li>© selfdrivecars all rights reserved</li>
                     <li className='flex gap-6'>

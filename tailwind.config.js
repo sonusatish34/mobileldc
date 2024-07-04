@@ -6,13 +6,30 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens:{
+      xs:"300px",
+      sm:"640px",
+      md:"768px",
+      lg:"1024px",
+      xl:"1280px",
+      ["2xl"]:"1530px",
+    },
     fontFamily: {
+  
+        "play": ["Play", "sans-serif"],
+
       'sans': ['ui-sans-serif', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
       'mono': ['ui-monospace', 'SFMono-Regular'],
       'display': ['Oswald'],
       'body': ['"Open Sans"'],
-      'newfont' : ['Arial']
+      'newfont' : ['Arial'],
+      'jakarta': ['Plus Jakarta Sans'],
+      'dmsans':['DM Sans'],
+      'manrope':['Manrope'],
+      'montserrat':['Montserrat'],
+      'roboto':['Roboto'],
+      // font-family: "Montserrat", sans-serif;
     },
     extend: {
       animation: {

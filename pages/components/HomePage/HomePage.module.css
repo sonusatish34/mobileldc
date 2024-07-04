@@ -10,26 +10,17 @@
     color: red;
     background: red;
   } */
-
+  .brandlogo{
+    /* background-color: red; */
+    /* margin-left: 10px;
+    margin-right: 10px; */
+  }
   .widthscreenset
   {
-    width: 80vw;
+    /* width: 80vw; */
+
   }
  
-.backimgr {
-  /* background-color: red; */
-  /* background: linear-gradient(37deg,#fff 30%,#ff5722  70%),linear-gradient(57deg,#fff 60%,#e91e63 60%); */
-}
-
-.backimgr{
-  /* background: linear-gradient(
-    to right,
-    red,
-    red 1rem,
-    transparent 1rem,
-    transparent 100%
-  ); */
-}
 .triangleElement {
   /* width: 760px; */
   /* height: 500px; */
