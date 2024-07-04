@@ -297,7 +297,7 @@ export default function Homepage({ data }) {
                         <Link href="https://api.whatsapp.com/send?phone=+919000478478&text=Hi%21" target='_blank'>
                           <p className=' flex gap-1 text-sm'><span><FaWhatsapp size={20} /></span> <span>Whatsapp</span></p>
                         </Link>
-                      </button> 
+                      </button>
                       <button className='bg-blue-500 rounded-full p-2'>
                         <Link href="tel:9000478478" target='_blank'>
                           <p className=' flex gap-1 text-sm'><span><BiPhoneCall size={20} /></span> <span>Call Us</span></p>
@@ -342,8 +342,8 @@ export default function Homepage({ data }) {
         <FaqAccordian />
       </div>
       {/* <div className='flex lg:mx-[98px] xl:mx-[68px] mx-3 rounded-md justify-center bg-orange-400  items-center pb-5 lg:pt-5 text-white'> */}
-      <div className='flex p-5 justify-around xl:justify-between lg:p-8 flex-wrap bg-orange-500 rounded-md text-white mx-[10px] lg:mx-[58px] my-3 items-center'>
-        <div className='xl:w-2/6 xs:w-5/6 lg:w-2/5 lg:text-xl text-left text-lg  lg:p-4 font-semibold'>
+      <div className='flex p-5 justify-around xl:justify-between lg:p-8 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center'>
+        <div className='xl:w-2/6 xs:w-full xs:text-center lg:w-2/5 lg:text-xl text-left text-lg  lg:p-4 font-semibold'>
           Free service and damage taken care by self drive cars. Our team will help you
         </div>
         <div className='flex flex-col pt-4 items-center justify-start gap-2 text-lg lg:p-4 font-semibold cursor-pointer pr-'>

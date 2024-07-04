@@ -43,7 +43,7 @@ const CarDetails = () => {
   }
   return (
     <div className='bg-white text-black'>
-      <div className=' lg:px-2 mx-auto lg:mx-36 xl:mx-16 md:p-28 lg:p-4  sm:pt-44 px-2'>
+      <div className=' lg:px-2 mx-auto lg:mx-36 xl:mx-16 md:p-28 lg:p-4 xs:px-5 sm:pt-44 px-2'>
 
 
         {/* <div style={{ position: "relative", width: "90vw", height: "60vh"  }}> */}
@@ -68,13 +68,13 @@ const CarDetails = () => {
         </div>
         <div className='pt-4'>
           <h2 className='font-semibold text-xl font-manrope'>Contact us by</h2>
-          <div className='flex justify-start lg:gap-5 pb-2 xs:pt-2 text-white'>
+          <div className='flex justify-start lg:gap-5 pb-2 xs:gap-6 xs:pt-2 text-white'>
             <button className='bg-green-500 rounded-full p-2 lg:p-7'>
               <Link href="https://api.whatsapp.com/send?phone=9000478478" target='_blank'>
                 <p className=' flex gap-1 text-sm'><span><FaWhatsapp size={20} /></span> <span>Whatsapp</span></p>
               </Link>
             </button>
-            <button className='bg-blue-500 rounded-full p-2 lg:p-9'>
+            <button className='bg-blue-500 rounded-full p-2 xs:px-6 lg:p-9'>
               <Link href="tel:9000478478" target='_blank'>
                 <p className=' flex gap-1 text-sm'><span><BiPhoneCall size={20} /></span> <span>Call Us</span></p>
               </Link>
