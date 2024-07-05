@@ -16,11 +16,12 @@ function NearYou() {
         <div className='flex lg:flex-row flex-col lg:justify-between items-center flex-wrap bg-gradient-to-t from-gray-100 to-orange-300'>
             <Image
                 src={rightimg}
-                width={200}
-                height={300}
+                width={600}
+                height={600}
+                alt='innova car'
                 className='lg:w-2/5 '
             />
-            <div className='py-16 lg:w-1/2'>
+            <div className='py-16 lg:w-2/4'>
                 <h2 className='font-bold text-4xl lg:pb-8 py-2 xs:px-4 xs:text-2xl lg:text-left xs:text-center pb-4'>Book A Car Near You</h2>
                 <div className='flex flex-wrap items-center lg:items-start text-black justify-center md:flex-col lg:justify-start  gap-3'>
                     <div className='flex items-center gap-2 p-2 bg-white lg:w-1/2 w-3/4  rounded-md' >

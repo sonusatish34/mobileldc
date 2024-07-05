@@ -68,15 +68,15 @@ const CarDetails = () => {
         </div>
         <div className='pt-4'>
           <h2 className='font-semibold text-xl font-manrope'>Contact us by</h2>
-          <div className='flex justify-start lg:gap-5 pb-2 xs:gap-6 xs:pt-2 text-white'>
-            <button className='bg-green-500 rounded-full p-2 lg:p-7'>
-              <Link href="https://api.whatsapp.com/send?phone=9000478478" target='_blank'>
-                <p className=' flex gap-1 text-sm'><span><FaWhatsapp size={20} /></span> <span>Whatsapp</span></p>
+          <div className='flex justify-start lg:gap-5 xl:gap-8 xl:pt-8 pb-2 xs:gap-6 xs:pt-2 text-white'>
+            <button className='bg-green-500 rounded-full p-2 lg:p-3'>
+              <Link href="https://api.whatsapp.com/send?phone=9666677405" target='_blank'>
+                <p className=' flex items-center gap-1 text-xl'><span><FaWhatsapp className='xl:size-10' /></span> <span>Whatsapp</span></p>
               </Link>
             </button>
-            <button className='bg-blue-500 rounded-full p-2 xs:px-6 lg:p-9'>
-              <Link href="tel:9000478478" target='_blank'>
-                <p className=' flex gap-1 text-sm'><span><BiPhoneCall size={20} /></span> <span>Call Us</span></p>
+            <button className='bg-blue-500 rounded-full p-2 lg:p-3 lg:px-7'>
+              <Link href="https://api.whatsapp.com/send?phone=9666677405" target='_blank'>
+                <p className=' flex items-center gap-1 text-xl'><span><BiPhoneCall className='xl:size-10' /></span> <span>Call Us</span></p>
               </Link>
             </button>
           </div>

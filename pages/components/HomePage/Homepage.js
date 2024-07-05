@@ -14,6 +14,7 @@ import kia from '../../images/kia.jpg';
 import mahindra from '../../images/mahindra.png';
 import suzuki from '../../images/suz.png';
 import NearYou from '../NearYou/NearYou';
+import renault from '../../images/renault.jpg'
 import dumimg from '../../images/creta.png'
 // import admin from '../../images/why.png';
 import { BiPhoneCall } from "react-icons/bi";
@@ -92,6 +93,7 @@ export default function Homepage({ data }) {
           slidesToScroll: 2,
           rows: 2,
           slidesPerRow: 1,
+          pauseOnHover: true,
           autoplay: true,
           // dots: false,
           // infinite: true,
@@ -107,16 +109,22 @@ export default function Homepage({ data }) {
       }
     ]
   };
+  function scrollToTarget() {
+    const element = document.getElementById('explore');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
   return (
     <div className="min-h-screen w-f ml">
       <div className='mt-28 xl:mt-0 2xl:mt-0 lg:mt-0'>
         <div className='h-full xs:pt-8 lg:pt-2 xl:pl-36 lg:pl-48  lg:justify-between xs:justify-end flex flex-wrap md:justify-end justify-between bg-white'>
-          <div className='lg:w-2/5 md:w-2/4 xl:pl-20 xl:pt-20 xs:pt-20 xs:pr-20 px-4'>
+          <div className='lg:w-2/5 md:w-2/4 xl:pl-20 xl:pt-20 xs:pt-20 px-4'>
             {/* <h2 className="font-bold lg:text-2xl md:text-xl" data-wow-delay="50ms" data-wow-duration="200ms">
               Self Drive <span className='text-blue-400'>Car in Hyderabad</span>
             </h2> */}
-            <h2 className="text-black font-semibold  md:text-xl font-jakarta" data-wow-delay="50ms" data-wow-duration="200ms">
-              Self Drive cars Hyderabad.
+            <h2 className="text-black font-semibold text-xl font-jakarta" data-wow-delay="50ms" data-wow-duration="200ms">
+              Self Drive Car Rental Starting at  <span className='pl-2 text-blue-500'>₹ 70/hr</span>
             </h2>
 
           </div>
@@ -134,7 +142,7 @@ export default function Homepage({ data }) {
               <Slider className={`${styles.widthscreenset} lg:w-[80vw] w-[70vw]`} {...settings}>
 
                 <div className={`${styles.brandlogo} bg-yello`}>
-                  <div onClick={() => { setSearchQuery("mahindra") }} className='my-2 lg:p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
+                  <div onClick={() => { setSearchQuery("mahindra"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
                     <Image
                       src={mahindra}
                       alt="Car"
@@ -146,7 +154,7 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div >
-                  <div onClick={() => { setSearchQuery("tata") }} className='lg:p-6 my-2 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
+                  <div onClick={() => { setSearchQuery("tata"); scrollToTarget() }} className='lg:p-6 my-2 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
                     <Image
                       src={tata}
                       alt="Car"
@@ -158,7 +166,7 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div >
-                  <div onClick={() => { setSearchQuery("skoda") }} className='lg:p-6 my-2 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
+                  <div onClick={() => { setSearchQuery("skoda"); scrollToTarget() }} className='lg:p-6 my-2 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
                     <Image
                       src={skoda}
                       alt="Car"
@@ -170,7 +178,7 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div>
-                  <div onClick={() => { setSearchQuery("toyota") }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
+                  <div onClick={() => { setSearchQuery("toyota"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
                     <Image
                       src={toyota}
                       alt="Car"
@@ -183,7 +191,7 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div >
-                  <div onClick={() => { setSearchQuery("mg") }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
+                  <div onClick={() => { setSearchQuery("mg"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
                     <Image
                       src={mg}
                       alt="Car"
@@ -195,7 +203,7 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div >
-                  <div onClick={() => { setSearchQuery("kia") }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
+                  <div onClick={() => { setSearchQuery("kia"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
                     <Image
                       src={kia}
                       alt="Car"
@@ -208,7 +216,7 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div >
-                  <div onClick={() => { setSearchQuery("suzuki") }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer'>
+                  <div onClick={() => { setSearchQuery("maruthi"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer'>
                     <Image
                       src={suzuki}
                       alt="Car"
@@ -220,15 +228,15 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div >
-                  <div onClick={() => { setSearchQuery("suzuki") }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer'>
+                  <div onClick={() => { setSearchQuery("renault"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer'>
                     <Image
-                      src={suzuki}
+                      src={renault}
                       alt="Car"
                       width={180}
                       height={180}
                       className="rounded hover:bg-red-500"
                     />
-                    <p className='pt-2 font-bold'>Suzuki</p>
+                    <p className='pt-2 font-bold'>Renault</p>
                   </div>
                 </div>
 
@@ -240,7 +248,7 @@ export default function Homepage({ data }) {
       <div><NearYou /></div>
       <div className=' bg-white'>
         <div className='text-center'>
-          <h2 className="px-3 font-bold text-2xl font-jakarta pt-8 text-blue-950 mb-2 lg:text-5xl lg:mb-9">Explore Self Drive Car Rentals</h2>
+          <h2 id='explore' className="px-3 font-bold text-2xl font-jakarta pt-8 text-blue-950 mb-2 lg:text-5xl lg:mb-9">Explore Self Drive Car Rentals</h2>
         </div>
         <div className='mb-9 lg:mb-16 flex flex-grow items-center justify-center'>
           <input
@@ -294,12 +302,12 @@ export default function Homepage({ data }) {
                     <div className='text-black flex justify-center font-semibold'>For Booking</div>
                     <div className='flex justify-around gap-1 pb-2 text-white'>
                       <button className='bg-green-500 rounded-full p-2'>
-                        <Link href="https://api.whatsapp.com/send?phone=+919000478478&text=Hi%21" target='_blank'>
+                        <Link href="https://api.whatsapp.com/send?phone=+9666677405&text=Hi%21" target='_blank'>
                           <p className=' flex gap-1 text-sm'><span><FaWhatsapp size={20} /></span> <span>Whatsapp</span></p>
                         </Link>
                       </button>
                       <button className='bg-blue-500 rounded-full p-2'>
-                        <Link href="tel:9000478478" target='_blank'>
+                        <Link href="tel:9666677405" target='_blank'>
                           <p className=' flex gap-1 text-sm'><span><BiPhoneCall size={20} /></span> <span>Call Us</span></p>
                         </Link>
                       </button>
@@ -352,12 +360,12 @@ export default function Homepage({ data }) {
 
           <div className='flex justify-around gap-1 pb-2 text-white'>
             <button className='bg-green-500 rounded-full p-2 '>
-              <Link href="https://api.whatsapp.com/send?phone=9000478478" target='_blank'>
+              <Link href="https://api.whatsapp.com/send?phone=9666677405" target='_blank'>
                 <p className=' flex gap-1 text-sm'><span><FaWhatsapp size={20} /></span> <span>Whatsapp</span></p>
               </Link>
             </button>
             <button className='bg-blue-500 rounded-full p-2'>
-              <Link href="tel:7989030741" target='_blank'>
+              <Link href="tel:9666677405" target='_blank'>
 
                 <p className=' flex gap-1 text-sm'><span><BiPhoneCall size={20} /></span> <span>Call Us</span></p>
 

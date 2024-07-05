@@ -11,7 +11,7 @@ function Footer() {
     return (
         // <div style={{backgroundImage:"url('https://assets.website-files.com/60801cda8fa75d1cf863cacd/60801cda8fa75da2d963cc65_header%202.png')", backgroundRepeat:'no-repeat', backgroundSize:"cover", backgroundPosition:"center top", opacity:""}} className='lg:p-16 text-white'>
         // <div className='lg:p-16 text-white bg-black'>
-        <div style={{backgroundImage:"url('/hyd.gif')",backgroundRepeat:'no-repeat', backgroundSize:"cover", backgroundPosition:" center", opacity:"",backgroundRepeat:'no-repeat'}} className='lg:p-16 text-white bg-black'>
+        <div style={{backgroundImage:"url('/hyd.gif')",backgroundRepeat:'no-repeat', backgroundSize:"cont", backgroundPosition:" center", opacity:"",backgroundRepeat:'no-repeat'}} className='lg:p-16 text-white sm:bg-contain bg-black'>
             {/* <div>
                 <Image
                     className='bg-white p-2  rounded-sm'
@@ -35,31 +35,17 @@ function Footer() {
                         <div className='flex items-center'>
                             <ul >
                                 <li className='text-base'>Telangana, AP</li>
-                                <li className='text-2xl font-bold'><Link href="tel:9000478478" target='_blank'>9000-478-478</Link></li>
+                                <li className='text-2xl font-bold'><Link href="tel:9666677405" target='_blank'>9666-677-405</Link></li>
                             </ul>
                         </div>
                         <div className='flex items-center'>
                             <ul>
                                 <li className='text-base'>Bangalore</li>
-                                <li className='text-2xl font-bold'><Link href="tel:9000478478" target='_blank'>912-912-25-25</Link></li>
+                                <li className='text-2xl font-bold'><Link href="tel:9129122525" target='_blank'>912-912-25-25</Link></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                {/* <div className='flex bg-white'>
-                    <Image
-                    src={android}
-                    height={200}
-                    width={300}
-                    className='bg-white'
-                    />
-                    <Image
-                    className='bg-white'
-                    src={apple}
-                    height={200}
-                    width={300}
-                    />
-                </div> */}
             </footer>
             <div  >
                 <ul className='flex flex-wrap items-center justify-around py-5 gap-5 text-white flex-grow'>

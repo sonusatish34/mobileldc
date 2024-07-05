@@ -12,7 +12,7 @@ import Head from "next/head";
 
 export default function Home({ items, cars }) {
   // console.log(cars,"carrrr");
-  console.log("hoo");
+  // console.log("hoo");
   return (
     <div className="bg-white">
       <Head>
