@@ -80,7 +80,7 @@ const HamburgerMenu = () => {
               />
               <div className='w-48 text-black 2xl:w-full lg:w-96 flex flex-col al lg:mt-2'>
                 <p className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars Hyderabad</p>
-                <p className='lg:text-[15px] lg:pl-2 text-[9px] xl:text-base pl-1'>Powered By <span className='text-[#004aad] ml-1 lg:font-extrabold 2xl:text-2xl'>LONG DRIVE CARS</span></p>
+                <p className='lg:text-[15px] text-[9px] xl:text-base'>Powered By <span className='text-[#004aad] ml-1 lg:font-extrabold xl:text-lg'>LONG DRIVE CARS</span></p>
               </div>
             </div>
           </Link>
