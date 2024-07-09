@@ -29,6 +29,7 @@ module.exports = {
       'manrope':['Manrope'],
       'montserrat':['Montserrat'],
       'roboto':['Roboto'],
+      'popins':['Poppins']
       // font-family: "Montserrat", sans-serif;
     },
     extend: {

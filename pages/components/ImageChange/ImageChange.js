@@ -10,7 +10,7 @@ const ImageChange = () => {
   const images = [
    img2,img3,img4,img5
   ];
-
+  const prices = ["Ertiga from 1000","Plol from 2000","Swift from 3000"," I10 from 4000"]
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -23,6 +23,7 @@ const ImageChange = () => {
     <div className="image-container lg:mt-24 lg:w-full h-[300px] w-[300px]">
       {/* <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} /> */}
         <Image src={images[currentIndex]} alt={`Image ${currentIndex + 1}`}  height={600} width={600}/>
+        {/* <p className='text-black text-lg font-jakarta font-medium'>{prices[currentIndex]}</p> */}
     </div>
   );
 };

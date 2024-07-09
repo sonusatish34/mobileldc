@@ -4,10 +4,10 @@ const FaqAccordion = () => {
   const faqData = [
     {
       question: 'What are the requirements for renting a car?',
-      answer: 'To rent a car from Long Drive Cars, you need to be at least 21 years old, have a valid drivers licence, and Aadhar Card'
+      answer: "<p><b>Age 18+</b></p><p>After Booking Successful you can Upload your selfie photo & Aadhar card & Driving License in App one time only from next booking documents not required.</p><p>Our team will verify & Approve your documents.</p><p>You must upload your documents before your pickup time otherwise your booking will be Auto canceled no refund.</p>"
     },
     {
-      question: 'What Incase Of Any Damage To Car?',
+      question: 'What Incase Of Any Damage To A Car?',
       answer: "<b>Rental Agreement:</b><p>No refunds or adjustments for another car booking in case of damage.</p><b>Damage Coverage</b><p>Up to 2 lakhs: Customer responsible for full cost.<p>Over 2 lakhs:</p><p>Basic protection Customer pays 20,000.</p></p><p>Premium protection: Customer pays ₹10,000.</p><b>Insurance Claim Process:</b><p>Customer required to:</p><p>File an FIR (police report)</p><p>Submit driver's license</p><p>Visit police station and insurance company for verification (multiple visits may be required)</p><p><span><b>Important Note:</b></span> Insurance not applicable for damages under ₹2 lakhs.</p> "
     },
     {
@@ -37,7 +37,7 @@ const FaqAccordion = () => {
             className="flex justify-between items-center px-4 py-3 cursor-pointer"
             onClick={() => toggleAccordion(index)}
           >
-            <span className=" lg:w-full font-semibold capitalize text-base w-64">{item.question}</span>
+            <span className=" lg:w-full xs:text-sm font-semibold capitalize text-base w-64">{item.question}</span>
             <svg
               className={`lg:w-6 lg:h-6 w-4 h-4 rounded bg-orange-300 transition-transform ${
                 activeIndex === index ? 'transform rotate-180' : ''
@@ -59,7 +59,7 @@ const FaqAccordion = () => {
             }`}
           >
             {/* <div className="px-4 py-3">{item.answer}</div> */}
-            <div className='px-4 text-sm' dangerouslySetInnerHTML={{ __html: item.answer }} />
+            <div className='px-4 text-sm leading-6' dangerouslySetInnerHTML={{ __html: item.answer }} />
           </div>
         </div>
       ))}

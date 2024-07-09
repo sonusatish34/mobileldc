@@ -51,15 +51,14 @@ export default function Homepage({ data }) {
     item.maker_model.toLowerCase().includes(searchQuery.toLowerCase())
   );
   var settings = {
-    // dots: true,
     infinite: true,
     slidesToShow: 7,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 1000,
-    pauseOnFocus: false,
+    // pauseOnFocus: false,
     pauseOnHover: true,
-    arrows: true,
+    // arrows: true,
     responsive: [
       {
         breakpoint: 1440,
@@ -67,7 +66,6 @@ export default function Homepage({ data }) {
           slidesToShow: 7,
           slidesToScroll: 1,
           infinite: true,
-          // dots: true
         }
       },
       {
@@ -81,30 +79,26 @@ export default function Homepage({ data }) {
       {
         breakpoint: 768,
         settings: {
-          // slidesToShow: ,
           slidesToScroll: 2,
           initialSlide: 2
         }
       },
       {
         breakpoint: 480,
-        settings: {
+        settings: {         
           slidesToShow: 2,
-          slidesToScroll: 2,
-          rows: 2,
+          slidesToScroll: 1,
+          rows: 1,
           slidesPerRow: 1,
           pauseOnHover: true,
-          autoplay: true,
-          // dots: false,
-          // infinite: true,
+          pauseOnFocus: true,
+          // autoplay: true,
+          infinite: true,
           speed: 2000,
-          // slidesToShow: 1,
-          // slidesToScroll: 1,
-          // // vertical: true,
-          // // verticalSwiping: true,
-          // arrows: true,
-          // prevArrow: <p>up</p>, // Custom arrow components
-          // nextArrow: <p>down</p>, // Custom arrow components
+          vertical: true, // Enable vertical mode
+          verticalSwiping: true, // Enable vertical swiping
+          prevArrow: <p>prev</p>, // Replace with your custom arrow component if needed
+          nextArrow:<p>next</p>,
         }
       }
     ]
@@ -120,13 +114,10 @@ export default function Homepage({ data }) {
       <div className='mt-28 xl:mt-0 2xl:mt-0 lg:mt-0'>
         <div className='h-full xs:pt-8 lg:pt-2 xl:pl-36 lg:pl-48  lg:justify-between xs:justify-end flex flex-wrap md:justify-end justify-between bg-white'>
           <div className='lg:w-2/5 md:w-2/4 xl:pl-20 xl:pt-20 xs:pt-20 px-4'>
-            {/* <h2 className="font-bold lg:text-2xl md:text-xl" data-wow-delay="50ms" data-wow-duration="200ms">
-              Self Drive <span className='text-blue-400'>Car in Hyderabad</span>
-            </h2> */}
-            <h2 className="text-black font-semibold text-xl font-jakarta" data-wow-delay="50ms" data-wow-duration="200ms">
-              Self Drive Car Rental Starting at  <span className='pl-2 text-blue-500'>₹ 70/hr</span>
+            <h2 className="lg:pr-0 xs:pr-16 text-black font-[500] xl:text-2xl text-xl font-popins " data-wow-delay="50ms" data-wow-duration="200ms">
+              <p className='text-4xl pb-2'>Self Drive Car Rental </p>
+              <p className='text-4xl'>Starting at <span className='pl-2 text-blue-500'>₹ 70/hr</span></p>
             </h2>
-
           </div>
           <div className={`${styles.triangleElement} xl:w-[660px] xs:pt-16 lg:w-[460px] lg:h-[500px] w-`}>
             <ImageChange />
@@ -264,7 +255,7 @@ export default function Homepage({ data }) {
           <div className="flex flex-wrap gap-x-8 gap-y-8 items-center xs:justify-center lg:max-w-7xl">
             {filteredData?.slice(0, visibleItems).map((item, index) => (
               <React.Fragment key={index}>
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col w-72 h-96 hover:scale-105">
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col w-72 h-96 lg:hover:scale-105">
                   <div className="relative h-64">
                     <Link href={`/${item.maker_model}`}>
                       <Image
@@ -315,16 +306,16 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 {(index + 1) % 5 === 0 && (
-                  <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center w-72 h-96 hover:scale-105">
+                  <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center w-72 h-96 lg:hover:scale-105">
                     <div>
-                    <Image
-                    src={disc}
-                    height={400}
-                    width={400}
-                    />
+                      <Image
+                        src={disc}
+                        height={400}
+                        width={400}
+                      />
+                    </div>
                   </div>
-                  </div>
-                  
+
                 )}
               </React.Fragment>
             ))}
@@ -351,8 +342,8 @@ export default function Homepage({ data }) {
       </div>
       {/* <div className='flex lg:mx-[98px] xl:mx-[68px] mx-3 rounded-md justify-center bg-orange-400  items-center pb-5 lg:pt-5 text-white'> */}
       <div className='flex p-5 justify-around xl:justify-between lg:p-8 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center'>
-        <div className='xl:w-2/6 xs:w-full xs:text-center lg:w-2/5 lg:text-xl text-left text-lg  lg:p-4 font-semibold'>
-          Free service and damage taken care by self drive cars. Our team will help you
+        <div className='xl:w-2/6 xl:text-left xs:w-full xs:text-center lg:w-2/5 lg:text-xl text-left text-lg  lg:p-4 font-semibold'>
+          Get in touch with us to arrange your booking
         </div>
         <div className='flex flex-col pt-4 items-center justify-start gap-2 text-lg lg:p-4 font-semibold cursor-pointer pr-'>
 
