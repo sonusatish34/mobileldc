@@ -33,14 +33,13 @@ import { LuPhoneCall } from 'react-icons/lu';
 import './HomePage.module.css'
 import ImageChange from '../ImageChange/ImageChange';
 
-
 export default function Homepage({ data }) {
   const [visibleItems, setVisibleItems] = useState(7);
   const [searchQuery, setSearchQuery] = useState('');
   // const backgroundImage = 'https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/topics/magazine-article-pool/2024/wallpaper/m-wallpaper/3-0-csl/bmw-3-0-csl-mi-02.jpg.asset.1669308608803.jpg';
   // console.log(data,'sss');
   const handleLoadMore = () => {
-    setVisibleItems(prev => prev + 8);
+    setVisibleItems(prev => prev + 7);
   };
 
   const replaceText = (str) => {
@@ -50,20 +49,24 @@ export default function Homepage({ data }) {
   const filteredData = data?.filter(item =>
     item.maker_model.toLowerCase().includes(searchQuery.toLowerCase())
   );
+  // const sliderRef = useRef(null);
+  // const [autoplayPaused, setAutoplayPaused] = useState(false);
+
   var settings = {
-    // infinite: true,
-    // slidesToShow: 7,
-    // slidesToScroll: 1,
-    // // autoplay: true,
-    // autoplaySpeed: 1000,
-    // // pauseOnFocus: false,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
     // pauseOnHover: true,
-    // arrows: true,
+    // arrows: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    autoplay: true,
+    speed: 1000,
     responsive: [
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 7,
+          // slidesToShow: 7,
           slidesToScroll: 1,
           infinite: true,
         }
@@ -86,15 +89,20 @@ export default function Homepage({ data }) {
       {
         breakpoint: 480,
         settings: {
-          // dots: true,
-          infinite: true,
-          speed: 500,
-          colums:2,
+          pauseOnFocus: true,
+          pauseOnHover: true,
           slidesToShow: 2,
-          slidesToScroll: 1,
-          vertical: true,  // Enable vertical scrolling
-          verticalSwiping: true,
-
+          slidesToScroll: 2,
+          // rows: 2,
+          slidesPerRow: 2, // 2 slides per row (2 columns)
+          pauseOnHover: true,
+          autoplay: true,
+          speed: 2000,
+          vertical: true,
+          verticalSwiping: true, // Enable vertical swiping
+          swipeToSlide: true,
+          arrows:false
+         
         }
       }
     ]
@@ -111,7 +119,7 @@ export default function Homepage({ data }) {
         <div className='h-full xs:pt-8 lg:pt-2 xl:pl-36 lg:pl-48  lg:justify-between xs:justify-end flex flex-wrap md:justify-end justify-between bg-white'>
           <div className='lg:w-2/5 md:w-2/4 xl:pl-20 xl:pt-20 xs:pt-20 px-4'>
             <h2 className="lg:pr-0 xs:pr-16 text-black font-[500] xl:text-2xl text-xl font-popins " data-wow-delay="50ms" data-wow-duration="200ms">
-              <p className='lg:text-4xl pb-2'>Self Drive Car Rental </p>
+              <p className='lg:text-4xl lg:pb-2 pb-1'>Self Drive Car Rental </p>
               <p className='lg:text-4xl'>Starting at <span className='pl-2 text-blue-500'>₹ 70/hr</span></p>
             </h2>
           </div>
@@ -120,16 +128,16 @@ export default function Homepage({ data }) {
           </div>
         </div>
       </div>
-
       <div className='bg-gray-800 flex flex-col justify-center items-center gap-y-6 py-20'>
         <div className='text-center'>
           <p className='py-3 md:text-5xl xs:text-3xl mb-7 text-white font-jakarta font-bold'>Browse By Brand</p>
           <div className="flex items-center text-black justify-center">
+            
             <div className="slider-container my-2 ">
-              <Slider className={`${styles.widthscreenset} lg:w-[80vw]  w-[70vw]`} {...settings}>
+              <Slider className={`${styles.widthscreenset} lg:w-[80vw] w-[70vw]`} {...settings}>
 
                 <div className={`${styles.brandlogo} bg-yello`}>
-                  <div onClick={() => { setSearchQuery("mahindra"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
+                  <div onClick={() => { setSearchQuery("mahindra"); scrollToTarget() }} className='lg:my-2 lg:p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
                     <Image
                       src={mahindra}
                       alt="Car"
@@ -147,7 +155,7 @@ export default function Homepage({ data }) {
                       alt="Car"
                       width={180}
                       height={180}
-                      className="rounded-lg mb-5"
+                      className="rounded-lg lg:mb-5"
                     />
                     <p className='pt-2 font-bold'>Tata</p>
                   </div>
@@ -219,8 +227,8 @@ export default function Homepage({ data }) {
                     <Image
                       src={renault}
                       alt="Car"
-                      width={180}
-                      height={180}
+                      width={220}
+                      height={220}
                       className="rounded hover:bg-red-500"
                     />
                     <p className='pt-2 font-bold'>Renault</p>
@@ -228,6 +236,7 @@ export default function Homepage({ data }) {
                 </div>
 
               </Slider>
+            
             </div>
           </div>
         </div>
@@ -259,11 +268,11 @@ export default function Homepage({ data }) {
                         alt="Car"
                         layout="fill"
                         objectFit="cover"
-                        className="rounded-t-lg"
+                        className="rounded-t-lg relative"
+                        priority
                       />
                     </Link>
                   </div>
-
 
                   <div className="px-2 pt-4 flex flex-col gap-4 p-1">
                     <div className='flex items-baseline justify-between px-2'>
@@ -308,6 +317,7 @@ export default function Homepage({ data }) {
                         src={disc}
                         height={400}
                         width={400}
+                        alt='discount'
                       />
                     </div>
                   </div>
