@@ -51,13 +51,13 @@ export default function Homepage({ data }) {
     item.maker_model.toLowerCase().includes(searchQuery.toLowerCase())
   );
   var settings = {
-    infinite: true,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 1000,
-    // pauseOnFocus: false,
-    pauseOnHover: true,
+    // infinite: true,
+    // slidesToShow: 7,
+    // slidesToScroll: 1,
+    // // autoplay: true,
+    // autoplaySpeed: 1000,
+    // // pauseOnFocus: false,
+    // pauseOnHover: true,
     // arrows: true,
     responsive: [
       {
@@ -85,20 +85,16 @@ export default function Homepage({ data }) {
       },
       {
         breakpoint: 480,
-        settings: {         
+        settings: {
+          // dots: true,
+          infinite: true,
+          speed: 500,
+          colums:2,
           slidesToShow: 2,
           slidesToScroll: 1,
-          rows: 1,
-          slidesPerRow: 1,
-          pauseOnHover: true,
-          pauseOnFocus: true,
-          // autoplay: true,
-          infinite: true,
-          speed: 2000,
-          vertical: true, // Enable vertical mode
-          verticalSwiping: true, // Enable vertical swiping
-          prevArrow: <p>prev</p>, // Replace with your custom arrow component if needed
-          nextArrow:<p>next</p>,
+          vertical: true,  // Enable vertical scrolling
+          verticalSwiping: true,
+
         }
       }
     ]
@@ -110,7 +106,7 @@ export default function Homepage({ data }) {
     }
   }
   return (
-    <div className="min-h-screen w-f ml">
+    <div className="min-h-screen">
       <div className='mt-28 xl:mt-0 2xl:mt-0 lg:mt-0'>
         <div className='h-full xs:pt-8 lg:pt-2 xl:pl-36 lg:pl-48  lg:justify-between xs:justify-end flex flex-wrap md:justify-end justify-between bg-white'>
           <div className='lg:w-2/5 md:w-2/4 xl:pl-20 xl:pt-20 xs:pt-20 px-4'>
@@ -130,7 +126,7 @@ export default function Homepage({ data }) {
           <p className='py-3 md:text-5xl xs:text-3xl mb-7 text-white font-jakarta font-bold'>Browse By Brand</p>
           <div className="flex items-center text-black justify-center">
             <div className="slider-container my-2 ">
-              <Slider className={`${styles.widthscreenset} lg:w-[80vw] w-[70vw]`} {...settings}>
+              <Slider className={`${styles.widthscreenset} lg:w-[80vw]  w-[70vw]`} {...settings}>
 
                 <div className={`${styles.brandlogo} bg-yello`}>
                   <div onClick={() => { setSearchQuery("mahindra"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
