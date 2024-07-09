@@ -22,7 +22,7 @@ const ImageChange = () => {
   return (
     <div className="image-container lg:mt-24 lg:w-full h-[300px] w-[300px]">
       {/* <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} /> */}
-        <Image src={images[currentIndex]} alt={`Image ${currentIndex + 1}`}  height={600} width={600}/>
+        <Image priority src={images[currentIndex]} alt={`Image ${currentIndex + 1}`}  height={600} width={600}/>
         {/* <p className='text-black text-lg font-jakarta font-medium'>{prices[currentIndex]}</p> */}
     </div>
   );

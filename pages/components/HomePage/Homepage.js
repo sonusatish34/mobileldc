@@ -53,14 +53,14 @@ export default function Homepage({ data }) {
   // const [autoplayPaused, setAutoplayPaused] = useState(false);
 
   var settings = {
-    infinite: true,
-    slidesToShow: 6,
+    // infinite: true,
+    slidesToShow: 7,
     slidesToScroll: 1,
     // pauseOnHover: true,
     // arrows: false,
     pauseOnFocus: false,
     pauseOnHover: false,
-    autoplay: true,
+    // autoplay: true,
     speed: 1000,
     responsive: [
       {
@@ -74,7 +74,7 @@ export default function Homepage({ data }) {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 7,
+          slidesToShow: 5,
           slidesToScroll: 2,
           initialSlide: 2
         }
@@ -82,7 +82,8 @@ export default function Homepage({ data }) {
       {
         breakpoint: 768,
         settings: {
-          slidesToScroll: 2,
+          slidesToShow: 4,
+          slidesToScroll: 1,
           initialSlide: 2
         }
       },
@@ -101,8 +102,8 @@ export default function Homepage({ data }) {
           vertical: true,
           verticalSwiping: true, // Enable vertical swiping
           swipeToSlide: true,
-          arrows:false
-         
+          arrows: false
+
         }
       }
     ]
@@ -132,12 +133,12 @@ export default function Homepage({ data }) {
         <div className='text-center'>
           <p className='py-3 md:text-5xl xs:text-3xl mb-7 text-white font-jakarta font-bold'>Browse By Brand</p>
           <div className="flex items-center text-black justify-center">
-            
+
             <div className="slider-container my-2 ">
               <Slider className={`${styles.widthscreenset} lg:w-[80vw] w-[70vw]`} {...settings}>
 
                 <div className={`${styles.brandlogo} bg-yello`}>
-                  <div onClick={() => { setSearchQuery("mahindra"); scrollToTarget() }} className='lg:my-2 lg:p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
+                  <div onClick={() => { setSearchQuery("mahindra"); scrollToTarget() }} className='my-2 p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
                     <Image
                       src={mahindra}
                       alt="Car"
@@ -149,7 +150,7 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div >
-                  <div onClick={() => { setSearchQuery("tata"); scrollToTarget() }} className='lg:p-6 my-2 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
+                  <div onClick={() => { setSearchQuery("tata"); scrollToTarget() }} className='p-6 my-2 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
                     <Image
                       src={tata}
                       alt="Car"
@@ -190,9 +191,9 @@ export default function Homepage({ data }) {
                     <Image
                       src={mg}
                       alt="Car"
-                      width={190}
-                      height={190}
-                      className="rounded"
+                      width={200}
+                      height={220}
+                      className="rounded lg:h-24 lg:w-36"
                     />
                     <p className='pt-2 font-bold'>MG</p>
                   </div>
@@ -223,20 +224,20 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div >
-                  <div onClick={() => { setSearchQuery("renault"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer'>
+                  <div onClick={() => { setSearchQuery("renault"); scrollToTarget() }} className='p- bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center items-center flex-col hover:border-2  mt-2 hover:border-blue-700 hover: -105 cursor-pointer'>
                     <Image
                       src={renault}
                       alt="Car"
-                      width={220}
-                      height={220}
-                      className="rounded hover:bg-red-500"
+                      width={180}
+                      height={180}
+                      className="rounded hover:bg-red-500 xs:h-24 lg:h-16"
                     />
-                    <p className='pt-2 font-bold'>Renault</p>
+                    <p className='pt- font-bold'>Renault</p>
                   </div>
                 </div>
 
               </Slider>
-            
+
             </div>
           </div>
         </div>

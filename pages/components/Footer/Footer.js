@@ -11,18 +11,8 @@ function Footer() {
     return (
         // <div style={{backgroundImage:"url('https://assets.website-files.com/60801cda8fa75d1cf863cacd/60801cda8fa75da2d963cc65_header%202.png')", backgroundRepeat:'no-repeat', backgroundSize:"cover", backgroundPosition:"center top", opacity:""}} className='lg:p-16 text-white'>
         // <div className='lg:p-16 text-white bg-black'>
-        <div style={{ backgroundImage: "url('/hyd.gif')", backgroundRepeat: 'no-repeat', backgroundSize: "cont", backgroundPosition: "center center", opacity: "", backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='lg:p-16 text-white sm:bg-contain bg-black'>
-            {/* <div>
-                <Image
-                    className='bg-white p-2  rounded-sm'
-                src={logo}
-                alt="carrr"
-                    width={400}
-                    height={300
-                />
- 
-            </div> */}
-            <footer className="flex pb-96 xlll:pb-28 flex-wrap justify-between gap-3 b0 text-white z-10 p-4 lg:px-28 xl:px-2 border-b-2 border-b-blue-400">
+        <div style={{ backgroundImage: "url('/hyd.gif')", backgroundRepeat: 'no-repeat', opacity: "", backgroundRepeat: 'no-repeat' }} className='lg:p-16 text-white sm:bg-contain lg:bg-cover bg-black bg-contain lg:bg-center bg-bottom'>
+            <footer className="flex lg:pb-60 xlll:pb-28 flex-wrap justify-between gap-3 b0 text-white z-10 p-4 lg:px-28 xl:px-2 ">
                 <div className='lg:w-3/6'>
                     {/* <h2 className='text-left font-newfont font-bold text-xl mb-1'>About Long Drive Cars</h2> */}
                     <div className='flex flex-col text-lef'>
@@ -32,7 +22,7 @@ function Footer() {
                 <div>
                     <h2 className='text-left mb-1 text-xl font-bold'>Contact Info</h2>
                     <div className='flex flex-col text-left text-lg gap-2'>
-                        <div className='flex items-center'>
+                        <div className='flex justify-center items-center'>
                             <ul >
                                 <li className='text-base'>Telangana, AP</li>
                                 <li className='text-xl font-bold'><Link href="tel:9666677405" target='_blank'>9666-677-405</Link></li>
@@ -46,8 +36,9 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <ul className='flex flex-wrap gap-5 text-white flex-grow'>
+            </footer>
+                <div className='flex justify-center items-center text-black'>
+                    <ul className='flex flex-wrap items-center justify-center py-5 gap-5 text-white flex-grow'>
                         <li>© selfdrivecars all rights reserved</li>
                         <li className='flex gap-6'>
 
@@ -64,7 +55,6 @@ function Footer() {
 
                     </ul>
                 </div>
-            </footer>
 
         </div>
     )

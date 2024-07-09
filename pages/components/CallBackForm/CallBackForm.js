@@ -1,8 +1,29 @@
 import React from 'react'
 import Image from 'next/image'
 import carphotot from '../../images/rightimg.png';
+import { useState } from 'react';
 
 function CallBackForm() {
+    const currentDateTime = new Date();
+    const [formData, setFormData] = useState({
+        name: '',
+        timeframe: currentDateTime,
+        // Add more fields as needed
+    });
+    
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Save or process formData here
+        console.log('Form data:', formData);
+        // Example: Save to localStorage
+        localStorage.setItem('formData', JSON.stringify(formData));
+    };
 
     return (
         <div className='bg-white'>
@@ -12,10 +33,31 @@ function CallBackForm() {
                         <h2 className='md:text-2xl md:font-semibold sm:text-lg xl:text-2xl font-semibold xs:text-center'>Can't find the perfect car? </h2>
                         <p className='text-base lg:pl-9 xl:pl-0 xl:text-base xs:text-center pt-2 xs:pt-0 xs:text-xs font-normal'>Let us help you on a quick call</p>
                     </div>
-                    <form className=' lg:px-6 lg:pb-2 pt-2 flex rounded-m'>
+                    {/* <form className=' lg:px-6 lg:pb-2 pt-2 flex rounded-m'>
                         <input maxLength={10} className='border-2 border-gray-400 xs:px-0 lg:p-2  text-black px-2 rounded xs:w-3/4' type='text' placeholder='mobile no' />
                         <button className='bg-green-400 ml-0 border-2 border-gray-400 lg:p-2 text-xs px-2 rounded'>Get Callback</button>
+                    </form> */}
+                    <form onSubmit={handleSubmit} className='rounded-lg text-black flex pt-4'>
+                        <input
+                            type="text"
+                            name="name"
+                            maxLength={10}
+                            value={formData.name}
+                            onChange={handleChange}
+                            placeholder="Mobile number"
+                            className='p-2 rounded-md xs:w-36 lg:w-full'
+                        />
+                        {/* <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="Email"
+                        /> */}
+                        {/* Add more input fields as needed */}
+                        <button className='bg-green-400 ml-0 border-2 border-gray-400 lg:p-2 text-xs px-2 rounded' type="submit">Get Callback</button>
                     </form>
+
                 </div>
             </div>
         </div>

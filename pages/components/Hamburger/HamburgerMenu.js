@@ -49,12 +49,12 @@ const HamburgerMenu = () => {
   return (
     <div className='fixed lg:relative top-0 left-0 right-0 z-50 bg-white text-black shadow-md'>
       <div className='flex justify-between items-center lg:px-14'>
-        <Marquee speed={50}>
-          <div className={'flex p-1 text-xs gap-2 lg:text-xl '}>
-            <p className='flex items-center justify-center'><TbPointFilled /><span>Zero Deposit</span></p>
-            <p className='flex items-center justify-center'><TbPointFilled /><span>Unlimited Kilometers</span></p>
-            <p className='flex items-center justify-center'><TbPointFilled /><span>24/7 Breakdown Service</span></p>
-            <p className='flex items-center justify-center'><TbPointFilled /><span>Neately Washed Car</span></p>
+        <Marquee speed={75}>
+          <div className={'flex p-1 text-xs gap-14 lg:text-xl '}>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Zero Deposit</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Unlimited Kilometers</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>24/7 Breakdown Service</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Neately Washed Car</span></p>
           </div>
         </Marquee>
         <div className='border-l-2 border-l-black'>
@@ -98,9 +98,9 @@ const HamburgerMenu = () => {
                 width={150}
                 height={150}
               />
-              <div className='w-48 text-black 2xl:w-full lg:w-96 flex flex-col al lg:mt-2'>
+              <div className='w-48 text-black 2xl:w-full lg:w-96 al lg:mt-2'>
                 <p className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars Hyderabad</p>
-                <p className='lg:text-[15px] lg:pl-2 text-[9px] xl:text-base pl-1'>Powered By <span className='text-[#004aad] ml-1 lg:font-extrabold 2xl:text-2xl'>LONG DRIVE CARS</span></p>
+                <p className='xs:text-xs lg:text-lg'><span className='text-[9px] lg:text-base'>Powered By </span><span className='lg:text-[17px] font-bold text-blue-400 text-[10px]'>LONG DRIVE CARS</span></p>
               </div>
             </div>
           </Link>

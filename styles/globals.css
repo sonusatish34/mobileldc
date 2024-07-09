@@ -114,11 +114,53 @@ transform: rotate(180deg);
   background-color: currentColor; /* Use currentColor to match text color */
   transition: width 0.3s ease-in-out; /* Adjust the transition duration and easing as needed */
 }
+.prevBtn ::before
+{
+  padding: 4px;
+  background: red;
+  color: red;
 
+}
 .text-gray-900:hover::after {
   width: 100%; /* Full width on hover */
 }
 /*  */
+
+/* slick-custom.css */
+
+/* Custom styles for the vertical arrows */
+.slick-prev,
+.slick-next {
+  width: 30px; /* Adjust width as needed */
+  height: 100px; /* Adjust height to match your design */
+  z-index: 1; /* Ensure arrows are above the slides */
+}
+
+.slick-prev {
+  left: -80px; /* Position the left arrow */
+  transform: translateY(-50%);
+}
+
+.slick-next {
+  right: -40px; /* Position the right arrow */
+  transform: translateY(-50%);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px; /* Adjust arrow size */
+  line-height: 1; /* Adjust vertical alignment if needed */
+}
+
+/* Example styling for the arrows (you can customize further) */
+.slick-prev:before {
+  content: '←'; /* Unicode arrow or image */
+}
+
+.slick-next:before {
+  content: '→'; /* Unicode arrow or image */
+}
+
 
 
 /* div {

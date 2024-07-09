@@ -10,11 +10,13 @@ import { PiCarFill } from "react-icons/pi";
 import { BiPhoneCall } from "react-icons/bi";
 import Link from 'next/link';
 import { FaWhatsapp } from "react-icons/fa";
-import { RiMoneyRupeeCircleFill } from "react-icons/ri";
+// import { RiMoneyRupeeCircleFill } from "react-icons/ri";
 import { SlSpeedometer } from "react-icons/sl";
 import { Ri24HoursLine } from "react-icons/ri";
 // import { FaCarBurst } from "react-icons/fa6";
 import { GiTowTruck } from "react-icons/gi";
+import { HiCurrencyRupee } from "react-icons/hi2";
+
 
 const CarDetails = () => {
   const [caritem, setCarItem] = useState(null);
@@ -88,10 +90,10 @@ const CarDetails = () => {
           </div>
         </div>
         <div className='whychoose'>
-          <div className="grid lg:grid-cols-2 gap-4 lg:pt-12 xl:pt-14 pt-4 text-xs
+          <div className="grid grid-cols-2 gap-2 lg:pt-12 xl:pt-14 pt-4 text-xs
                      font-semibold lg:text-base xs: lg:w-full">
             <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
-              <RiMoneyRupeeCircleFill className="bg-orange-200 rounded-md p-1" size={40} />
+              <HiCurrencyRupee className="bg-orange-200 rounded-md p-1" size={40} />
               <p className="ml-2">Zero Deposit</p>
             </div>
             <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
