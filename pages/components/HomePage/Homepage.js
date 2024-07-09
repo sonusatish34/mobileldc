@@ -115,8 +115,8 @@ export default function Homepage({ data }) {
         <div className='h-full xs:pt-8 lg:pt-2 xl:pl-36 lg:pl-48  lg:justify-between xs:justify-end flex flex-wrap md:justify-end justify-between bg-white'>
           <div className='lg:w-2/5 md:w-2/4 xl:pl-20 xl:pt-20 xs:pt-20 px-4'>
             <h2 className="lg:pr-0 xs:pr-16 text-black font-[500] xl:text-2xl text-xl font-popins " data-wow-delay="50ms" data-wow-duration="200ms">
-              <p className='text-4xl pb-2'>Self Drive Car Rental </p>
-              <p className='text-4xl'>Starting at <span className='pl-2 text-blue-500'>₹ 70/hr</span></p>
+              <p className='lg:text-4xl pb-2'>Self Drive Car Rental </p>
+              <p className='lg:text-4xl'>Starting at <span className='pl-2 text-blue-500'>₹ 70/hr</span></p>
             </h2>
           </div>
           <div className={`${styles.triangleElement} xl:w-[660px] xs:pt-16 lg:w-[460px] lg:h-[500px] w-`}>
