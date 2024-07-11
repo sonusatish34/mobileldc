@@ -25,6 +25,27 @@
 .addBag {
   background-color: blue;
 }
+/* VerticalImageSlider.css */
+
+.vertical-slider-container {
+  height: 500px; /* Adjust height as needed */
+  width: 100%;
+  overflow: hidden; /* Hide overflow */
+}
+
+.slider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the slide area */
+}
+
+@media (max-width: 768px) {
+  /* Adjust height for smaller screens */
+  .vertical-slider-container {
+    height: 300px; /* Adjust height for mobile */
+  }
+}
+
 .accItem {
   margin-bottom: 0.5rem;
   /* border: 1px solid #ccc; */
@@ -131,6 +152,7 @@ transform: rotate(180deg);
 /* Custom styles for the vertical arrows */
 .slick-prev,
 .slick-next {
+  background-color: red;
   width: 30px; /* Adjust width as needed */
   height: 100px; /* Adjust height to match your design */
   z-index: 1; /* Ensure arrows are above the slides */

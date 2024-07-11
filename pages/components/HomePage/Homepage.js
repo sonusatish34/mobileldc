@@ -56,12 +56,12 @@ export default function Homepage({ data }) {
     // infinite: true,
     slidesToShow: 7,
     slidesToScroll: 1,
-    // pauseOnHover: true,
+    pauseOnHover: true,
     // arrows: false,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    // autoplay: true,
+
+    autoplay: true,
     speed: 1000,
+    autoplaySpeed: 1500,
     responsive: [
       {
         breakpoint: 1440,
@@ -69,14 +69,19 @@ export default function Homepage({ data }) {
           // slidesToShow: 7,
           slidesToScroll: 1,
           infinite: true,
+          pauseOnHover: true,
+          pauseOnFocus: true,
         }
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 5,
-          slidesToScroll: 2,
-          initialSlide: 2
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          pauseOnHover: true,
+          autoplay: true,
+          speed: 1000,
+          autoplaySpeed: 2000,
         }
       },
       {
@@ -95,12 +100,12 @@ export default function Homepage({ data }) {
           slidesToShow: 2,
           slidesToScroll: 2,
           // rows: 2,
-          slidesPerRow: 2, // 2 slides per row (2 columns)
+          rows: 2, // 2 slides per row (2 columns)
           pauseOnHover: true,
           autoplay: true,
           speed: 2000,
-          vertical: true,
-          verticalSwiping: true, // Enable vertical swiping
+          // vertical: true,
+          // verticalSwiping: true, // Enable vertical swiping
           swipeToSlide: true,
           arrows: false
 
@@ -242,6 +247,7 @@ export default function Homepage({ data }) {
           </div>
         </div>
       </div>
+      {/* <KK/> */}
       <div><NearYou /></div>
       <div className=' bg-white'>
         <div className='text-center'>
