@@ -3,10 +3,12 @@ import Image from 'next/image';
 import { BsFuelPump } from 'react-icons/bs';
 import { TbManualGearbox } from 'react-icons/tb';
 import { MdOutlineAirlineSeatReclineExtra } from 'react-icons/md';
+import { RiMoneyRupeeCircleFill } from "react-icons/ri";
+import { SlSpeedometer } from "react-icons/sl";
 import Link from 'next/link';
 import { FaSearch } from 'react-icons/fa';
 import tata from '../../images/tata2.jpg';
-import disc from '../../images/discount.png'
+import disc from '../../images/discountonbook.png'
 import skoda from '../../images/skoda1.jpg';
 import toyota from '../../images/toyota1.jpg';
 import mg from '../../images/mg.png';
@@ -15,10 +17,7 @@ import mahindra from '../../images/mahindra.png';
 import suzuki from '../../images/suz.png';
 import NearYou from '../NearYou/NearYou';
 import renault from '../../images/renault.jpg'
-import dumimg from '../../images/creta.png'
-// import admin from '../../images/why.png';
 import { BiPhoneCall } from "react-icons/bi";
-
 import { FaWhatsapp } from "react-icons/fa";
 import { IoReload } from "react-icons/io5";
 import CallBackForm from '../CallBackForm/CallBackForm';
@@ -28,7 +27,6 @@ import "slick-carousel/slick/slick-theme.css";
 import WhyChooseUs from '../WhyChooseUs/WhyChooseUs';
 import FaqAccordian from '../FaqAccordian/FaqAccordian';
 import styles from './HomePage.module.css';
-// import BrandsSlider from '../BrandsSlider/BrandsSlider';
 import { LuPhoneCall } from 'react-icons/lu';
 import './HomePage.module.css'
 import ImageChange from '../ImageChange/ImageChange';
@@ -36,8 +34,7 @@ import ImageChange from '../ImageChange/ImageChange';
 export default function Homepage({ data }) {
   const [visibleItems, setVisibleItems] = useState(7);
   const [searchQuery, setSearchQuery] = useState('');
-  // const backgroundImage = 'https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/topics/magazine-article-pool/2024/wallpaper/m-wallpaper/3-0-csl/bmw-3-0-csl-mi-02.jpg.asset.1669308608803.jpg';
-  // console.log(data,'sss');
+
   const handleLoadMore = () => {
     setVisibleItems(prev => prev + 7);
   };
@@ -100,12 +97,12 @@ export default function Homepage({ data }) {
           slidesToShow: 2,
           slidesToScroll: 2,
           // rows: 2,
-          rows: 2, // 2 slides per row (2 columns)
+          slidesPerRow: 2, // 2 slides per row (2 columns)
           pauseOnHover: true,
           autoplay: true,
           speed: 2000,
-          // vertical: true,
-          // verticalSwiping: true, // Enable vertical swiping
+          vertical: true,
+          verticalSwiping: true, // Enable vertical swiping
           swipeToSlide: true,
           arrows: false
 
@@ -122,16 +119,27 @@ export default function Homepage({ data }) {
   return (
     <div className="min-h-screen">
       <div className='mt-28 xl:mt-0 2xl:mt-0 lg:mt-0'>
-        <div className='h-full xs:pt-8 lg:pt-2 xl:pl-36 lg:pl-48  lg:justify-between xs:justify-end flex flex-wrap md:justify-end justify-between bg-white'>
-          <div className='lg:w-2/5 md:w-2/4 xl:pl-20 xl:pt-20 xs:pt-20 px-4'>
-            <h2 className="lg:pr-0 xs:pr-16 text-black font-[500] xl:text-2xl text-xl font-popins " data-wow-delay="50ms" data-wow-duration="200ms">
-              <p className='lg:text-4xl lg:pb-2 pb-1'>Self Drive Car Rental </p>
-              <p className='lg:text-4xl'>Starting at <span className='pl-2 text-blue-500'>₹ 70/hr</span></p>
-            </h2>
-          </div>
-          <div className={`${styles.triangleElement} xl:w-[660px] xs:pt-16 lg:w-[460px] lg:h-[500px] w-`}>
+        <div className='h-full md:justify-between xs:justify-end flex flex-wrap sm:justify-end justify-between bg-white'>
+        <div className={`${styles.triangleElement} xl:w-[660px] xs:pt-16 lg:pt-0 lg:w-[460px] lg:h-[500px] w-`}>
             <ImageChange />
           </div>
+          <div className='lg:w-6/12 md:w-2/4 xl:pt-20 xs:pt-20 pl-12'>
+            <h2 className="lg:text-left lg:pr-16 text-black font-[500] xl:text-2xl text-xl font-jakarta " data-wow-delay="50ms" data-wow-duration="200ms">
+              <p className='lg:text-5xl xs:text-2xl lg:pb-2 font-bold pb-1'>Self Drive Car Rental </p>
+              <p className='lg:text-5xl xs:text-2xl font-bold'>Starting at <span className='pl-2 text-blue-500'>₹ 70/hr</span></p>
+              <div className='flex xs:flex-wrap xl:pt-28 lg:gap-8 pt-8 gap-2 lg:w-full'>
+                <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-xl border-[#7c92f4] rounded-md">
+                  <RiMoneyRupeeCircleFill className="bg-[#7c92f4] text-white rounded-md p-1" size={40} />
+                  <p className="ml-2">Zero Deposit</p>
+                </div>
+                <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-xl border-[#7c92f4] rounded-md">
+                  <SlSpeedometer className="bg-[#7c92f4] text-white rounded-md p-1" size={40} />
+                  <p className=" lg:ml-2">Unlimited Kilometers</p>
+                </div>
+              </div>
+            </h2>
+          </div>
+          
         </div>
       </div>
       <div className='bg-gray-800 flex flex-col justify-center items-center gap-y-6 py-20'>
@@ -240,14 +248,12 @@ export default function Homepage({ data }) {
                     <p className='pt- font-bold'>Renault</p>
                   </div>
                 </div>
-
               </Slider>
 
             </div>
           </div>
         </div>
       </div>
-      {/* <KK/> */}
       <div><NearYou /></div>
       <div className=' bg-white'>
         <div className='text-center'>
@@ -267,9 +273,9 @@ export default function Homepage({ data }) {
           <div className="flex flex-wrap gap-x-8 gap-y-8 items-center xs:justify-center lg:max-w-7xl">
             {filteredData?.slice(0, visibleItems).map((item, index) => (
               <React.Fragment key={index}>
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col w-72 h-96 lg:hover:scale-105">
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] md:w-72 h-[444px] lg:hover:scale-105">
                   <div className="relative h-64">
-                    <Link href={`/${item.maker_model}`}>
+                    <Link href={`/${item?.maker_model.toLowerCase()}`}>
                       <Image
                         src={replaceText(item?.car_image_car_right_view)}
                         alt="Car"
@@ -318,7 +324,7 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 {(index + 1) % 5 === 0 && (
-                  <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center w-72 h-96 lg:hover:scale-105">
+                  <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center md:w-72 h-[444px] lg:hover:scale-105">
                     <div>
                       <Image
                         src={disc}
@@ -353,8 +359,7 @@ export default function Homepage({ data }) {
         <h2 className='uppercase p-2 mb-4 text-center font-bold xl:text-2xl font-newfont'>Frequently asked questions</h2>
         <FaqAccordian />
       </div>
-      {/* <div className='flex lg:mx-[98px] xl:mx-[68px] mx-3 rounded-md justify-center bg-orange-400  items-center pb-5 lg:pt-5 text-white'> */}
-      <div className='flex p-5 justify-around xl:justify-between lg:p-8 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center'>
+      <div className='flex p-5 justify-around xl:justify-between lg:p-8 flex-wrap bg-[#7c92f4] rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center'>
         <div className='xl:w-2/6 xl:text-left xs:w-full xs:text-center lg:w-2/5 lg:text-xl text-left text-lg  lg:p-4 font-semibold'>
           Get in touch with us to arrange your booking
         </div>

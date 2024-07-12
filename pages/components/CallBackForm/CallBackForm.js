@@ -1,67 +1,80 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import carphotot from '../../images/rightimg.png';
 import { useState } from 'react';
 
 function CallBackForm() {
+    const [phone, setPhone] = useState('');
     const currentDateTime = new Date();
     const [formData, setFormData] = useState({
-        name: '',
         timeframe: currentDateTime,
-        // Add more fields as needed
     });
-    
+
+    const [mobile, setmobile] = useState("");
+    const [isError, setIsError] = useState(false);
+    const pattern = new RegExp(/^\d{10}$/);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Save or process formData here
-        console.log('Form data:', formData);
-        // Example: Save to localStorage
-        localStorage.setItem('formData', JSON.stringify(formData));
+        if (formData?.name)
+            localStorage.setItem('formData', JSON.stringify(formData));
+        if(!isError && mobile.length == 10)
+        {
+            fetch('https://longdrivecarz.in/site/contacts', {
+                method: 'POST',
+                headers: {
+                    'accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    'user_phone': mobile,
+                    'user_location': 'Bangalore'
+                })
+            });
+            // console.log("api call");
+        }
+        else {
+            console.log("some error");
+        }
+        
     };
 
     return (
         <div className='bg-white'>
-            <div className='flex lg:mx-[77px] p-5 xl:mx-[98px] xs:mx-7 rounded-md justify-center bg-orange-400  items-center pb-5 lg:pt-5 text-white shadow-md'>
+            <div className='flex lg:mx-[77px] p-5 xl:mx-[98px] xs:mx-7 rounded-md justify-center bg-[#7c92f4]   items-center pb-5 lg:pt-5 text-white shadow-md'>
                 <div className='lg:flex lg:flex-col lg:justify-center lg:items-center xl:p-5 lg:w-2/3 xl:w-2/5 xs:p-0 lg:p-0'>
                     <div className='  xl:px-6 lg:py-3'>
                         <h2 className='md:text-2xl md:font-semibold sm:text-lg xl:text-2xl font-semibold xs:text-center'>Can't find the perfect car? </h2>
                         <p className='text-base lg:pl-9 xl:pl-0 xl:text-base xs:text-center pt-2 xs:pt-0 xs:text-xs font-normal'>Let us help you on a quick call</p>
                     </div>
-                    {/* <form className=' lg:px-6 lg:pb-2 pt-2 flex rounded-m'>
-                        <input maxLength={10} className='border-2 border-gray-400 xs:px-0 lg:p-2  text-black px-2 rounded xs:w-3/4' type='text' placeholder='mobile no' />
-                        <button className='bg-green-400 ml-0 border-2 border-gray-400 lg:p-2 text-xs px-2 rounded'>Get Callback</button>
-                    </form> */}
-                    <form onSubmit={handleSubmit} className='rounded-lg text-black flex pt-4'>
+                    <form onSubmit={handleSubmit} className='rounded-lg text-black text-xs flex pt-4'>
+            
                         <input
+                            value={mobile}
                             type="text"
-                            name="name"
+                            placeholder="Enter mobile number"
+                            onChange={(e) => {
+                                setmobile(e.target.value);
+                                if (!pattern.test(e.target.value))
+                                    setIsError(true);
+                                else setIsError(false);
+                            }}
                             maxLength={10}
-                            value={formData.name}
-                            onChange={handleChange}
-                            placeholder="Mobile number"
-                            className='p-2 rounded-md xs:w-36 lg:w-full'
+                            className='lg:rounded-md lg:w-full lg:p-3 xs:w-40 xs:rounded-sm xs:p-1'
                         />
-                        {/* <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder="Email"
-                        /> */}
-                        {/* Add more input fields as needed */}
-                        <button className='bg-green-400 ml-0 border-2 border-gray-400 lg:p-2 text-xs px-2 rounded' type="submit">Get Callback</button>
-                    </form>
 
+                        <button className='bg-green-400 ml-0 border-2 xs:ml-1 xs:p-1  border-gray-400 lg:p-2 lg:text-[10px] text-white lg:w-28  w-fit xs:text-[8px] rounded' type="submit">Get Callback</button>
+                    </form>
+                    <div>{isError && mobile.length>1 && <p className='text-sm text-center '>Please enter a valid number</p>}</div>
                 </div>
             </div>
         </div>
-    )
+    ) 
 }
 
 export default CallBackForm

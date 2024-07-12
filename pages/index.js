@@ -1,38 +1,25 @@
 import Image from "next/image";
 // import { Inter } from "next/font/google";
-import Login from "./components/Login";
-// import Home from "./components/Homepage";
 import Homepage from "./components/HomePage/Homepage";
-// import Dashboard from "./components/Dashboard";
-// import II from "./components/II";
-import Feech from "./Feech";
-
 // const inter = Inter({ subsets: ["latin"] });
 import Head from "next/head";
 
 export default function Home({ items, cars }) {
-  // console.log(cars,"carrrr");
-  // console.log("hoo");
   return (
     <div className="bg-white">
       <Head>
-        <title>Self Drive Cars</title>
-        <meta name="description" content="This is my Next.js app" />
+        <title>Zero Deposit & Unlimited km - Self-Drive Car Rentals In Bangalore</title>
+        <meta name="description" content="Self-drive cars start at 62/hr, We offer Self Drive Cars for the best prices with unlimited km & Zero deposit, Book Dzire @ ₹77/hr, Baleno @ ₹83/hr, Ertiga @ ₹116/hr, Swift @ ₹77/hr, Thar @ ₹208/hr." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="self drive cars" />
-        <meta property="og:description" content="This is my Next.js app" />
-        {/* <meta property="og:image" content="/images/og-image.jpg" />
-        <meta property="og:url" content="https://www.my-next-app.com" />
-        <meta name="twitter:card" content="summary_large_image" /> */}
+        <meta property="og:title" content="Zero Deposit & Unlimited km - Self-Drive Car Rentals In Bangalore" />
+        <meta property="og:description" content="Self-drive cars start at 62/hr, We offer Self Drive Cars for the best prices with unlimited km & Zero deposit, Book Dzire @ ₹77/hr, Baleno @ ₹83/hr, Ertiga @ ₹116/hr, Swift @ ₹77/hr, Thar @ ₹208/hr." />
       </Head>
       <Homepage data={cars} />
-
     </div>
-
   );
 }
 export async function getStaticProps() {
-  const response = await fetch('https://api.longdrivecarz.in/site/cars-info?location=Hyderabad');
+  const response = await fetch('https://api.longdrivecarz.in/site/cars-info?location=Bangalore');
   const items = await response.json();
   const cars = items?.data?.results
   return {
