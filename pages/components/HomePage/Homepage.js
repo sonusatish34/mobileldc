@@ -119,7 +119,7 @@ export default function Homepage({ data }) {
   return (
     <div className="min-h-screen">
       <div className='mt-28 xl:mt-0 2xl:mt-0 lg:mt-0'>
-        <div className='h-full md:justify-between xs:justify-end flex flex-wrap sm:justify-end justify-between bg-white'>
+        <div className='h-full md:justify-between xs:justify-normal flex flex-wrap sm:justify-end justify-between bg-white'>
         <div className={`${styles.triangleElement} xl:w-[660px] xs:pt-16 lg:pt-0 lg:w-[460px] lg:h-[500px] w-`}>
             <ImageChange />
           </div>
@@ -127,7 +127,7 @@ export default function Homepage({ data }) {
             <h2 className="lg:text-left lg:pr-16 text-black font-[500] xl:text-2xl text-xl font-jakarta " data-wow-delay="50ms" data-wow-duration="200ms">
               <p className='lg:text-5xl xs:text-2xl lg:pb-2 font-bold pb-1'>Self Drive Car Rental </p>
               <p className='lg:text-5xl xs:text-2xl font-bold'>Starting at <span className='pl-2 text-blue-500'>₹ 70/hr</span></p>
-              <div className='flex xs:flex-wrap xl:pt-28 lg:gap-8 pt-8 gap-2 lg:w-full'>
+              <div className='flex xs:flex-wrap xl:pt-28 lg:gap-8 pb-6 pt-2 gap-2 lg:w-full'>
                 <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-xl border-[#7c92f4] rounded-md">
                   <RiMoneyRupeeCircleFill className="bg-[#7c92f4] text-white rounded-md p-1" size={40} />
                   <p className="ml-2">Zero Deposit</p>

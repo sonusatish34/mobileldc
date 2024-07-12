@@ -77,7 +77,7 @@ const HamburgerMenu = () => {
         </div>
       </subhead>
 
-      <div className="flex w-full lg:justify-between items-center z-50 fixed lg:relative bg-white lg:py-14  lg:pr-14 border-8 border-orange-100 lg:h-20 ">
+      <div className="flex w-full lg:justify-between items-center z-50 fixed lg:relative bg-white lg:py-14  lg:pr-14 border-8 border-[] lg:h-20 ">
         <div className=" flex">
           <Link className='' href={'/'}>
             <div className=' rounded-md flex cursor-pointer items-center lg:pl-8 xs:pl-2'>
@@ -107,12 +107,12 @@ const HamburgerMenu = () => {
         <div className='lg:hidden block'>
           <button
             ref={buttonRef}
-            className="fixed top-[7rem] right-4 z-40 text-orange-400"
+            className="fixed top-[7rem] right-4 z-40 text-[#7c92f4]"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 fill-current text-orange-400"
+              className="w-6 h-6 fill-current text-[#7c92f4]"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -141,9 +141,9 @@ const HamburgerMenu = () => {
                 height={150}
                 fetchPriority="high"
               />
-              <div className='w-48 text-black 2xl:w-full lg:w-96 al lg:mt-2'>
-                <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></h1>
-                <p className='xs:text-xs lg:text-lg flex lg:pl-10 xs:pl-9'><span className='xs:text-[7px] lg:text-[10px]'>Powered By </span><span className='lg:text-[17px] font-bold text-blue-700 text-[10px] xs:text-[8px] pl-1'>LONG DRIVE CARS</span></p>
+              <div className='w-48 text-black 2xl:w-full lg:w-96 pl-2'>
+                <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-[#7c92f4]'>Bangalore</span></h1>
+                <p className='xs:text-xs lg:text-lg flex lg:pl-8 xs:pl-8'><span className='xs:text-[7px] lg:text-[10px]'>Powered By </span><span className='lg:text-[17px] font-bold text-blue-700 text-[10px] xs:text-[8px] pl-1'>LONG DRIVE CARS</span></p>
               </div>
             </div>
           </Link>
