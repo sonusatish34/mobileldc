@@ -10,12 +10,10 @@ const Layout = ({ children }) => {
 
     return (
         <div className="flex flex-col min-h-screen font-manrope">
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3SZC8HS"
+                height="0" width="0" style={{display:"none", visibility:"hidden"}}></iframe></noscript>
             <Header />
 
-            {/* <header className="py-3 px-6 bg-white mx-3 rounded-b-md">
-            <Header />
-          </header> */}
-            
             <main className="flex-grow bg-white">{children}</main>
             <Footer />
         </div>

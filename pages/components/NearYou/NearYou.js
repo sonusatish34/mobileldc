@@ -13,7 +13,14 @@ import { GiConfirmed } from "react-icons/gi";
 
 function NearYou() {
     return (
-        <div className='flex lg:flex-row flex-col lg:justify-around items-center flex-wrap bg-gradient-to-t from-gray-50 to-indigo-600'>
+        <div className='flex lg:flex-row flex-col lg:justify-around items-center flex-wrap bg-gradient-to-t from-gray-100 to-orange-300'>
+            <Image
+                src={rightimg}
+                width={600}
+                height={600}
+                alt='innova car'
+                className='lg:w-2/5 '
+            />
             <div className='py-16 lg:w-2/5 flex flex-col items-center'>
                 <h2 className='font-bold text-4xl lg:pb-8 py-2 xs:px-4 xs:text-2xl lg:text-left xs:text-center pb-4'>Book A Car Near You</h2>
                 <div className='flex flex-wrap items-center lg:items-start text-black justify-center md:flex-col lg:justify-start xs:px-7 md:px-0  gap-3'>
@@ -40,14 +47,6 @@ function NearYou() {
                     </div>
                 </div>
             </div>
-            <Image
-                src={rightimg}
-                width={1000}
-                height={1000}
-                alt='innova car'
-                className='lg:w-2/5 '
-            />
-            
         </div>
     )
 }

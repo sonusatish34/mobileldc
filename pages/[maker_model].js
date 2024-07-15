@@ -20,13 +20,13 @@ const CarDetails = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const { maker_model } = router.query;
-  // console.log(maker_model.toLowerCase(),"mm");   
+
   useEffect(() => {
     async function fetchCarDetails() {
       setLoading(true);
 
       try {
-        const response = await fetch('https://api.longdrivecarz.in/site/cars-info?location=Bangalore');
+        const response = await fetch('https://api.longdrivecarz.in/site/cars-info?location=Hyderabad');
         const items = await response.json();
         const cars = items?.data?.results;
         const car = cars?.find(i => i?.maker_model.toLowerCase() === maker_model?.toLowerCase());
@@ -49,7 +49,7 @@ const CarDetails = () => {
   return (
     <div className='bg-white text-black'>
       <div className=' lg:px-2 mx-auto lg:mx-36 xl:mx-16 md:p-28 lg:p-4 xs:px-5 sm:pt-44 px-2'>
-        <div className='flex flex-col xs:mt-48 md:mt-20 lg:mt-2 md:flex-row p-2 border-2 border-[#7c92f4] rounded-md'>
+        <div className='flex flex-col xs:mt-48 md:mt-20 lg:mt-2 md:flex-row p-2 border-2 border-orange-400 rounded-md'>
           {loading && <div>Loading...</div>}
           {!loading && (
             <div className="relative md:w-2/3 w-full p-1 xl:pt-6 xs:pt-8 border-1 border-gray-300 h-[434px]">
@@ -103,19 +103,19 @@ const CarDetails = () => {
           <div className="grid grid-cols-2 gap-2 lg:pt-12 xl:pt-8 pt-4 text-xs
                      font-semibold lg:text-base xs: lg:w-full">
             <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
-              <HiCurrencyRupee className="bg-[#7c92f4] text-white rounded-md p-1" size={40} />
+              <HiCurrencyRupee className="bg-orange-200 rounded-md p-1" size={40} />
               <p className="ml-2">Zero Deposit</p>
             </div>
             <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
-              <GiTowTruck className="bg-[#7c92f4] text-white rounded px-[4px]" size={40} />
+              <GiTowTruck className="bg-orange-200 rounded px-[4px]" size={40} />
               <p className=" ml-2">24/7 Breakdown Service</p>
             </div>
             <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
-              <SlSpeedometer className="bg-[#7c92f4] text-white rounded-md p-1" size={40} />
+              <SlSpeedometer className="bg-orange-200 rounded-md p-1" size={40} />
               <p className=" ml-2">Unlimited Kilometers</p>
             </div>
             <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md">
-              <Ri24HoursLine className="bg-[#7c92f4] text-white rounded-md p-1" size={40} />
+              <Ri24HoursLine className="bg-orange-200 rounded-md p-1" size={40} />
               <p className=" ml-2 mt-1">Choose Your Own Hours</p>
             </div>
           </div>
@@ -150,7 +150,7 @@ const CarDetails = () => {
           {customData[maker_model?.toLowerCase()]?.desc}
         </p>
 
-        <h2 className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[maker_model?.toLowerCase()]?.id} from Self Drive Cars Rental Bangalore</h2>
+        <h2 className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[maker_model?.toLowerCase()]?.id} from Self Drive Cars Rental Hyderabad</h2>
         <p className='font-light p-1 leading-6 text-[14px] font-jakarta pb-8'>
           {customData[maker_model?.toLowerCase()]?.subdesc}
         </p>

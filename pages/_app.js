@@ -8,8 +8,8 @@ function MyApp({ Component, pageProps }) {
     
     <Layout>
        <Head>
-        <link rel="icon" href="/bangalore.png" />
-        <link rel="canonical" href="https://selfdrivecarsBangalore.com/"/>
+        <link rel="icon" href="/sdcnew.png" />
+        <link rel="canonical" href="https://selfdrivecarshyderabad.com/"/>
       </Head>
       <Component {...pageProps} />
     </Layout>

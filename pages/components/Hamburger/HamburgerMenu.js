@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../images/sdc.png';
-import logo2 from '../../images/bangalore.png';
+import logo2 from '../../images/sdcnew.png';
 import { LuPhoneCall } from 'react-icons/lu';
 import styles from './HamburgerMenu.module.css'
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaSearch, FaYoutube } from 'react-icons/fa';
@@ -48,21 +48,26 @@ const HamburgerMenu = () => {
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Unlimited Kilometers</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>24/7 Breakdown Service</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Neatly Washed Car</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Choose your Favourite Color Car</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Check Original Car Photos & Book</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Choose Your Own Hours 36hr, 50hr</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Car Starts 62rs/hr, min 24hrs</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Any Problem 24/7 Service</span></p>
           </div>
         </Marquee>
         <div className='border-l-2 border-l-black'>
-          <li className='flex justify-end gap-5 pl-2'>
+          <li className='flex justify-end lg:gap-5 xs:gap-2 pl-2'>
             <Link href={'https://www.facebook.com/selfdrivecarsbylongdrivecars/'} target='_blank'>
-              <p className='hover:text-blue-500 cursor-pointer'><FaFacebook className='lg:size-6' /></p>
+              <p className='hover:text-blue-500 cursor-pointer'><FaFacebook className='lg:size-6'/></p>
             </Link>
             <Link href={'https://www.instagram.com/longdrivecars_official/'} target='_blank'>
-              <p className='hover:text-blue-500 cursor-pointer'><FaInstagram className='lg:size-6' /></p>
+              <p className='hover:text-blue-500 cursor-pointer'><FaInstagram className='lg:size-6'/></p>
             </Link>
             <Link href={'https://in.linkedin.com/company/long-drive-cars'} target='_blank'>
-              <p className='hover:text-blue-500 cursor-pointer'><SiLinkedin className='lg:size-6' /></p>
+              <p className='hover:text-blue-500 cursor-pointer'><SiLinkedin className='lg:size-6'/></p>
             </Link>
             <Link href={'https://www.youtube.com/@longdrivecars_official'} target='_blank'>
-              <p className='hover:text-blue-500 cursor-pointer'><FaYoutube className='lg:size-6' /></p>
+              <p className='hover:text-blue-500 cursor-pointer'><FaYoutube className='lg:size-6'/></p>
             </Link>
           </li>
         </div>
@@ -77,21 +82,21 @@ const HamburgerMenu = () => {
         </div>
       </subhead>
 
-      <div className="flex w-full lg:justify-between items-center z-50 fixed lg:relative bg-white lg:py-14  lg:pr-14 border-8 border-[] lg:h-20 ">
+      <div className="flex w-full lg:justify-between items-center z-50 fixed lg:relative bg-white lg:py-14  lg:pr-14 border-8 border-orange-100 lg:h-20 ">
         <div className=" flex">
           <Link className='' href={'/'}>
-            <div className=' rounded-md flex cursor-pointer items-center lg:pl-8 xs:pl-2'>
+            <div className=' rounded-md flex cursor-pointer items-center'>
               <Image
-                className="w-24 lg:w-36  lg:h-36 "
+                className="w-24 lg:w-48  lg:h-48"
                 src={logo2}
                 alt="carrr"
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 fetchPriority="high"
               />
-              <div className='w-48 text-black 2xl:w-full lg:w-96 pl-2'>
-                <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-[#7c92f4]'>Bangalore</span></h1>
-                <p className='xs:text-xs lg:text-lg flex lg:pl-8 xs:pl-8'><span className='xs:text-[7px] lg:text-[10px]'>Powered By </span><span className='lg:text-[17px] font-bold text-blue-700 text-[10px] xs:text-[8px] pl-1'>LONG DRIVE CARS</span></p>
+              <div className='w-48 text-black 2xl:w-full lg:w-96 al lg:mt-2'>
+                <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></h1>
+                <p className='xs:text-xs lg:text-lg flex lg:pl-10 xs:pl-9'><span className='xs:text-[7px] lg:text-[10px]'>Powered By </span><span className='lg:text-[17px] font-bold text-blue-700 text-[10px] xs:text-[8px] pl-1'>LONG DRIVE CARS</span></p>
               </div>
             </div>
           </Link>
@@ -107,12 +112,12 @@ const HamburgerMenu = () => {
         <div className='lg:hidden block'>
           <button
             ref={buttonRef}
-            className="fixed top-[7rem] right-4 z-40 text-[#7c92f4]"
+            className="fixed top-[7rem] right-4 z-40 text-orange-400"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 fill-current text-[#7c92f4]"
+              className="w-6 h-6 fill-current text-orange-400"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -141,9 +146,9 @@ const HamburgerMenu = () => {
                 height={150}
                 fetchPriority="high"
               />
-              <div className='w-48 text-black 2xl:w-full lg:w-96 pl-2'>
-                <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-[#7c92f4]'>Bangalore</span></h1>
-                <p className='xs:text-xs lg:text-lg flex lg:pl-8 xs:pl-8'><span className='xs:text-[7px] lg:text-[10px]'>Powered By </span><span className='lg:text-[17px] font-bold text-blue-700 text-[10px] xs:text-[8px] pl-1'>LONG DRIVE CARS</span></p>
+              <div className='w-48 text-black 2xl:w-full lg:w-96 al lg:mt-2'>
+                <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></h1>
+                <p className='xs:text-xs lg:text-lg flex lg:pl-10 xs:pl-9'><span className='xs:text-[7px] lg:text-[10px]'>Powered By </span><span className='lg:text-[17px] font-bold text-blue-700 text-[10px] xs:text-[8px] pl-1'>LONG DRIVE CARS</span></p>
               </div>
             </div>
           </Link>
