@@ -6,23 +6,14 @@ import { useState } from 'react';
 const  CallBackForm = () => {
     const [phone, setPhone] = useState('');
     const currentDateTime = new Date();
-    const [formData, setFormData] = useState({
-        timeframe: currentDateTime,
-    });
 
     const [mobile, setmobile] = useState("");
     const [isError, setIsError] = useState(false);
     const pattern = new RegExp(/^\d{10}$/);
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData?.name)
-            localStorage.setItem('formData', JSON.stringify(formData));
+
         if(!isError && mobile.length == 10)
         {
             fetch('https://longdrivecarz.in/site/contacts', {

@@ -15,7 +15,7 @@ const ImageChange = () => {
   const images = [
     img2, img3, img4, img5
   ];
-  const prices = ["Ertiga from 1000", "Plol from 2000", "Swift from 3000", " I10 from 4000"]
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -55,7 +55,6 @@ const ImageChange = () => {
         <div className={`${styles.triangleElement} xl:w-[660px] xs:pt-16 lg:pt-0 lg:w-[460px] lg:h-[500px] w-`}>
           <div className="image-container lg:mt-24 lg:w-full h-[300px] w-[300px] aspect-w-1 aspect-h-1">
             <Image  priority src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} height={600} width={600} placeholder="blur" />
-            {/* <p className='text-black text-lg font-jakarta font-medium'>{prices[currentIndex]}</p> */}
           </div>
         </div>
       </div>

@@ -10,9 +10,10 @@ import { Ri24HoursLine } from "react-icons/ri";
 import { GiTowTruck } from "react-icons/gi";
 import { FaCar } from "react-icons/fa";
 import { VscColorMode } from "react-icons/vsc";
-
+import { v4 } from "uuid";
 
 function WhyChooseUs() {
+    console.log(v4(), 'v4 uuid 2');
     return (
         <div className='flex xs:justify-center xl:justify-between lg:mx-7 flex-wrap bg-white pt-6'>
             <div className='xl:pl-16 xl:pt-16 xl:p-2 xs: lg:w-[555px] xl:w-[717px] xs'>
@@ -45,7 +46,6 @@ function WhyChooseUs() {
                             <p className=" lg:ml-2">Choose your Favourite Color</p>
                         </div>
                     </div>
-
                 </div>
             </div>
             {<Image

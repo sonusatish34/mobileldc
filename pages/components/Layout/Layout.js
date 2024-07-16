@@ -5,8 +5,6 @@ import Image from 'next/image';
 import logo from '../../images/newlog.png';
 import Script from 'next/script';
 import { useEffect } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
-
 <meta property="og:title" content="Title Here" />
 
 const Layout = ({ children }) => {
@@ -18,7 +16,6 @@ const Layout = ({ children }) => {
             <Header />
 
             <main className="flex-grow bg-white">{children}</main>
-            <SpeedInsights/>
             <Footer />
         </div>
     );
