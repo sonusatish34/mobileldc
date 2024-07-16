@@ -41,8 +41,15 @@ const HamburgerMenu = () => {
     <div className='fixed lg:relative top-0 left-0 right-0 z-50 bg-white text-black shadow-md'>
       <div className='flex justify-between items-center lg:px-14'>
         <Marquee speed={75}>
-          <div className='flex p-1 text-xs gap-24 lg:text-lg'>
-            {/* ...other Marquee content */}
+          <div className={'flex p-1 text-xs gap-24 lg:text-lg '}>
+            <p className='flex items-center gap-1 justify-center pl-6'><TbPointFilled /><span>Zero Deposit</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Unlimited Kilometers</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Neatly Washed Car</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Choose your Favourite Color Car</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Check Original Car Photos & Book</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Choose Your Own Hours 36hr, 50hr</span></p>
+            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Car Starts 62rs/hr, min 24hrs</span></p>
+            <p className='flex items-center gap-1 justify-center lg:pr-20'><TbPointFilled /><span>Any Problem 24/7 Service</span></p>
           </div>
         </Marquee>
         <div className='border-l-2 border-l-black'>
