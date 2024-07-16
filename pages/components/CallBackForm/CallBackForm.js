@@ -3,7 +3,7 @@ import Image from 'next/image'
 import carphotot from '../../images/rightimg.png';
 import { useState } from 'react';
 
-function CallBackForm() {
+const  CallBackForm = () => {
     const [phone, setPhone] = useState('');
     const currentDateTime = new Date();
     const [formData, setFormData] = useState({
