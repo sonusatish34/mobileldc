@@ -42,12 +42,10 @@ const CarDetails = () => {
       fetchCarDetails();
     }
   }, [maker_model]);
-
   function replaceText(str) {
-    return str?.replace('https://s3.ap-south-2.amazonaws.com/ld-prod-image-urls3', 'https://d10uth61hedy2t.cloudfront.net');
+    let newstr = str?.replace('https://s3.ap-south-2.amazonaws.com/ld-prod-image-urls3', 'https://d10uth61hedy2t.cloudfront.net');
+    return newstr
   }
-
-
   return (
     <div className='bg-white text-black'>
       <div className=' lg:px-2 mx-auto lg:mx-36 xl:mx-16 md:p-28 lg:p-4 xs:px-5 sm:pt-44 px-2'>
