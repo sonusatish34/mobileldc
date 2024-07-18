@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import CarProducts from '../CarProducts';
@@ -9,22 +11,25 @@ import mg from '../../images/mg.png';
 import kia from '../../images/kia.jpg';
 import mahindra from '../../images/mahindra.png';
 import suzuki from '../../images/suz.png';
-import NearYou from '../NearYou/NearYou';
+
 import renault from '../../images/renault.jpg'
 import { BiPhoneCall } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa";
-import CallBackForm from '../CallBackForm/CallBackForm';
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import WhyChooseUs from '../WhyChooseUs/WhyChooseUs';
-import FaqAccordian from '../FaqAccordian/FaqAccordian';
 import styles from './HomePage.module.css';
 import { FaSearch } from 'react-icons/fa';
+const DynCallBackForm = dynamic(() => import('../CallBackForm/CallBackForm'));
+const DynNearYou = dynamic(() => import('../NearYou/NearYou'));
+const DynWhyChooseUs = dynamic(() => import('../WhyChooseUs/WhyChooseUs'));
+const DynImageChange = dynamic(() => import('../ImageChange/ImageChange'));
 
 import './HomePage.module.css'
-import ImageChange from '../ImageChange/ImageChange';
 
+
+const DynamicFaqComponent = dynamic(() => import('../FaqAccordian/FaqAccordian'));
 export default function Homepage({ data }) {
   const data2 = data;
   const [searchQuery, setSearchQuery] = useState('');
@@ -98,7 +103,7 @@ export default function Homepage({ data }) {
   }
   return (
     <div className="min-h-screen">
-      <ImageChange />
+      <DynImageChange />
       <div className='bg-gray-800 flex flex-col justify-center items-center gap-y-6 py-20'>
         <div className='text-center'>
           <p className='py-3 md:text-5xl xs:text-3xl mb-7 text-white  font-bold'>Browse By Brand</p>
@@ -212,7 +217,7 @@ export default function Homepage({ data }) {
           </div>
         </div>
       </div>
-      <div><NearYou /></div>
+      <div><DynNearYou /></div>
       <div>
       <div className='text-center'>
           <h2 id='explore' className="px-3 font-bold text-2xl font-jakarta pt-8 text-blue-950 mb-2 lg:text-5xl lg:mb-9">Explore Self Drive Car Rentals</h2>
@@ -230,17 +235,17 @@ export default function Homepage({ data }) {
       </div>
       <CarProducts data={data2} searchQuery={searchQuery}/>
 
-      <CallBackForm />
-      <WhyChooseUs />
+      <DynCallBackForm />
+      <DynWhyChooseUs />
       <div className='bg-white text-black rounded shadow-md xl:py-12 lg:px-14 xl:px-14 p-2'>
-        <h2 className='uppercase p-2 mb-4 text-center font-bold xl:text-2xl font-newfont'>Frequently asked questions</h2>
-        <FaqAccordian />
+        <h2 className='uppercase p-2 mb-4 text-center font-bold xl:text-2xl font-manrope'>Frequently asked questions</h2>
+        <DynamicFaqComponent />
       </div>
-      <div className='flex p-5 justify-around xl:justify-between lg:p-8 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center'>
+      <div className='flex p-5 justify-around xl:justify-between lg:p-8 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center font-sans'>
         <div className='xl:w-5/12 xl:text-left xs:w-full xs:text-center lg:w-2/5 xl:text-4xl lg:text-2xl text-left text-lg  lg:p-4 lg:pl-14 font-semibold'>
           Get in touch with us to arrange your booking
         </div>
-        <div className='flex flex-col pt-4 lg:pr-16 items-center justify-start gap-2 text-lg lg:p-4 font-semibold cursor-pointer pr-'>
+        <div className='flex flex-col pt-4 lg:pr-16 items-center justify-start gap-2 text-sm lg:p-4 font-semibold cursor-pointer pr-'>
           <p>CONTACT US NOW</p>
           <div className='flex justify-around gap-3 pb-2 text-white'>
             <button className='bg-green-500  rounded-full p-2 '>

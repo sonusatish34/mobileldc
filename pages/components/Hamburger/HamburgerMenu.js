@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo2 from '../../images/sdcnew.png';
 import { LuPhoneCall } from 'react-icons/lu';
-import styles from './HamburgerMenu.module.css';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { TbPointFilled } from "react-icons/tb";
 import Marquee from 'react-fast-marquee';
@@ -91,13 +90,14 @@ const HamburgerMenu = () => {
                 priority
                 placeholder="blur"
               />
-              <div className='w-48 text-black 2xl:w-full lg:w-96 lg:mt-2'>
+              <div className='w-40 text-black 2xl:w-full lg:w-96 lg:mt-2'>
                 <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></h1>
-                <p className='xs:text-xs lg:text-lg flex lg:pl-10 xs:pl-9'>
+                <p className='xs:text-xs lg:text-lg lg:pl-8 xs:pl-9'>
                   <span className='xs:text-[7px] lg:text-[10px]'>Powered By</span>
                   <span className='lg:text-[17px] font-bold text-blue-700 text-[10px] xs:text-[8px] pl-1'>LONG DRIVE CARS</span>
                 </p>
               </div>
+
             </div>
           </Link>
         </div>

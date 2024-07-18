@@ -14,13 +14,11 @@ import { Ri24HoursLine } from "react-icons/ri";
 import { GiTowTruck } from "react-icons/gi";
 import { HiCurrencyRupee } from "react-icons/hi2";
 
-
 const CarDetails = () => {
   const [caritem, setCarItem] = useState(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const { maker_model } = router.query;
-
   useEffect(() => {
     async function fetchCarDetails() {
       setLoading(true);
@@ -59,6 +57,7 @@ const CarDetails = () => {
                 style={{objectFit:"cover"}}
                 className="relative"
                 fill
+                sizes="(min-width: 640px) 50vw, 100vw"
               />
             </div>
           )}
@@ -146,12 +145,12 @@ const CarDetails = () => {
           </ul>
         </div>
         <h2 className='font-bold text-2xl border-l-2 border-red-900 mb-3 mt-4 font-manrope' >Description</h2>
-        <p className='font-light p-1 text-[14px] leading-6 font-jakarta'>
+        <p className='font-light p-1 text-[12px] lg:text-[14px] leading-6 font-sans'>
           {customData[maker_model?.toLowerCase()]?.desc}
         </p>
 
         <h2 className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[maker_model?.toLowerCase()]?.id} from Self Drive Cars Rental Hyderabad</h2>
-        <p className='font-light p-1 leading-6 text-[14px] font-jakarta pb-8'>
+        <p className='font-light p-1 leading-6 text-[12px] lg:text-[14px] font-sans pb-8'>
           {customData[maker_model?.toLowerCase()]?.subdesc}
         </p>
       </div>

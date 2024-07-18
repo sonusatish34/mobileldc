@@ -12,7 +12,7 @@ function Footer() {
                 <div className="flex xll:pb-28 flex-wrap px-4 justify-between gap-3 b0 text-white z-10 pt-16 lg:pb-24 lg:px-28 xl:px-2">
                     <div className='lg:w-3/6'>
                         <div className='flex flex-col text-lef'>
-                            <p className='lg:text-lg xs:text-xs xs:font-medium lg:font-bold'>Long drive cars a leading car rental company offers rental cars for self drive in Hyderabad and various other cities. Currently operational in Hyderabad, Warangal and Bangalore, Long drive cars offer a huge selection of cars ranging from luxury suvs or a sensible sedan.</p>
+                            <p className='lg:text-lg xs:text-xs xs:font-medium lg:font-semibold font-sans'>Long drive cars a leading car rental company offers rental cars for self drive in Hyderabad and various other cities. Currently operational in Hyderabad, Warangal and Bangalore, Long drive cars offer a huge selection of cars ranging from luxury suvs or a sensible sedan.</p>
                         </div>
                     </div>
                     <div>
@@ -21,13 +21,13 @@ function Footer() {
                             <div className='flex justify-center items-center'>
                                 <ul >
                                     <li className='text-base'>Telangana, AP</li>
-                                    <li className='text-lg font-bold'><Link href="tel:9666677405" target='_blank'>9666-677-405</Link></li>
+                                    <li className='text-xl font-bold'><Link href="tel:9666677405" target='_blank'>9666-677-405</Link></li>
                                 </ul>
                             </div>
                             <div className='flex items-center'>
                                 <ul>
                                     <li className='text-base'>Bangalore</li>
-                                    <li className='text-lg font-bold'><Link href="tel:9129122525" target='_blank'>912-912-25-25</Link></li>
+                                    <li className='text-xl font-bold'><Link href="tel:9129122525" target='_blank'>912-912-25-25</Link></li>
                                 </ul>
                             </div>
                         </div>

@@ -44,7 +44,8 @@ function CarProducts({data,searchQuery}) {
                                             layout="fill"
                                             objectFit="cover"
                                             className="rounded-t-lg relative"
-                                            priority
+                                            // priority
+                                            loading='lazy'
                                         />
                                     </Link>
                                 </div>
@@ -52,7 +53,7 @@ function CarProducts({data,searchQuery}) {
                                 <div className="px-2 pt-4 flex flex-col gap-4 p-1">
                                     <div className='flex items-baseline justify-between px-2'>
                                         <Link href={`/${item.maker_model}`}>
-                                            <p className="text-gray-700 cursor-pointer font-semibold text-[11px] hover:text-red-600 w-fit">{item.maker_model}</p>
+                                            <p className="text-gray-700 cursor-pointer font-sans font-semibold text-[10px] hover:text-red-600 w-fit">{item.maker_model}</p>
                                         </Link>
                                         <p className="text-blue-500 font-bold">₹ {item.price_24_hours * 24}/day</p>
                                     </div>
