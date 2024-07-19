@@ -37,7 +37,7 @@ function CarProducts({data,searchQuery}) {
                         <React.Fragment key={index}>
                             <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] md:w-72 h-96 lg:hover:scale-105">
                                 <div className="relative h-64">
-                                    <Link href={`/${item.maker_model}`}>
+                                    <Link href={`/${item.maker_model.toLowerCase()}`}>
                                         <Image
                                             src={replaceText(item?.car_image_car_right_view)}
                                             alt="Car"

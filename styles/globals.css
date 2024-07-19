@@ -24,7 +24,7 @@
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("/font/manrope2.woff2") format("woff2");
+  src: url("/font/opensans.woff2") format("woff2");
   /* Add additional font formats if necessary */
   font-weight: normal;
   font-style: normal;
