@@ -4,15 +4,15 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import CarProducts from '../CarProducts';
-import tata from '../../images/tata2.jpg';
-import skoda from '../../images/skoda1.jpg';
-import toyota from '../../images/toyota1.jpg';
-import mg from '../../images/mg.png';
-import kia from '../../images/kia.jpg';
-import mahindra from '../../images/mahindra.png';
-import suzuki from '../../images/suz.png';
+import tata from '../../images/tata2.webp';
+import skoda from '../../images/skoda1.webp';
+import toyota from '../../images/toyota1.webp';
+import mg from '../../images/mg.webp';
+import kia from '../../images/kia.webp';
+import mahindra from '../../images/mahindra.webp';
+import suzuki from '../../images/suz.webp';
 
-import renault from '../../images/renault.jpg'
+import renault from '../../images/renault.webp'
 import { BiPhoneCall } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -90,7 +90,6 @@ export default function Homepage({ data }) {
           verticalSwiping: true, // Enable vertical swiping
           swipeToSlide: true,
           arrows: false
-
         }
       }
     ]
@@ -111,7 +110,6 @@ export default function Homepage({ data }) {
 
             <div className="slider-container my-2 ">
               <Slider className={`${styles.widthscreenset} lg:w-[80vw] w-[70vw]`} {...settings}>
-
                 <div>
                   <div onClick={() => { setSearchQuery("mahindra"); scrollToTarget() }} className='my-2 p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
                     <Image
@@ -203,8 +201,6 @@ export default function Homepage({ data }) {
                     <Image
                       src={renault}
                       alt="Car"
-                      width={180}
-                      height={180}
                       className="rounded hover:bg-red-500 xs:h-24 lg:h-16"
                     />
                     <p className='pt- font-bold'>Renault</p>

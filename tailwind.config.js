@@ -15,7 +15,6 @@ module.exports = {
       ["2xl"]: "1530px",
     },
     fontFamily: {
-      "play": ["Play", "sans-serif"],
       'sans': ['ui-sans-serif', 'system-ui'],
       'serif': ['ui-serif', 'Georgia'],
       'mono': ['ui-monospace', 'SFMono-Regular'],
@@ -39,10 +38,6 @@ module.exports = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        'back-texture': "url('https://www.mordeo.org/files/uploads/2020/05/BMW-M8-4K-Ultra-HD-Mobile-Wallpaper-283x503.jpg')",
-        "hero-image": "url('/booknear.png')"
       },
     },
   },

@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo2 from '../../images/sdcnew.png';
+import logo2 from '../../images/sdcnew.webp';
 import { LuPhoneCall } from 'react-icons/lu';
 import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { TbPointFilled } from "react-icons/tb";
@@ -52,7 +52,7 @@ const HamburgerMenu = () => {
           </div>
         </Marquee>
         <div className='border-l-2 border-l-black'>
-          <ul className='flex justify-end lg:gap-5 xs:gap-2 pl-2'>
+          <ul className='flex justify-end lg:gap-5 xs:gap-2 px-2'>
             <Link href={'https://www.facebook.com/selfdrivecarsbylongdrivecars/'} target='_blank'>
               <FaFacebook className='hover:text-blue-500 cursor-pointer lg:size-6' />
             </Link>

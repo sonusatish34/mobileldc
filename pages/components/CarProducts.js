@@ -9,7 +9,7 @@ import { MdOutlineAirlineSeatReclineExtra } from 'react-icons/md';
 import { RiMoneyRupeeCircleFill } from "react-icons/ri";
 import { SlSpeedometer } from "react-icons/sl";
 import Link from 'next/link';
-import disc from '../images/discountonbook.png'
+import disc from '../images/discountonbook.webp'
 import { FaSearch } from 'react-icons/fa';
 function CarProducts({data,searchQuery}) {
     // console.log(data,"dasya");

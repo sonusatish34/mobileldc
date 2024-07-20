@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-// import img1 from '../../changeimg/citogfenh.png'
 import styles from '../HomePage/HomePage.module.css';
 import { FaCar } from "react-icons/fa";
 import { VscColorMode } from "react-icons/vsc";
 import { RiMoneyRupeeCircleFill } from "react-icons/ri";
 import { SlSpeedometer } from "react-icons/sl";
-import img2 from '../../changeimg/ertiga.png'
-import img3 from '../../changeimg/polo.png'
-import img4 from '../../changeimg/swift.png'
-import img5 from '../../changeimg/i20.png'
+import img2 from '../../changeimg/ertiga.webp'
+import img3 from '../../changeimg/polo.webp'
+import img4 from '../../changeimg/swift.webp'
+import img5 from '../../changeimg/i20.webp'
 const ImageChange = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [

@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-import carphotot from '../../images/rightimg.png';
+// import carphotot from '../../images/rightimg.webp';
 import { useState } from 'react';
 
 const  CallBackForm = () => {
-    const [phone, setPhone] = useState('');
-    const currentDateTime = new Date();
 
     const [mobile, setmobile] = useState("");
     const [isError, setIsError] = useState(false);
@@ -27,10 +25,9 @@ const  CallBackForm = () => {
                     'user_location': 'Hyderabad'
                 })
             });
-            // console.log("api call");
         }
         else {
-            console.log("some error");
+            // console.log("some error");
         }
         
     };
