@@ -90,6 +90,7 @@ export default function Homepage({ data }) {
           verticalSwiping: true, // Enable vertical swiping
           swipeToSlide: true,
           arrows: false
+
         }
       }
     ]
@@ -110,6 +111,7 @@ export default function Homepage({ data }) {
 
             <div className="slider-container my-2 ">
               <Slider className={`${styles.widthscreenset} lg:w-[80vw] w-[70vw]`} {...settings}>
+
                 <div>
                   <div onClick={() => { setSearchQuery("mahindra"); scrollToTarget() }} className='my-2 p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
                     <Image
