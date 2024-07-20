@@ -53,7 +53,7 @@ const ImageChange = () => {
         </div>
         <div className={`${styles.triangleElement} xl:w-[660px] xs:pt-16 lg:pt-0 lg:w-[460px] lg:h-[500px] w-`}>
           <div className="image-container block lg:mt-24 lg:w-full h-[400px] w-[600px] aspect-w-1 aspect-h-1 xs:w-[300px] xs:h-[240px]">
-            <Image  priority src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} height={600} width={600} placeholder="blur" layout='responsive' />
+            <Image  priority src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} height={600} width={600} layout='responsive' />
           </div>
         </div>
       </div>
