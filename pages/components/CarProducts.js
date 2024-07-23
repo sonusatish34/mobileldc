@@ -44,8 +44,8 @@ function CarProducts({data,searchQuery}) {
                                             layout="fill"
                                             objectFit="cover"
                                             className="rounded-t-lg relative"
-                                            // priority
-                                            loading='lazy'
+                                            priority
+                                            // loading='lazy'
                                         />
                                     </Link>
                                 </div>

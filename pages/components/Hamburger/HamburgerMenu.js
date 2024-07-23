@@ -53,18 +53,20 @@ const HamburgerMenu = () => {
         </Marquee>
         <div className='border-l-2 border-l-black'>
           <ul className='flex justify-end lg:gap-5 xs:gap-2 px-2'>
-            <Link href={'https://www.facebook.com/selfdrivecarsbylongdrivecars/'} target='_blank'>
+            <li><Link href={'https://www.facebook.com/selfdrivecarsbylongdrivecars/'} target='_blank'>
               <FaFacebook className='hover:text-blue-500 cursor-pointer lg:size-6' />
-            </Link>
-            <Link href={'https://www.instagram.com/longdrivecars_official/'} target='_blank'>
+            </Link></li>
+            <li><Link href={'https://www.instagram.com/longdrivecars_official/'} target='_blank'>
               <FaInstagram className='hover:text-blue-500 cursor-pointer lg:size-6' />
-            </Link>
-            <Link href={'https://in.linkedin.com/company/long-drive-cars'} target='_blank'>
+            </Link></li>
+            <li><Link href={'https://in.linkedin.com/company/long-drive-cars'} target='_blank'>
               <SiLinkedin className='hover:text-blue-500 cursor-pointer lg:size-6' />
-            </Link>
-            <Link href={'https://www.youtube.com/@longdrivecars_official'} target='_blank'>
+            </Link></li>
+            <li><Link href={'https://www.youtube.com/@longdrivecars_official'} target='_blank'>
               <FaYoutube className='hover:text-blue-500 cursor-pointer lg:size-6' />
-            </Link>
+            </Link></li>
+
+
           </ul>
         </div>
       </div>
@@ -88,7 +90,7 @@ const HamburgerMenu = () => {
                 width={192}
                 height={192}
                 priority
-                placeholder="blur"
+              // placeholder="blur"
               />
               <div className='w-40 text-black 2xl:w-full lg:w-96 lg:mt-2'>
                 <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></h1>
@@ -143,7 +145,7 @@ const HamburgerMenu = () => {
                 width={192}
                 height={192}
                 priority
-                placeholder="blur"
+              // placeholder="blur"
               />
               <div className='w-48 text-black 2xl:w-full lg:w-96 lg:mt-2'>
                 <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></h1>
