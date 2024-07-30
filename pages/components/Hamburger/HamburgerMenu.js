@@ -44,7 +44,7 @@ const HamburgerMenu = () => {
             <p className='flex items-center gap-1 justify-center pl-6'><TbPointFilled /><span>Zero Deposit</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Unlimited Kilometers</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Neatly Washed Car</span></p>
-            <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Choose your Favourite Color Car</span></p>
+            {/* <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Choose your Favourite Color Car</span></p> */}
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Check Original Car Photos & Book</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Choose Your Own Hours 36hr, 50hr</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Car Starts 62rs/hr, min 24hrs</span></p>
@@ -65,8 +65,6 @@ const HamburgerMenu = () => {
             <li><Link href={'https://www.youtube.com/@longdrivecars_official'} target='_blank'>
               <FaYoutube className='hover:text-blue-500 cursor-pointer lg:size-6' />
             </Link></li>
-
-
           </ul>
         </div>
       </div>
@@ -90,10 +88,10 @@ const HamburgerMenu = () => {
                 width={192}
                 height={192}
                 priority
-              // placeholder="blur"
+                // placeholder="blur"
               />
               <div className='w-40 text-black 2xl:w-full lg:w-96 lg:mt-2'>
-                <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></h1>
+                <h2 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></h2>
                 <p className='xs:text-xs lg:text-lg lg:pl-8 xs:pl-9'>
                   <span className='xs:text-[7px] lg:text-[10px]'>Powered By</span>
                   <span className='lg:text-[17px] font-bold text-blue-700 text-[10px] xs:text-[8px] pl-1'>LONG DRIVE CARS</span>
@@ -145,10 +143,10 @@ const HamburgerMenu = () => {
                 width={192}
                 height={192}
                 priority
-              // placeholder="blur"
+                // placeholder="blur"
               />
               <div className='w-48 text-black 2xl:w-full lg:w-96 lg:mt-2'>
-                <h1 className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></h1>
+                <p className='font-semibold xl:text-xl lg:text-xl text-xs'>Self Drive Cars <span className='text-orange-500'>Hyderabad</span></p>
                 <p className='xs:text-xs lg:text-lg flex lg:pl-10 xs:pl-9'>
                   <span className='xs:text-[7px] lg:text-[10px]'>Powered By</span>
                   <span className='lg:text-[17px] font-bold text-blue-700 text-[10px] xs:text-[8px] pl-1'>LONG DRIVE CARS</span>

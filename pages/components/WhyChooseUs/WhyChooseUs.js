@@ -39,16 +39,17 @@ function WhyChooseUs() {
                             <FaCar className="bg-orange-200 rounded-md p-1" size={40} />
                             <p className="ml-2">Check Original Car Photo</p>
                         </div>
-                        <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md lg:hover:scale-105">
+                        {/* <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md lg:hover:scale-105">
                             <VscColorMode className="bg-orange-200 rounded-md p-1" size={40} />
                             <p className=" lg:ml-2">Choose your Favourite Color</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
             {<Image
                 className='lg:w-[320px] lg:h-[400px] xl:w-[600px] xl:h-[600px] '
-                alt="creta"
+                alt="car rental near you creta"
+                title="car rental near you creta"
                 src={rightimg}
                 width={1000}
                 height={1000}

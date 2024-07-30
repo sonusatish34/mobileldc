@@ -11,11 +11,10 @@ import { SlSpeedometer } from "react-icons/sl";
 import Link from 'next/link';
 import disc from '../images/discountonbook.webp'
 import { FaSearch } from 'react-icons/fa';
-function CarProducts({data,searchQuery}) {
-    // console.log(data,"dasya");
+import StaticData from './StaticData/StaticData'
+function CarProducts({ data, searchQuery }) {
 
     const [visibleItems, setVisibleItems] = useState(7);
-    // const [searchQuery, setSearchQuery] = useState('');
 
     const handleLoadMore = () => {
         setVisibleItems(prev => prev + 7);
@@ -37,15 +36,16 @@ function CarProducts({data,searchQuery}) {
                         <React.Fragment key={index}>
                             <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] md:w-72 h-96 lg:hover:scale-105">
                                 <div className="relative h-64">
-                                    <Link href={`/${item.maker_model.toLowerCase()}`}>
+                                    <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
                                         <Image
                                             src={replaceText(item?.car_image_car_right_view)}
-                                            alt="Car"
+                                            alt={StaticData(String(item?.maker_model.toLowerCase()) + `${item?.maker_model.toLowerCase()}`)}
+                                            title={StaticData(String(item?.maker_model.toLowerCase()) + `${item?.maker_model.toLowerCase()}`)}
                                             layout="fill"
                                             objectFit="cover"
                                             className="rounded-t-lg relative"
-                                            priority
-                                            // loading='lazy'
+                                            // priority
+                                            loading='lazy'
                                         />
                                     </Link>
                                 </div>
@@ -74,7 +74,7 @@ function CarProducts({data,searchQuery}) {
                                     <div className='text-black flex justify-center font-semibold'>For Booking</div>
                                     <div className='flex justify-around gap-1 pb-2 text-white'>
                                         <button className='bg-green-500 rounded-full p-2'>
-                                            <Link href="https://api.whatsapp.com/send?phone=+9666677405&text=Hi%21" target='_blank'>
+                                            <Link href="https://api.whatsapp.com/send?phone=+9666677405&text=Hi%0AI%20am%20looking%20for%20a%20car%20booking." target='_blank'>
                                                 <p className=' flex gap-1 text-sm'><span><FaWhatsapp size={20} /></span> <span>Whatsapp</span></p>
                                             </Link>
                                         </button>
@@ -107,11 +107,8 @@ function CarProducts({data,searchQuery}) {
 
             {visibleItems < filteredData?.length && (
                 <div className="text-center md:pb-10 pb-6">
-                    <button
-                        className="bg-blue-500 text-lg font-bold text-white px-9 py-2 rounded-full"
-                        onClick={handleLoadMore}
-                    >
-                        <div className='flex justify-center items-center gap-2'><span>Load more</span><span><IoReload /></span></div>
+                    <button className="bg-blue-500 text-lg font-bold text-white px-9 py-2 rounded-full">
+                        <Link href={"/explore-self-drive-cars"}>View all cars</Link>
                     </button>
                 </div>
             )}

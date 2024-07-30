@@ -18,7 +18,8 @@ function NearYou() {
                 src={rightimg}
                 width={600}
                 height={600}
-                alt='innova car'
+                alt='self drive car innova'
+                tile='self drive car innova'
                 className='lg:w-2/5 '
             />
             <div className='py-16 lg:w-2/5 flex flex-col items-center'>

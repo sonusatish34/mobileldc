@@ -10,7 +10,7 @@ import toyota from '../../images/toyota1.webp';
 import mg from '../../images/mg.webp';
 import kia from '../../images/kia.webp';
 import mahindra from '../../images/mahindra.webp';
-import suzuki from '../../images/suz.webp';
+import suzuki from '../../images/suzuki-logo.webp';
 
 import renault from '../../images/renault.webp'
 import { BiPhoneCall } from "react-icons/bi";
@@ -28,7 +28,6 @@ const DynImageChange = dynamic(() => import('../ImageChange/ImageChange'));
 
 import './HomePage.module.css'
 
-
 const DynamicFaqComponent = dynamic(() => import('../FaqAccordian/FaqAccordian'));
 export default function Homepage({ data }) {
   const data2 = data;
@@ -40,7 +39,7 @@ export default function Homepage({ data }) {
     pauseOnHover: true,
     // arrows: false,
 
-    autoplay: true,
+    // autoplay: true,
     speed: 1000,
     autoplaySpeed: 1500,
     responsive: [
@@ -131,7 +130,7 @@ export default function Homepage({ data }) {
                       alt="Car"
                       width={180}
                       height={180}
-                      className="rounded-lg lg:mb-5"
+                      className="rounded-lg lg:mb-2"
                     />
                     <p className='pt-2 font-bold'>Tata</p>
                   </div>
@@ -149,7 +148,9 @@ export default function Homepage({ data }) {
                   </div>
                 </div>
                 <div>
-                  <div onClick={() => { setSearchQuery("toyota"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer  '>
+                  <div onClick={() => { setSearchQuery("toyota"); scrollToTarget() }} className='my-2 lg:p-6 bg-white rounded-lg lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2 hover:border-blue-700 hover: -105 cursor-pointer 
+                  '>
+
                     <Image
                       src={toyota}
                       alt="Car"
@@ -247,7 +248,7 @@ export default function Homepage({ data }) {
           <p>CONTACT US NOW</p>
           <div className='flex justify-around gap-3 pb-2 text-white'>
             <button className='bg-green-500  rounded-full p-2 '>
-              <Link href="https://api.whatsapp.com/send?phone=9666677405" target='_blank'>
+              <Link href="https://api.whatsapp.com/send?phone=+9666677405&text=Hi%0AI%20am%20looking%20for%20a%20car%20booking." target='_blank'>
                 <p className=' flex items-center justify-center gap-1 text-sm'><span><FaWhatsapp size={30} /></span> <span>Whatsapp</span></p>
               </Link>
             </button>
