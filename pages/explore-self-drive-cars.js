@@ -1,24 +1,21 @@
 import { BiPhoneCall } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoReload } from "react-icons/io5";
-import React, { useState , useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { BsFuelPump } from 'react-icons/bs';
 import { TbManualGearbox } from 'react-icons/tb';
 import { MdOutlineAirlineSeatReclineExtra } from 'react-icons/md';
-import { RiMoneyRupeeCircleFill } from "react-icons/ri";
-import { SlSpeedometer } from "react-icons/sl";
 import Link from 'next/link';
 import disc from './images/discountonbook.webp'
 import { FaSearch } from 'react-icons/fa';
 import StaticData from './components/StaticData/StaticData'
 import { useMemo } from "react";
-import desc from './images/discountonbook.webp'
 import img2 from './changeimg/innova.webp'
 import img3 from './changeimg/polo.webp'
 import img4 from './changeimg/swift.webp'
 import img5 from './changeimg/i20.webp'
-export default function car_products({cars}) {
+export default function car_products({ cars }) {
 
     const [mobile, setmobile] = useState("");
     const [isError, setIsError] = useState(false);
@@ -65,20 +62,16 @@ export default function car_products({cars}) {
         setPriceRanges(prev => ({ ...prev, [value]: checked }));
     };
 
-    const uniqueBrands = ["maruthi", "kia", "hyundai", "tata"]
+    const uniqueBrands = ["maruthi", "kia", "hyundai", "tata", "mahindra", "honda", "mg"]
     const uniqueFuelTypes = ["petrol", "diesel"]
     const uniqueSeaters = ["5", "7"];
     const uniqueTrasmission = ["manual", "automatic"];
-
-    // const filteredData = cars?.filter(item =>
-    //     item.maker_model.toLowerCase().includes(searchQuery.toLowerCase())
-    // );
 
     const filteredData = useMemo(() => {
         if (!Array.isArray(cars)) return [];
 
         return cars.filter(item => {
-            if (!item) return false; // Skip if item is undefined or null
+            if (!item) return false;
 
             const matchesBrand = selectedBrand ? item.maker_model.toLowerCase().includes(selectedBrand.toLowerCase()) : true;
             const matchesSeater = selectedSeater ? item.seater === selectedSeater : true;
@@ -120,7 +113,15 @@ export default function car_products({cars}) {
                 <div className="text-black-400 px-20  text-black">
                     <div>
                         <div className="image-container block h-[140px] w-[180px] aspect-w-1 aspect-h-1  xs:h-[140px]">
-                            <Image priority src={images[currentIndex]} alt={imgalt[currentIndex]} title={imgalt[currentIndex]} height={600} width={600} layout='responsive' />
+                            <Image
+                                // priority
+                                src={images[currentIndex]}
+                                alt={imgalt[currentIndex]}
+                                title={imgalt[currentIndex]}
+                                height={600}
+                                width={600}
+                                layout='responsive'
+                                loading="lazy" />
                         </div>
                     </div>
                     <div className='flex flex-wrap flex-col capitalize gap-6 mb-6 w-max lg:pt-2 pt-2 font-manrope'>
@@ -197,23 +198,23 @@ export default function car_products({cars}) {
 
             </div>
             <div className='w-full'>
-                <h2 id='explore' className="px-3 font-bold text-2xl font-jakarta pt-8 text-blue-950 mb-2 lg:text-5xl lg:mb-9 lg:text-center">Explore Self Drive
+                <h2 id='explore' className="px-3 font-bold text-2xl font-jakarta pt-8 text-blue-950 mb-2 lg:text-5xl lg:mb-9 text-center">Explore Self Drive
                     Car Rentals</h2>
                 <div className='mb-9 lg:mb-16 flex flex-grow items-center justify-center'>
                     <input
                         placeholder='Search for the cars'
-                        className='placeholder-black text-black px-4 py-3 rounded-full w-full max-w-56 md:max-w-96 lg:max-w-2xl'
+                        className='placeholder-black text-black px-4 py-3 rounded-md w-full max-w-56 md:max-w-96 lg:max-w-2xl'
                         type='search'
                         value={searchQuery}
                         onChange={e => setSearchQuery(e.target.value)}
                     />
                     <FaSearch size={25} className='text-blue-500 relative right-14 lg:right-20 md:right-14' />
                 </div>
-                <div className="lg:grid lg:grid-cols-3 gap-x-8 gap-y-8 flex flex-col gap-2 items-center justify-center lg:max-w-7xl">
+                <div className="lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 gap-y-8 flex flex-col gap-2 items-center justify-center lg:max-w-7xl">
                     {filteredData?.map((item, index) => (
                         <React.Fragment key={index}>
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] lg:w-80 h-96 lg:hover:scale-105">
-                                <div className="relative h-64">
+                            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] lg:w-72 xl:w-80 h-[529px] lg:hover:scale-105">
+                                <div className="relative h-80">
                                     <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
                                         <Image
                                             src={replaceText(item?.car_image_car_right_view)}
@@ -222,8 +223,8 @@ export default function car_products({cars}) {
                                             layout="fill"
                                             objectFit="cover"
                                             className="rounded-t-lg relative"
-                                            priority
-                                        // loading='lazy'
+                                            // priority
+                                            loading='lazy'
                                         />
                                     </Link>
                                 </div>
@@ -298,6 +299,7 @@ export default function car_products({cars}) {
                                             height={400}
                                             width={400}
                                             alt='discount'
+                                            loading='lazy'
                                         />
                                     </div>
                                 </div>

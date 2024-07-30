@@ -34,8 +34,8 @@ function CarProducts({ data, searchQuery }) {
                 <div className="flex flex-wrap gap-x-8 gap-y-8 items-center xs:justify-center lg:max-w-7xl">
                     {filteredData?.slice(0, visibleItems).map((item, index) => (
                         <React.Fragment key={index}>
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] md:w-72 h-96 lg:hover:scale-105">
-                                <div className="relative h-64">
+                            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] md:w-72 h-[529px] lg:hover:scale-105">
+                                <div className="relative h-80">
                                     <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
                                         <Image
                                             src={replaceText(item?.car_image_car_right_view)}
@@ -52,7 +52,7 @@ function CarProducts({ data, searchQuery }) {
 
                                 <div className="px-2 pt-4 flex flex-col gap-4 p-1">
                                     <div className='flex items-baseline justify-between px-2'>
-                                        <Link href={`/${item.maker_model}`}>
+                                    <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
                                             <p className="text-gray-700 cursor-pointer font-sans font-semibold text-[10px] hover:text-red-600 w-fit">{item.maker_model}</p>
                                         </Link>
                                         <p className="text-blue-500 font-bold">₹ {item.price_24_hours * 24}/day</p>
@@ -87,7 +87,7 @@ function CarProducts({ data, searchQuery }) {
                                 </div>
                             </div>
                             {(index + 1) % 5 === 0 && (
-                                <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center md:w-72 h-96 lg:hover:scale-105">
+                                <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center md:w-72 h-[529px] lg:hover:scale-105">
                                     <div>
                                         <Image
                                             src={disc}

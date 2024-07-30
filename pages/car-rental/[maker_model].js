@@ -21,6 +21,7 @@ const CarDetails = () => {
 
   const router = useRouter();
   const { maker_model } = router.query;
+  const mdyfmaker_model = maker_model?.toLowerCase().replace(/-/g, " ").replace("car-rental/", "");
   useEffect(() => {
     async function fetchCarDetails() {
       setLoading(true);
@@ -29,7 +30,7 @@ const CarDetails = () => {
         const response = await fetch('https://api.longdrivecarz.in/site/cars-info?location=Hyderabad');
         const items = await response.json();
         const cars = items?.data?.results;
-        const car = cars?.find(i => i?.maker_model.toLowerCase() == maker_model?.toLowerCase().replace(/-/g, " ").replace("car-rental/", ""));
+        const car = cars?.find(i => i?.maker_model.toLowerCase() == mdyfmaker_model);
         setCarItem(car);
       } catch (error) {
       } finally {
@@ -111,7 +112,7 @@ const CarDetails = () => {
           )}
           <div className='flex flex-col justify-evenly'>
             <div>
-              <h2 className='p-1 font-bold font-manrope text-3xl lg:pl-20'>{customData[maker_model?.toLowerCase()]?.id}</h2>
+              <h2 className='p-1 font-bold font-manrope text-3xl lg:pl-20'>{customData[mdyfmaker_model]?.id}</h2>
               <h2 className='p-1 font-bold md:text-3xl text-xl lg:pl-20'><span className='text-lg'>Starting from</span><span className='text-blue-400'> ₹ {caritem?.price_24_hours * 24}/day</span></h2>
             </div>
             <div className='pt-6 flex flex-col xs:hidden lg:flex lg:pl-20'>
@@ -128,7 +129,7 @@ const CarDetails = () => {
                   </Link>
                 </button>
               </div>
-            </div>
+            </div>  
           </div>
         </div>
         <div className='pt-6 lg:hidden'>
@@ -194,12 +195,12 @@ const CarDetails = () => {
         </div>
         <h2 className='font-bold text-2xl border-l-2 border-red-900 mb-3 mt-4 font-manrope' >Description</h2>
         <p className='font-light p-1 text-[12px] lg:text-[14px] leading-6 font-sans'>
-          {customData[maker_model?.toLowerCase()]?.desc}
+          {customData[mdyfmaker_model]?.desc}
         </p>
 
-        <h2 className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[maker_model?.toLowerCase()]?.id} from Self Drive Cars Rental Hyderabad</h2>
+        <h2 className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[mdyfmaker_model]?.id} from Self Drive Cars Rental Hyderabad</h2>
         <p className='font-light p-1 leading-6 text-[12px] lg:text-[14px] font-sans pb-8'>
-          {customData[maker_model?.toLowerCase()]?.subdesc}
+          {customData[mdyfmaker_model]?.subdesc}
         </p>
       </div>
     </div>
