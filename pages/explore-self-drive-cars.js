@@ -107,9 +107,7 @@ export default function car_products({ cars }) {
     }, []);
     return (
         <div className="produvt-page flex flex-col lg:flex-row gap-10 bg-slate-100">
-
             <div className='flex lg:pt-12 pt-48 bg-white'>
-
                 <div className="text-black-400 px-20  text-black">
                     <div>
                         <div className="image-container block h-[140px] w-[180px] aspect-w-1 aspect-h-1  xs:h-[140px]">
@@ -318,7 +316,6 @@ export async function getStaticProps() {
     const cars = items?.data?.results
     return {
         props: {
-            items,
             cars
         },
     };

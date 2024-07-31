@@ -37,7 +37,7 @@ export default function Homepage({ data }) {
     slidesToShow: 7,
     slidesToScroll: 1,
     pauseOnHover: true,
-    arrows: false,
+    arrows: true,
 
     autoplay: true,
     speed: 1000,
