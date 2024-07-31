@@ -37,9 +37,9 @@ export default function Homepage({ data }) {
     slidesToShow: 7,
     slidesToScroll: 1,
     pauseOnHover: true,
-    // arrows: false,
+    arrows: false,
 
-    // autoplay: true,
+    autoplay: true,
     speed: 1000,
     autoplaySpeed: 1500,
     responsive: [
@@ -192,8 +192,8 @@ export default function Homepage({ data }) {
                     <Image
                       src={suzuki}
                       alt="Car"
-                      width={180}
-                      height={180}
+                      width={120}
+                      height={120}
                       className="rounded hover:bg-red-500"
                     />
                     <p className='pt-2 font-bold'>Suzuki</p>
@@ -204,7 +204,7 @@ export default function Homepage({ data }) {
                     <Image
                       src={renault}
                       alt="Car"
-                      className="rounded hover:bg-red-500 xs:h-24 lg:h-16"
+                      className="rounded hover:bg-red-500 xs:h-16 lg:h-16"
                     />
                     <p className='pt- font-bold'>Renault</p>
                   </div>

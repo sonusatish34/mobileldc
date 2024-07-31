@@ -39,8 +39,8 @@ function CarProducts({ data, searchQuery }) {
                                     <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
                                         <Image
                                             src={replaceText(item?.car_image_car_right_view)}
-                                            alt={StaticData(String(item?.maker_model.toLowerCase()) + `${item?.maker_model.toLowerCase()}`)}
-                                            title={StaticData(String(item?.maker_model.toLowerCase()) + `${item?.maker_model.toLowerCase()}`)}
+                                            alt={StaticData(String(item?.maker_model.toLowerCase())) + String(item?.maker_model.toLowerCase())}
+                                            title={StaticData(String(item?.maker_model.toLowerCase())) + String(item?.maker_model.toLowerCase())}
                                             layout="fill"
                                             objectFit="cover"
                                             className="rounded-t-lg relative"
