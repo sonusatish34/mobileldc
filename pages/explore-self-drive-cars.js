@@ -266,7 +266,7 @@ export default function car_products({ cars }) {
                                 </div>
                             </div>
                             {(index + 1) % 10 === 0 && (
-                                <div className="bg-orange-400 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center md:w-80 h-96 lg:hover:scale-105">
+                                <div className="bg-orange-400 rounded-lg shadow-lg overflow-hidden flex flex-col xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
                                     <div className="flex flex-col justify-center items-center">
                                         <h2 className='text-center '>Can't find the perfect car? </h2>
                                         <p className='text-center'>Let us help you on a quick call</p>
@@ -292,7 +292,7 @@ export default function car_products({ cars }) {
                                 </div>
                             )}
                             {(index + 1) % 5 === 0 && (
-                                <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center md:w-80 h-96 lg:hover:scale-105">
+                                <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
                                     <div>
                                         <Image
                                             src={disc}
