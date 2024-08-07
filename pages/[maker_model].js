@@ -65,7 +65,7 @@ const CarDetails = () => {
           }}
         />
         {/* <!-- Google tag (gtag.js) --> */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16647839094">
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16647839094">
         </script>
         <script
           dangerouslySetInnerHTML={{
@@ -76,7 +76,7 @@ const CarDetails = () => {
           gtag('config', 'AW-16647839094');
             `,
           }}
-        />
+        /> */}
         <script
           dangerouslySetInnerHTML={{
             __html: `

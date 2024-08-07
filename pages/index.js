@@ -1,6 +1,6 @@
 import Homepage from "./components/HomePage/Homepage";
 import Head from "next/head";
-
+import Script from "next/script";
 export default function Home({ cars }) {
   return (
     <div className="bg-white">
@@ -23,7 +23,7 @@ export default function Home({ cars }) {
           }}
         />
         {/* <!-- Google tag (gtag.js) --> */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16647839094">
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16647839094">
         </script>
         <script
           dangerouslySetInnerHTML={{
@@ -34,7 +34,24 @@ export default function Home({ cars }) {
           gtag('config', 'AW-16647839094');
             `,
           }}
-        />
+        /> */}
+        <Script
+      strategy="afterInteractive"
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16647839094"
+    />
+
+    {/* Initialize Google Analytics after the script is loaded */}
+    <Script
+      id="google-analytics-script"
+      strategy="afterInteractive"
+    >
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16647839094');
+      `}
+    </Script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
