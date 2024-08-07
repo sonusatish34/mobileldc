@@ -105,10 +105,21 @@ export default function car_products({ cars }) {
 
         return () => clearInterval(interval);
     }, []);
+    const [filter, setFilter] = useState(false);
+    function handleFilter() {
+        if (filter) {
+            setFilter(false);
+        }
+        else {
+            setFilter(true);
+        }
+    }
+    const blockd = "block";
+    const hiddend = "hidden";
     return (
         <div className="produvt-page flex flex-col lg:flex-row gap-10 bg-slate-100">
             <div className='flex lg:pt-12 pt-48 bg-white'>
-                <div className="text-black-400 px-20  text-black">
+                <div className="text-black-400 lg:px-20  text-black">
                     <div>
                         <div className="image-container block h-[140px] w-[180px] aspect-w-1 aspect-h-1  xs:h-[140px]">
                             <Image
@@ -124,72 +135,75 @@ export default function car_products({ cars }) {
                     </div>
                     <div className='flex flex-wrap flex-col capitalize gap-6 mb-6 w-max lg:pt-2 pt-2 font-manrope'>
                         <div className="flex gap-6">
-                            <p className="text-black text-2xl font-bold">Filters</p>
+                            <p onClick={handleFilter} className="text-black text-2xl font-bold">Filters</p>
                             <button className="text-xs opacity-85" onClick={clearFilters}>Clear all </button>
                         </div>
-                        <div className='flex flex-col capitalize  '>
-                            <label className='font-semibold text-xl'>Brand</label>
-                            {uniqueBrands.map(brand => (
-                                <label key={brand} className='flex items-center'>
-                                    <input
-                                        type='radio'
-                                        name='brand'
-                                        value={brand}
-                                        checked={selectedBrand === brand}
-                                        onChange={() => setSelectedBrand(brand)}
-                                        className='mr-2'
-                                    />
-                                    {brand}
-                                </label>
-                            ))}
-                        </div>
-                        <div className='flex flex-col  '>
-                            <label className='font-semibold text-xl'>Seater</label>
-                            {uniqueSeaters.map(seater => (
-                                <label key={seater} className='flex items-center'>
-                                    <input
-                                        type='radio'
-                                        name='seater'
-                                        value={seater}
-                                        checked={selectedSeater === seater}
-                                        onChange={() => setSelectedSeater(seater)}
-                                        className='mr-2'
-                                    />
-                                    {seater}
-                                </label>
-                            ))}
-                        </div>
-                        <div className='flex flex-col'>
-                            <label className='font-semibold text-xl'>Fuel Type</label>
-                            {uniqueFuelTypes.map(fuelType => (
-                                <label key={fuelType} className='flex items-center'>
-                                    <input
-                                        type='radio'
-                                        name='fuelType'
-                                        value={fuelType}
-                                        checked={selectedFuelType === fuelType}
-                                        onChange={() => setSelectedFuelType(fuelType)}
-                                        className='mr-2'
-                                    />
-                                    {fuelType}
-                                </label>
-                            ))}
-                        </div>
-                        <div className='flex flex-col'>
-                            <label className='font-semibold text-xl'>Transmission Type</label>
-                            {uniqueTrasmission.map(TransType => (
-                                <label key={TransType} className='flex items-center'>
-                                    <input
-                                        type='radio'
-                                        name='TransType'
-                                        value={TransType}
-                                        checked={selectedTransType === TransType}
-                                        onChange={() => setSelectedTransType(TransType)}
-                                        className='mr-2'
-                                    />
-                                    {TransType}
-                                </label>
-                            ))}
+                        <div>
+                            <label className='font-semibold text-xl w-full'>Brand</label>
+                            <div className='flex flex-wrap lg:flex-col w-56 overflow-hidden capitalize'>
+                                {uniqueBrands.map(brand => (
+                                    <label key={brand} className='flex items-center flex-wrap lg:w-full'>
+                                        <input
+                                            type='radio'
+                                            name='brand'
+                                            value={brand}
+                                            checked={selectedBrand === brand}
+                                            onChange={() => setSelectedBrand(brand)}
+                                            className='mr-2'
+                                        />
+                                        {brand}
+                                    </label>
+                                ))}
+                            </div>
+
+                            <div className='flex lg:flex-col  '>
+                                <label className='font-semibold text-xl'>Seater</label>
+                                {uniqueSeaters.map(seater => (
+                                    <label key={seater} className='flex items-center'>
+                                        <input
+                                            type='radio'
+                                            name='seater'
+                                            value={seater}
+                                            checked={selectedSeater === seater}
+                                            onChange={() => setSelectedSeater(seater)}
+                                            className='mr-2'
+                                        />
+                                        {seater}
+                                    </label>
+                                ))}
+                            </div>
+                            <div className='flex lg:flex-col'>
+                                <label className='font-semibold text-xl'>Fuel Type</label>
+                                {uniqueFuelTypes.map(fuelType => (
+                                    <label key={fuelType} className='flex items-center'>
+                                        <input
+                                            type='radio'
+                                            name='fuelType'
+                                            value={fuelType}
+                                            checked={selectedFuelType === fuelType}
+                                            onChange={() => setSelectedFuelType(fuelType)}
+                                            className='mr-2'
+                                        />
+                                        {fuelType}
+                                    </label>
+                                ))}
+                            </div>
+                            <div className='flex lg:flex-col'>
+                                <label className='font-semibold text-xl'>Transmission Type</label>
+                                {uniqueTrasmission.map(TransType => (
+                                    <label key={TransType} className='flex items-center'>
+                                        <input
+                                            type='radio'
+                                            name='TransType'
+                                            value={TransType}
+                                            checked={selectedTransType === TransType}
+                                            onChange={() => setSelectedTransType(TransType)}
+                                            className='mr-2'
+                                        />
+                                        {TransType}
+                                    </label>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -208,7 +222,7 @@ export default function car_products({ cars }) {
                     />
                     <FaSearch size={25} className='text-blue-500 relative right-14 lg:right-20 md:right-14' />
                 </div>
-                <div className="lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 gap-y-8 flex flex-col gap-2 items-center justify-center lg:max-w-7xl">
+                <div className="lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 gap-y-8 flex flex-col gap-2 items-center justify-center lg:max-w-7xl py-4">
                     {filteredData?.map((item, index) => (
                         <React.Fragment key={index}>
                             <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] lg:w-72 xl:w-80 h-[529px] lg:hover:scale-105">
@@ -229,7 +243,7 @@ export default function car_products({ cars }) {
 
                                 <div className="px-2 pt-4 flex flex-col gap-4 p-1">
                                     <div className='flex items-baseline justify-between px-2'>
-                                        <Link href={`/${item.maker_model}`}>
+                                        <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
                                             <p className="text-gray-700 cursor-pointer font-sans font-semibold text-[10px] hover:text-red-600 w-fit">{item.maker_model}</p>
                                         </Link>
                                         <p className="text-blue-500 font-bold">₹ {item.price_24_hours * 24}/day</p>
@@ -263,7 +277,7 @@ export default function car_products({ cars }) {
                                     </div>
                                 </div>
                             </div>
-                            {(index + 1) % 10 === 0 && (
+                            {[2, 8, 15, 20, 25, 32, 38, 43].includes(index) && (
                                 <div className="bg-orange-400 rounded-lg shadow-lg overflow-hidden flex flex-col xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
                                     <div className="flex flex-col justify-center items-center">
                                         <h2 className='text-center '>Can't find the perfect car? </h2>
@@ -289,7 +303,7 @@ export default function car_products({ cars }) {
                                     </div>
                                 </div>
                             )}
-                            {(index + 1) % 5 === 0 && (
+                            {(index + 1) % 10 === 0 && (
                                 <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
                                     <div>
                                         <Image

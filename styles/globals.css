@@ -31,7 +31,7 @@
   font-display: swap;
 }
 body {
-  font-family: 'ui-sans-serif', 'system-ui';
+  font-family: "ui-sans-serif", "system-ui";
 }
 @tailwind base;
 @tailwind components;
@@ -50,7 +50,12 @@ body {
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+.roboto-text {
+  font-family: "Roboto", sans-serif;
+}
+.mont-text {
+  font-family: "Montserrat", sans-serif;
+}
 
 body {
   font-size: 16px;

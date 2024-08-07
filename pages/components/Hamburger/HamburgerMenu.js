@@ -53,16 +53,16 @@ const HamburgerMenu = () => {
         </Marquee>
         <div className='border-l-2 border-l-black'>
           <ul className='flex justify-end lg:gap-5 xs:gap-2 px-2'>
-            <li><Link href={'https://www.facebook.com/selfdrivecarsbylongdrivecars/'} target='_blank'>
+            <li><Link href={'https://www.facebook.com/selfdrivecarsbylongdrivecars/'} target='_blank' aria-label='Facebook page' title='Visit our Facebook page'>
               <FaFacebook className='hover:text-blue-500 cursor-pointer lg:size-6' />
             </Link></li>
-            <li><Link href={'https://www.instagram.com/longdrivecars_official/'} target='_blank'>
+            <li><Link href={'https://www.instagram.com/longdrivecars_official/'} target='_blank' aria-label='Instagram page' title='Visit our Instagram page'>
               <FaInstagram className='hover:text-blue-500 cursor-pointer lg:size-6' />
             </Link></li>
-            <li><Link href={'https://in.linkedin.com/company/long-drive-cars'} target='_blank'>
+            <li><Link href={'https://in.linkedin.com/company/long-drive-cars'} target='_blank' aria-label='Linkedin page' title='Visit our LinkedIn page'>
               <SiLinkedin className='hover:text-blue-500 cursor-pointer lg:size-6' />
             </Link></li>
-            <li><Link href={'https://www.youtube.com/@longdrivecars_official'} target='_blank'>
+            <li><Link href={'https://www.youtube.com/@longdrivecars_official'} target='_blank' aria-label='Youtube page' title='Visit our Youtube page'>
               <FaYoutube className='hover:text-blue-500 cursor-pointer lg:size-6' />
             </Link></li>
           </ul>
