@@ -241,7 +241,7 @@ export default function Homepage({ data }) {
 
       </div>
       
-      <div className='flex p-5 justify-around xl:justify-between lg:p-8 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center font-sans'>
+      <div className='flex p-5 justify-around xl:justify-between lg:p-14 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center font-sans'>
         <div className='xl:w-5/12 xl:text-left xs:w-full xs:text-center lg:w-2/5 xl:text-4xl lg:text-2xl text-left text-lg  lg:p-4 lg:pl-14 font-semibold'>
           Get in touch with us to arrange your booking
         </div>
@@ -263,31 +263,7 @@ export default function Homepage({ data }) {
           </div>
         </div>
       </div>
-      {/* <div className='flex p-5 justify-around xl:justify-between lg:p-8 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center font-sans'>
-        <div className='xl:w-5/12 xl:text-left xs:w-full lg:w-2/5 lg:text-lg text-left text-sm  lg:p-4 lg:pl-14 font-semibold'>
-          <ul>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/gachibowli'}>Self drive car rental in Gachibowli</Link></li>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/medipally'}>Self drive car rental in Medipally</Link></li>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/miyapur'}>Self drive car rental in Miyapur</Link></li>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/ramanthapur'}>Self drive car rental in Ramanthapur</Link></li>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/secunderabad'}>Self drive car rental in Secunderabad</Link></li>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/shamshabad'}>Self drive car rental in Medipally</Link></li>
-          </ul>
-
-        </div>
-
-        <div className='xl:w-5/12 xl:text-left xs:w-full lg:w-2/5 xl:text-xl lg:text-lg text-left text-sm  lg:p-4 lg:pl-14 font-semibold'>
-
-          <ul>
-            <li className='hover:scale-105'> <Link href={'/self-drive-car-rental/dilshuknagar'}>Self drive car rental in Dilshuknagar</Link></li>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/madhapur'}>Self drive car rental in Madhapur</Link></li>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/kukatpally'}>Self drive car rental in Kukatapally</Link></li>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/ameerpet'}>Self drive car rental in Ameerpet</Link></li>
-            <li className='hover:scale-105'><Link href={'/self-drive-car-rental/ecil'}>Self drive car rental in Ecil</Link></li>
-
-          </ul>
-        </div>
-      </div> */}
+      
     </div>
   );
 }

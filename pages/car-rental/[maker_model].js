@@ -112,11 +112,11 @@ const CarDetails = () => {
           )}
           <div className='flex flex-col justify-evenly'>
             <div>
-              <h2 className='p-1 font-bold font-manrope text-3xl lg:pl-20'>{customData[mdyfmaker_model]?.id}</h2>
-              <h2 className='p-1 font-bold md:text-3xl text-xl lg:pl-20'><span className='text-lg'>Starting from</span><span className='text-blue-400'> ₹ {caritem?.price_24_hours * 24}/day</span></h2>
+              <p className='p-1 font-bold font-manrope text-3xl lg:pl-20'>{customData[mdyfmaker_model]?.id}</p>
+              <p className='p-1 font-bold md:text-3xl text-xl lg:pl-20'><span className='text-lg'>Starting from</span><span className='text-blue-400'> ₹ {caritem?.price_24_hours * 24}/day</span></p>
             </div>
             <div className='pt-6 flex flex-col xs:hidden lg:flex lg:pl-20'>
-              <h2 className='font-semibold text-2xl font-manrope'>Contact us  by</h2>
+              <p className='font-semibold text-2xl font-manrope'>Contact us  by</p>
               <div className='flex justify-start lg:gap-5 xl:gap-8 xl:pt-4 pb-2 xs:gap-6 xs:pt-2 text-white'>
                 <button className='bg-green-500 rounded-full p-2 lg:p-3'>
                   <Link href="https://api.whatsapp.com/send?phone=+9666677405text=Hi%0AI%20am%20looking%20for%20a%20car%20booking." target='_blank'>
@@ -133,7 +133,7 @@ const CarDetails = () => {
           </div>
         </div>
         <div className='pt-6 lg:hidden'>
-          <h2 className='font-semibold text-2xl font-manrope'>Contact us by</h2>
+          <p className='font-semibold text-2xl font-manrope'>Contact us by</p>
           <div className='flex justify-start lg:gap-5 xl:gap-8 xl:pt-4 pb-2 xs:gap-6 xs:pt-2 text-white'>
             <button className='bg-green-500 rounded-full p-2 lg:p-3'>
               <Link href="https://api.whatsapp.com/send?phone=+9666677405&text=Hi%0AI%20am%20looking%20for%20a%20car%20booking." target='_blank'>
@@ -169,7 +169,7 @@ const CarDetails = () => {
           </div>
         </div>
         <div className='overview pt-10'>
-          <h2 className='font-bold text-2xl border-l-2 border-red-900 mb-4 font-manrope'>Car Overview</h2>
+          <p className='font-bold text-2xl border-l-2 border-red-900 mb-4 font-manrope'>Car Overview</p>
           <ul className='my-2 flex flex-wrap pb-4'>
             <li className='w-32 flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2   '>
               <BsFuelPump size={30} className='text-green-700' />
@@ -193,12 +193,12 @@ const CarDetails = () => {
             </li>
           </ul>
         </div>
-        <h2 className='font-bold text-2xl border-l-2 border-red-900 mb-3 mt-4 font-manrope' >Description</h2>
+        <p className='font-bold text-2xl border-l-2 border-red-900 mb-3 mt-4 font-manrope' >Description</p>
         <p className='font-light p-1 text-[12px] lg:text-[14px] leading-6 font-sans'>
           {customData[mdyfmaker_model]?.desc}
         </p>
 
-        <h2 className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[mdyfmaker_model]?.id} from Self Drive Cars Rental Hyderabad</h2>
+        <p className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[mdyfmaker_model]?.id} from Self Drive Cars Rental Hyderabad</p>
         <p className='font-light p-1 leading-6 text-[12px] lg:text-[14px] font-sans pb-8'>
           {customData[mdyfmaker_model]?.subdesc}
         </p>

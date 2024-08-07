@@ -80,7 +80,7 @@ const HamburgerMenu = () => {
       <div className="flex w-full lg:justify-between items-center z-50 fixed lg:relative bg-white lg:py-14 lg:pr-14 border-8 border-orange-100 lg:h-20">
         <div className="flex">
           <Link href={'/'}>
-            <div className='rounded-md flex cursor-pointer items-center'>
+            <div className='rounded-md flex cursor-pointer items-center lg:pl-7'>
               <Image
                 className="w-24 lg:w-48 lg:h-48"
                 src={logo2}

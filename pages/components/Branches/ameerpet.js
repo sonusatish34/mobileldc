@@ -4,8 +4,8 @@ import tiago from '../../images/tiagobranch.webp'
 function Ameerpet() {
 
     return (
-        <div className='text-black pt-48 lg:py-12 lg:px-14 px-4 text-base leading-8 mont-text'>
-            <h1 className='font-bold text-base lg:text-4xl'>Discover Hyderabad at your own pace with self-drive cars in Ameerpet</h1>
+        <div className='text-black pt-48 lg:py-12 lg:px-20   px-4 text-sm lg:text-base leading-6 lg:leading-8 mont-text'>
+            <h1 className='font-bold text-sm lg:text-4xl'>Discover Hyderabad at your own pace with self-drive cars in Ameerpet</h1>
             <Image
                 src={tiago}
                 height={500}
@@ -16,10 +16,11 @@ function Ameerpet() {
             <p className='font-bold lg:text-xl py-2'>Advantages of Self-Drive Car Rentals in Ameerpet</p>
             <ul>
                 <li>
-                    <p className=''><strong>Flexibility:</strong>  Set your schedule and explore at your leisure, without any time constraints.</p>
+                    <p className=''><strong>Flexibility:</strong>&nbsp;
+                    Set your schedule and explore at your leisure, without any time constraints.</p>
                 </li>
                 <li>
-                    <p className=''><strong>Accessibility:</strong> Seamlessly visit Hyderabad's shopping hubs, historical sites, and dining destinations.</p>
+                    <p className=''><strong>Accessibility:&nbsp;</strong> Seamlessly visit Hyderabad's shopping hubs, historical sites, and dining destinations.</p>
                 </li>
                 <li>
                     <p className=''><strong>Cost-Efficiency:</strong> Typically more budget-friendly than hiring taxis or using ride-sharing services for long distances.</p>
