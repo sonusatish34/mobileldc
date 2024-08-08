@@ -4,14 +4,15 @@ import harrier from '../../images/harrierbranch.webp'
 function ecil() {
 
     return (
-        <div className='text-black pt-48 lg:py-12 lg:px-14 px-4 text-base leading-8 mont-text'>
-            <h1 className='font-bold text-base lg:text-4xl'>Experience the Self Drive Cars ECIL at your own peace </h1>
+        <div className='text-black pt-48 lg:py-12 text-xs lg:text-base leading-7 lg:leading-9 mont-text'>
+            <h1 className='font-bold text-base lg:text-3xl xl:mx-72 lg:mx-80 mx-6'>Experience the Self Drive Cars ECIL at your own peace </h1>
             <Image
                 src={harrier}
-                height={500}
-                width={500}
-                className='py-3 lg:w-[700px]'
+                height={2000}
+                width={2000}
+                className='py-3 object-cover w-full'
             />
+            <div className='xl:mx-72 lg:mx-80 mx-6'>
             <p>If you're searching for the best <strong>self drive car rentals</strong>  in ECIL, look no further than<strong> Self Drive Cars Hyderabad</strong>. Offering a seamless and convenient car rental experience, this service is perfect for those who want the freedom to explore without the hassle of deposits or mileage restrictions. </p>
             <p className='font-bold'>Explore Anywhere, Anytime  </p>
             <p>One of the standout features of Self Drive Cars Hyderabad is the ability to explore without boundaries. With<strong>unlimited kilometers</strong> , you can travel as far as you want without worrying about additional charges. Whether you're planning a weekend getaway, a business trip, or simply need a car for daily errands, the unlimited kilometers option ensures that you can go the extra mile—literally.</p>
@@ -37,6 +38,7 @@ function ecil() {
                     <p>Embarking on a temple tour around Vijayawada with a<strong> self-drive car </strong>from<strong>Self Drive Cars Hyderabad</strong>  gives you the freedom to explore these sacred sites at your own pace. Whether you're looking for spiritual enlightenment or a peaceful retreat, these temples offer a perfect escape from the hustle and bustle of everyday life. Enjoy the journey and the divine experience of visiting these beautiful temples with the convenience and flexibility of a <strong>self-drive car</strong>. </p>
                 </li>
             </ul>
+        </div>
         </div>
     )
 }

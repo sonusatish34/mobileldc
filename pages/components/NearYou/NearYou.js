@@ -2,13 +2,10 @@ import React from 'react'
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import rightimg from '../../images/innovawebp.webp'
 import Image from 'next/image';
-// import { RiMoneyRupeeCircleFill } from "react-icons/ri";
-// import { SlSpeedometer } from "react-icons/sl";
-// import { RiCustomerService2Fill } from "react-icons/ri";
-// import { Ri24HoursLine } from "react-icons/ri";
 import { PiCarFill } from "react-icons/pi";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import { GiConfirmed } from "react-icons/gi";
+
 
 function NearYou() {
     return (

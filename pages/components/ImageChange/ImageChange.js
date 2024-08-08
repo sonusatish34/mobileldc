@@ -47,11 +47,6 @@ const ImageChange = () => {
                 <FaCar className="bg-orange-200 rounded-md p-1 xs:size-8" size={40} />
                 <p className="ml-2">Check Original Car Photo</p>
               </div>
-              
-              {/* <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-sm border-orange-500 rounded-md">
-                <VscColorMode className="bg-orange-200 rounded-md p-1 xs:size-8" size={40} />
-                <p className=" lg:ml-2">Choose your Favourite Color</p>
-              </div> */}
             </div>
           </div>
         </div>

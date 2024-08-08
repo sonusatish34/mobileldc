@@ -65,7 +65,7 @@ const CarDetails = () => {
           }}
         />
         {/* <!-- Google tag (gtag.js) --> */}
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16647839094">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16647839094">
         </script>
         <script
           dangerouslySetInnerHTML={{
@@ -76,7 +76,7 @@ const CarDetails = () => {
           gtag('config', 'AW-16647839094');
             `,
           }}
-        /> */}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -93,7 +93,7 @@ const CarDetails = () => {
         />
       </Head>
       <div className=' lg:px-2 mx-auto lg:mx-36 xl:mx-16 md:p-28 lg:p-4 xs:px-5 sm:pt-44 px-2'>
-        <div className='flex flex-col xs:mt-48 md:mt-20 lg:mt-2 md:flex-row p-2 border-2 border-orange-400 rounded-md'>
+        <div className='flex flex-col xs:mt-52 md:mt-20 lg:mt-2 md:flex-row p-2 border-2 border-orange-400 rounded-md'>
           {loading && <div>Loading...</div>}
           {!loading && (
             <div className="relative md:w-2/3 w-full p-1 xl:pt-6 xs:pt-8 border-1 border-gray-300 h-[434px]">
@@ -109,11 +109,11 @@ const CarDetails = () => {
           )}
           <div className='flex flex-col justify-evenly'>
             <div>
-              <p className='p-1 font-bold font-manrope text-3xl lg:pl-20'>{customData[maker_model?.toLowerCase()]?.id}</p>
-              <p className='p-1 font-bold md:text-3xl text-xl lg:pl-20'><span className='text-lg'>Starting from</span><span className='text-blue-400'> ₹ {caritem?.price_24_hours * 24}/day</span></p>
+              <h2 className='p-1 font-bold font-manrope text-3xl lg:pl-20'>{customData[maker_model?.toLowerCase()]?.id}</h2>
+              <h2 className='p-1 font-bold md:text-3xl text-xl lg:pl-20'><span className='text-lg'>Starting from</span><span className='text-blue-400'> ₹ {caritem?.price_24_hours * 24}/day</span></h2>
             </div>
             <div className='pt-6 flex flex-col xs:hidden lg:flex lg:pl-20'>
-              <p className='font-semibold text-2xl font-manrope'>Contact us by</p>
+              <h2 className='font-semibold text-2xl font-manrope'>Contact us by</h2>
               <div className='flex justify-start lg:gap-5 xl:gap-8 xl:pt-4 pb-2 xs:gap-6 xs:pt-2 text-white'>
                 <button className='bg-green-500 rounded-full p-2 lg:p-3'>
                   <Link href="https://api.whatsapp.com/send?phone=+9666677405text=Hi%0AI%20am%20looking%20for%20a%20car%20booking." target='_blank'>
@@ -130,7 +130,7 @@ const CarDetails = () => {
           </div>
         </div>
         <div className='pt-6 lg:hidden'>
-          <p className='font-semibold text-2xl font-manrope'>Contact us by</p>
+          <h2 className='font-semibold text-2xl font-manrope'>Contact us by</h2>
           <div className='flex justify-start lg:gap-5 xl:gap-8 xl:pt-4 pb-2 xs:gap-6 xs:pt-2 text-white'>
             <button className='bg-green-500 rounded-full p-2 lg:p-3'>
               <Link href="https://api.whatsapp.com/send?phone=+9666677405&text=Hi%0AI%20am%20looking%20for%20a%20car%20booking." target='_blank'>
@@ -166,7 +166,7 @@ const CarDetails = () => {
           </div>
         </div>
         <div className='overview pt-10'>
-          <p className='font-bold text-2xl border-l-2 border-red-900 mb-4 font-manrope'>Car Overview</p>
+          <h2 className='font-bold text-2xl border-l-2 border-red-900 mb-4 font-manrope'>Car Overview</h2>
           <ul className='my-2 flex flex-wrap pb-4'>
             <li className='w-32 flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2   '>
               <BsFuelPump size={30} className='text-green-700' />
@@ -190,12 +190,12 @@ const CarDetails = () => {
             </li>
           </ul>
         </div>
-        <p className='font-bold text-2xl border-l-2 border-red-900 mb-3 mt-4 font-manrope' >Description</p>
+        <h2 className='font-bold text-2xl border-l-2 border-red-900 mb-3 mt-4 font-manrope' >Description</h2>
         <p className='font-light p-1 text-[12px] lg:text-[14px] leading-6 font-sans'>
           {customData[maker_model?.toLowerCase()]?.desc}
         </p>
 
-        <p className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[maker_model?.toLowerCase()]?.id} from Self Drive Cars Rental Hyderabad</p>
+        <h2 className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[maker_model?.toLowerCase()]?.id} from Self Drive Cars Rental Hyderabad</h2>
         <p className='font-light p-1 leading-6 text-[12px] lg:text-[14px] font-sans pb-8'>
           {customData[maker_model?.toLowerCase()]?.subdesc}
         </p>

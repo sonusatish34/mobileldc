@@ -4,15 +4,15 @@ import thar from '../../images/tharbranch.webp'
 function kukatpally() {
 
     return (
-        <div className='text-black pt-48 lg:py-12 lg:px-14 px-4 text-base leading-8 mont-text'>
-            <h1 className='font-bold text-base lg:text-4xl'>It's Time for Self-Drive Car Rentals in Kukatpally</h1>
+        <div className='text-black pt-48 lg:py-12 text-xs lg:text-base leading-7 lg:leading-9  mont-text'>
+            <h1 className='font-bold text-base lg:text-4xl  xl:mx-72 lg:mx-80 mx-6'>It's Time for Self-Drive Car Rentals in Kukatpally</h1>
             <Image
                 src={thar}
-                alt='thar'
-                height={500}
-                width={500}
-                className='py-3 lg:w-[700px]'
+                height={2000}
+                width={2000}
+                className='py-3 object-cover w-full'
             />
+            <div className=' xl:mx-72 lg:mx-80 mx-6'>
             <p className='font-bold lg:text-xl py-2'>Are you looking for the best self-drive car rentals in Kukatpally?</p>
             <p>Buying a car comes with immense responsibilities and significant costs, not just for your personal savings but for the environment as well. With Indian cities becoming increasingly crowded, the environmental burden is growing worse. Parking is also a growing challenge. But there's a bright side: today's savvy generation.</p>
             <p>The car rental segment in India in 2019 looked quite different compared to today. The smart generation of today knows how to make the most out of life. They prefer driving a variety of cars - choosing the model based on the day, mood, and need, all for a nominal rent from top-quality self-drive car rental services like Self Drive Cars Hyderabad.</p>
@@ -29,24 +29,24 @@ function kukatpally() {
             <p>With a range of small cars and SUVs, Self Drive Cars Hyderabad offers the best self-drive car rental in Kukatpally. </p>
             <p>Renting a car and self-driving is a cost-effective and convenient way to enhance your travel experience. It offers flexibility and freedom to explore at your own pace.</p>
             <p>Good News for 'Car Rental for Self-Driven' in Kukatpally If you've decided on car rental, consider the quality services of Self Drive Cars Hyderabad. Here are some requirements for self-driving in Hyderabad and India:</p>
-            <ol>
+            <ol className='pl-5'>
                 <li className='list-decimal'>A valid driver's license (Indian or international).</li>
                 <li className='list-decimal'>Being over 21 years of age.</li>
                 <li className='list-decimal'>Paying a damage deposit in advance.</li>
                 <li className='list-decimal'>Avoiding reckless driving and illegal activities.</li>
             </ol>
             <p className='font-bold lg:text-xl py-2'>Some basic road rules for self-driving in India:</p>
-            <ul>
-                <li className='list-desc'>Seat belts are compulsory for the driver and front passenger.</li>
-                <li className='list-desc'>Drive on the left side of the road; cars have right-side steering wheels.</li>
-                <li className='list-desc'>It is illegal to drink and drive.</li>
+            <ul className='pl-5'>
+                <li className='list-disc'>Seat belts are compulsory for the driver and front passenger.</li>
+                <li className='list-disc'>Drive on the left side of the road; cars have right-side steering wheels.</li>
+                <li className='list-disc'>It is illegal to drink and drive.</li>
             </ul>
 
             <p>When renting a car, inspect it for any damage in the presence of the sales assistant. If traveling to another city, check toll payment methods.
                 Visit Self Drive Cars for 'Self-Drive Car Rental in Kukatpally' Self Drive Cars is a unique car rental company offering excellent service, a great team, and economical rates. For self-drive car rentals in Kukatpally, Self Drive Cars is the place to be.
             </p>
             <p className='font-bold lg:text-xl py-2'>Benefits of Self-Driving a Rental Car in Hyderabad, India:</p>
-            <ol>
+            <ol className='pl-5'>
                 <li className='list-decimal'>No waiting to drive to your destination.</li>
                 <li className='list-decimal'>Convenience of a navigation system.</li>
                 <li className='list-decimal'>Save money by avoiding longer routes taken by cab drivers.</li>
@@ -57,6 +57,7 @@ function kukatpally() {
             <p>Choose self-drive car rentals from Self Drive Cars Hyderabad for an enjoyable and hassle-free travel experience.  </p>
             
 
+        </div>
         </div>
     )
 }

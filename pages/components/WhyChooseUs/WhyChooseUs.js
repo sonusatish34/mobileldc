@@ -15,27 +15,27 @@ function WhyChooseUs() {
     return (
         <div className='flex xs:justify-center xl:justify-between lg:mx-7 flex-wrap bg-white pt-6'>
             <div className='xl:pl-16 xl:pt-16 xl:p-2 xs:w-[259px] lg:w-[555px] xl:w-[717px] xs'>
-                <div className='xs:p-[1rem] xl:py-16 lg:p-6 bg-orange-200 rounded-lg text-black lg:w-fit border-[2px] border-gray-400 shadow-lg'>
-                    <h2 className='font-sans xl:text-5xl lg:text-5xl text-2xl mb-2 lg:'>Why Choose Us?</h2>
-                    <div className="grid lg:grid-cols-2 gap-4 lg:pt-12 xl:pt-14 pt-4 text-xs
-                     font-medium lg:text-sm xs: lg:w-full">
-                        <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md lg:hover:scale-105">
+                <div className='xs:p-[1rem] xl:py-16 xl:p-6 bg-orange-200 rounded-lg text-black lg:w-fit border-[2px] border-gray-400 shadow-lg'>
+                    <h2 className='font-sans xl:text-5xl lg:text-5xl text-2xl mb-2 lg:pl-5'>Why Choose Us?</h2>
+                    <div className="flex gap-4 items-center justify-center lg:pt-12 xl:pt-14 pt-4 text-xs
+                     font-medium lg:text-sm xs: lg:w-[90%] flex-wrap">
+                        <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md lg:hover:scale-105 xl:w-[230px] lg:w-[225px]">
                             <RiMoneyRupeeCircleFill className="bg-orange-200 rounded-md p-1" size={40} />
                             <p className="ml-2">Zero Deposit</p>
                         </div>
-                        <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md lg:hover:scale-105">
+                        <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md lg:hover:scale-105 xl:w-[230px] lg:w-[225px]">
                             <GiTowTruck className="bg-orange-200 rounded px-[4px]" size={40} />
                             <p className=" ml-2">24/7 Breakdown Service</p>
                         </div>
-                        <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md lg:hover:scale-105">
+                        <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md lg:hover:scale-105 xl:w-[230px] lg:w-[225px]">
                             <SlSpeedometer className="bg-orange-200 rounded-md p-1" size={40} />
                             <p className=" ml-2">Unlimited Kilometers</p>
                         </div>
-                        <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md lg:hover:scale-105">
+                        <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md lg:hover:scale-105 xl:w-[230px] lg:w-[225px]">
                             <Ri24HoursLine className="bg-orange-200 rounded-md p-1" size={40} />
                             <p className=" ml-2 mt-1">Choose Your Own Hours</p>
                         </div>
-                        <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md lg:hover:scale-105">
+                        <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md lg:hover:scale-105 xl:w-[230px] lg:w-[225px]">
                             <FaCar className="bg-orange-200 rounded-md p-1" size={40} />
                             <p className="ml-2">Check Original Car Photo</p>
                         </div>

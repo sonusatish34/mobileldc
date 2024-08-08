@@ -238,11 +238,9 @@ export default function Homepage({ data }) {
       <div className='bg-white text-black rounded xl:py-12 lg:px-14 xl:px-14 p-2'>
         <h2 className='uppercase p-2 mb-4 text-center font-bold xl:text-2xl font-manrope'>Frequently asked questions</h2>
         <DynamicFaqComponent />
-
       </div>
-      
-      <div className='flex p-5 justify-around xl:justify-between lg:p-14 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center font-sans'>
-        <div className='xl:w-5/12 xl:text-left xs:w-full xs:text-center lg:w-2/5 xl:text-4xl lg:text-2xl text-left text-lg  lg:p-4 lg:pl-14 font-semibold'>
+      <div className='flex p-5 justify-around lg:justify-between lg:p-14 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center font-sans'>
+        <div className='xl:w-5/12 xl:text-left xs:w-full xs:text-center lg:w-3/6 xl:text-4xl lg:text-2xl text-left text-lg font-semibold'>
           Get in touch with us to arrange your booking
         </div>
         <div className='flex flex-col pt-4 lg:pr-16 items-center justify-start gap-2 text-sm lg:p-4 font-semibold cursor-pointer pr-'>
@@ -263,7 +261,6 @@ export default function Homepage({ data }) {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

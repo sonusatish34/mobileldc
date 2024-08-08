@@ -7,7 +7,6 @@ import { BsFuelPump } from 'react-icons/bs';
 import { TbManualGearbox } from 'react-icons/tb';
 import { MdOutlineAirlineSeatReclineExtra } from 'react-icons/md';
 import { FaExchangeAlt } from "react-icons/fa";
-
 import Link from 'next/link';
 import disc from './images/discountonbook.webp'
 import { FaSearch } from 'react-icons/fa';
@@ -146,7 +145,7 @@ export default function car_products({ cars }) {
                                 {uniqueBrands.map(brand => (
                                     <label key={brand} className='flex items-center flex-wrap lg:w-full'>
                                         <input
-                                            type='radio'
+                                            type='checkbox'
                                             name='brand'
                                             value={brand}
                                             checked={selectedBrand === brand}
@@ -163,7 +162,7 @@ export default function car_products({ cars }) {
                                 {uniqueSeaters.map(seater => (
                                     <label key={seater} className='flex items-center'>
                                         <input
-                                            type='radio'
+                                            type='checkbox'
                                             name='seater'
                                             value={seater}
                                             checked={selectedSeater === seater}
@@ -179,7 +178,7 @@ export default function car_products({ cars }) {
                                 {uniqueFuelTypes.map(fuelType => (
                                     <label key={fuelType} className='flex items-center'>
                                         <input
-                                            type='radio'
+                                            type='checkbox'
                                             name='fuelType'
                                             value={fuelType}
                                             checked={selectedFuelType === fuelType}
@@ -195,7 +194,7 @@ export default function car_products({ cars }) {
                                 {uniqueTrasmission.map(TransType => (
                                     <label key={TransType} className='flex items-center'>
                                         <input
-                                            type='radio'
+                                            type='checkbox'
                                             name='TransType'
                                             value={TransType}
                                             checked={selectedTransType === TransType}
@@ -210,7 +209,7 @@ export default function car_products({ cars }) {
                     </div>
                     <div className={`flex flex-col capitalize gap-6 mb-6 lg:pt-2 pt-2 w-64 lg:hidden`}>
                         <div className="flex gap-6">
-                            <p onClick={handleFilter} className="text-black text-lg font-bold flex gap-2 items-center border-2 border-[#ffde32] p-2 rounded-md"><span><FaExchangeAlt/></span><span>Filters</span> </p>
+                            <p onClick={handleFilter} className="text-black text-lg font-bold flex gap-2 items-center border-2 border-orange-400 p-2 rounded-md"><span><FaExchangeAlt/></span><span>Filters</span> </p>
                             <button className={`${filter ? blockd : hiddend } text-xs opacity-85`} onClick={clearFilters}>Clear all </button>
                         </div>
                         <div className={`${filter ? blockd : hiddend } text-sm flex flex-col gap-2`}>
@@ -353,7 +352,7 @@ export default function car_products({ cars }) {
                                 </div>
                             </div>
                             {[2,8, 15, 20, 25, 32, 38, 43].includes(index) && (
-                                <div className="bg-[#ffde32] rounded-lg shadow-lg overflow-hidden flex flex-col xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
+                                <div className="bg-orange-400 rounded-lg shadow-lg overflow-hidden flex flex-col xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
                                     <div className="flex flex-col justify-center items-center">
                                         <h2 className='text-center '>Can't find the perfect car? </h2>
                                         <p className='text-center'>Let us help you on a quick call</p>
@@ -379,7 +378,7 @@ export default function car_products({ cars }) {
                                 </div>
                             )}
                            {(index + 1) % 10 === 0 && (
-                                <div className="bg-[#ffde32] rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
+                                <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
                                     <div>
                                         <Image
                                             src={disc}
@@ -400,7 +399,7 @@ export default function car_products({ cars }) {
     );
 }
 export async function getStaticProps() {
-    const response = await fetch('https://api.longdrivecarz.in/site/cars-info?location=Bangalore');
+    const response = await fetch('https://api.longdrivecarz.in/site/cars-info?location=Hyderabad');
     const items = await response.json();
     const cars = items?.data?.results
     return {

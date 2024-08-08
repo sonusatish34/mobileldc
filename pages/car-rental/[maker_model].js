@@ -46,7 +46,7 @@ const CarDetails = () => {
     let newstr = str?.replace('https://s3.ap-south-2.amazonaws.com/ld-prod-image-urls3', 'https://d10uth61hedy2t.cloudfront.net');
     return newstr
   }
- 
+
   return (
     <div className='bg-white text-black'>
       <Head>
@@ -95,7 +95,7 @@ const CarDetails = () => {
           }}
         />
       </Head>
-      <div className=' lg:px-2 mx-auto lg:mx-36 xl:mx-16 md:p-28 lg:p-4 xs:px-5 sm:pt-44 px-2'>
+      <div className='xl:mx-16 mont-text mx-4'>
         <div className='flex flex-col xs:mt-48 md:mt-20 lg:mt-2 md:flex-row p-2 border-2 border-orange-400 rounded-md'>
           {loading && <div>Loading...</div>}
           {!loading && (
@@ -104,7 +104,7 @@ const CarDetails = () => {
                 src={replaceText(caritem?.car_image_car_right_view)}
                 alt="Car"
                 style={{ objectFit: "cover" }}
-                className="relative"
+                className="relative rounded-md"
                 fill
                 sizes="(min-width: 640px) 50vw, 100vw"
               />
@@ -112,28 +112,28 @@ const CarDetails = () => {
           )}
           <div className='flex flex-col justify-evenly'>
             <div>
-              <p className='p-1 font-bold font-manrope text-3xl lg:pl-20'>{customData[mdyfmaker_model]?.id}</p>
-              <p className='p-1 font-bold md:text-3xl text-xl lg:pl-20'><span className='text-lg'>Starting from</span><span className='text-blue-400'> ₹ {caritem?.price_24_hours * 24}/day</span></p>
+              <p className='p-1 font-bold  text-3xl lg:pl-20'>{customData[mdyfmaker_model]?.id}</p>
+              <p className='p-1 font-bold md:text-3xl text-xl lg:pl-20'><span className='text-lg'>Starting from</span><span className='text-blue-400'> ₹{caritem?.price_24_hours * 24}/day</span></p>
             </div>
             <div className='pt-6 flex flex-col xs:hidden lg:flex lg:pl-20'>
-              <p className='font-semibold text-2xl font-manrope'>Contact us  by</p>
+              <p className='font-semibold text-2xl '>Contact us  by</p>
               <div className='flex justify-start lg:gap-5 xl:gap-8 xl:pt-4 pb-2 xs:gap-6 xs:pt-2 text-white'>
                 <button className='bg-green-500 rounded-full p-2 lg:p-3'>
                   <Link href="https://api.whatsapp.com/send?phone=+9666677405text=Hi%0AI%20am%20looking%20for%20a%20car%20booking." target='_blank'>
-                    <p className=' flex items-center gap-1 text-xl'><span><FaWhatsapp className='xl:size-6' /></span> <span>Whatsapp</span></p>
+                    <p className=' flex items-center gap-1 text-base'><span><FaWhatsapp className='xl:size-6' /></span> <span>Whatsapp</span></p>
                   </Link>
                 </button>
                 <button className='bg-blue-500 rounded-full p-2 lg:p-3 lg:px-7'>
                   <Link href="tel:9666677405" target='_blank'>
-                    <p className=' flex items-center gap-1 text-xl'><span><BiPhoneCall className='xl:size-6' /></span> <span>Call Us</span></p>
+                    <p className=' flex items-center gap-1 text-base'><span><BiPhoneCall className='xl:size-6' /></span> <span>Call Us</span></p>
                   </Link>
                 </button>
               </div>
-            </div>  
+            </div>
           </div>
         </div>
         <div className='pt-6 lg:hidden'>
-          <p className='font-semibold text-2xl font-manrope'>Contact us by</p>
+          <p className='font-semibold text-2xl'>Contact us by</p>
           <div className='flex justify-start lg:gap-5 xl:gap-8 xl:pt-4 pb-2 xs:gap-6 xs:pt-2 text-white'>
             <button className='bg-green-500 rounded-full p-2 lg:p-3'>
               <Link href="https://api.whatsapp.com/send?phone=+9666677405&text=Hi%0AI%20am%20looking%20for%20a%20car%20booking." target='_blank'>
@@ -147,61 +147,65 @@ const CarDetails = () => {
             </button>
           </div>
         </div>
-        <div className='lg:w-3/5'>
-          <div className="grid grid-cols-2 gap-2 lg:pt-12 xl:pt-8 pt-4 text-xs
-                     font-semibold lg:text-base xs: lg:w-full">
-            <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
-              <HiCurrencyRupee className="bg-orange-200 rounded-md p-1" size={40} />
-              <p className="ml-2">Zero Deposit</p>
-            </div>
-            <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
-              <GiTowTruck className="bg-orange-200 rounded px-[4px]" size={40} />
-              <p className=" ml-2">24/7 Breakdown Service</p>
-            </div>
-            <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
-              <SlSpeedometer className="bg-orange-200 rounded-md p-1" size={40} />
-              <p className=" ml-2">Unlimited Kilometers</p>
-            </div>
-            <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md">
-              <Ri24HoursLine className="bg-orange-200 rounded-md p-1" size={40} />
-              <p className=" ml-2 mt-1">Choose Your Own Hours</p>
+        <div className='xl:mx-64  lg:mx-48'>
+          <div className='py-8'>
+            <div className="flex gap-2 flex-col md:flex-row flex-wrap jus lg:justify-center lg:pt-12 xl:pt-8 pt-4 
+                     font-semibold  lg:w-full">
+              <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
+                <HiCurrencyRupee className="bg-orange-200 rounded-md p-1" size={40} />
+                <p className=" ml-2 text-xs">Zero Deposit</p>
+              </div>
+              <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
+                <SlSpeedometer className="bg-orange-200 rounded-md p-1" size={40} />
+                <p className="  ml-2 text-xs">Unlimited Kilometers</p>
+              </div>
+              <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[1px] border-black rounded-md">
+                <GiTowTruck className="bg-orange-200 rounded px-[4px]" size={40} />
+                <p className="  ml-2 text-xs">24/7 Breakdown Service</p>
+              </div>
+              
+              <div className="flex items-center gap-1 p-2 bg-[#ffffff]  border-[1px] border-black rounded-md">
+                <Ri24HoursLine className="bg-orange-200 rounded-md p-1" size={40} />
+                <p className="  ml-2 text-xs mt-1">Choose Your Own Hours</p>
+              </div>
             </div>
           </div>
+          <div className='overview pt-10 lg:text-base py-8'>
+            {/* <p className='font-bold text-2xl border-l-4 border-red-900 mb-4 pl-2 '>Car Overview</p> */}
+            <ul className='my-2 flex flex-wrap justify-center pb-4'>
+              <li className='md:w-32 xl:w-40 w-32  flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2'>
+                <BsFuelPump className='text-green-700 md:size-8 xl:size-10 size-6' />
+                <p>Fuel Type</p>
+                <p className='font-bold '>{caritem?.fuel_type}</p>
+              </li>
+              <li className='md:w-32 xl:w-40 w-32 flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2'>
+                <PiCarFill  className={`text-${caritem?.vehicle_color.toLowerCase()}-400 md:size-8 xl:size-10 size-6`} />
+                <p className='text-center'>Vehicle Color</p>
+                <p className='font-bold '>{caritem?.vehicle_color}</p>
+              </li>
+              <li className='md:w-32 xl:w-40 w-32 flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2 '>
+                <MdOutlineAirlineSeatReclineExtra className='text-amber-900 md:size-8 xl:size-10 size-6' />
+                <p>Seater</p>
+                <p className='font-bold'>{caritem?.seater}</p>
+              </li>
+              <li className='md:w-32 xl:w-40 w-32flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2'>
+                <TbManualGearbox  className='text-yellow-500 md:size-8 xl:size-10 size-6' />
+                <p>Transmission</p>
+                <p className='font-bold'>{caritem?.transmission_type}</p>
+              </li>
+            </ul>
+          </div>
+          <div className='py-8'>
+            <p className='font-bold text-2xl border-l-4 border-red-900 mb-4 pl-2 ' >Description</p>
+            <p className='font-light p-1 text-xs lg:text-base leading-6 '>
+              {customData[mdyfmaker_model]?.desc}
+            </p>
+          </div>
+          <p className='font-semibold text-xl mt-4  py-3'>Why Choose {customData[mdyfmaker_model]?.id} from Self Drive Cars Rental Hyderabad</p>
+          <p className='font-light p-1 leading-6 text-xs lg:text-base pb-8'>
+            {customData[mdyfmaker_model]?.subdesc}
+          </p>
         </div>
-        <div className='overview pt-10'>
-          <p className='font-bold text-2xl border-l-2 border-red-900 mb-4 font-manrope'>Car Overview</p>
-          <ul className='my-2 flex flex-wrap pb-4'>
-            <li className='w-32 flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2   '>
-              <BsFuelPump size={30} className='text-green-700' />
-              <p className='font text-sm'>Fuel Type</p>
-              <p className='font-bold text-lg'>{caritem?.fuel_type}</p>
-            </li>
-            <li className='w-32 flex flex-col justify-center items-center gap-2 border-[1px] border-gray-100 py-2   '>
-              <PiCarFill size={30} className={`text-${caritem?.vehicle_color.toLowerCase()}-400`} />
-              <p className='font text-sm'>Vehicle Color</p>
-              <p className='font-bold text-lg'>{caritem?.vehicle_color}</p>
-            </li>
-            <li className='w-32 flex flex-col justify-center items-center gap-2 border-[1px] border-gray-100 py-2   '>
-              <MdOutlineAirlineSeatReclineExtra size={30} className='text-amber-900' />
-              <p className='font- text-sm'>Seater</p>
-              <p className='font-bold text-lg'>{caritem?.seater}</p>
-            </li>
-            <li className='w-32 flex flex-col justify-center items-center gap-2 border-[1px] border-gray-100 py-2   '>
-              <TbManualGearbox size={30} className='text-yellow-500' />
-              <p className='font- text-sm'>Transmission</p>
-              <p className='font-bold text-lg'>{caritem?.transmission_type}</p>
-            </li>
-          </ul>
-        </div>
-        <p className='font-bold text-2xl border-l-2 border-red-900 mb-3 mt-4 font-manrope' >Description</p>
-        <p className='font-light p-1 text-[12px] lg:text-[14px] leading-6 font-sans'>
-          {customData[mdyfmaker_model]?.desc}
-        </p>
-
-        <p className='font-semibold text-xl mt-4 font-dmsans py-3'>Why Choose {customData[mdyfmaker_model]?.id} from Self Drive Cars Rental Hyderabad</p>
-        <p className='font-light p-1 leading-6 text-[12px] lg:text-[14px] font-sans pb-8'>
-          {customData[mdyfmaker_model]?.subdesc}
-        </p>
       </div>
     </div>
   );

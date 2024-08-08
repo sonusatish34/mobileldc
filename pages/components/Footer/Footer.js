@@ -7,22 +7,19 @@ import Image from 'next/image';
 function Footer() {
     return (
         <div className='bg-white'>
-            <div className='flex p-5 justify-around xl:justify-between text-white lg:p-8 flex-wrap bg-orange-500 rounded-md mx-[14px] lg:mx-[58px] my-3 items-center font-sans'>
-                <div className='xl:w-5/12 xl:text-left lg:text-base text-left text-xs  lg:p-4 xl:pl-20 font-semibold'>
+            <div className='flex px-10 py-5 md:justify-between text-white xl:px-28 lg:py-14 flex-wrap bg-orange-500 rounded-md mx-[14px] lg:mx-[58px] my-3 items-center font-sans'>
+                <div className=' xl:text-left lg:text-base text-left text-xs font-semibold'>
                     <ul className='gap-1 flex flex-col'>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/gachibowli'}>Self drive car rental in Gachibowli</Link></li>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/medipally'}>Self drive car rental in Medipally</Link></li>
                         <li className='hover:scale-105 '><Link href={'/self-drive-car-rental/miyapur'}>Self drive car rental in Miyapur</Link></li>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/ramanthapur'}>Self drive car rental in Ramanthapur</Link></li>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/secunderabad'}>Self drive car rental in Secunderabad</Link></li>
-                        <li className='hover:scale-105'><Link href={'/self-drive-car-rental/shamshabad'}>Self drive car rental in Medipally</Link></li>
+                        <li className='hover:scale-105'><Link href={'/self-drive-car-rental/shamshabad'}>Self drive car rental in Shamshabad</Link></li>
                     </ul>
-
                 </div>
-
-                <div className='xl:w-5/12 xl:text-left lg:text-base text-left text-xs  lg:p-4 font-semibold'>
-
-                    <ul className='gap-1 flex flex-col'>
+                <div className=' xl:text-left lg:text-base text-left text-xs font-semibold'>
+                    <ul className='gap-1 flex flex-col pt-1 lg:pt-0'>
                         <li className='hover:scale-105'> <Link href={'/self-drive-car-rental/dilshuknagar'}>Self drive car rental in Dilshuknagar</Link></li>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/madhapur'}>Self drive car rental in Madhapur</Link></li>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/kukatpally'}>Self drive car rental in Kukatapally</Link></li>
