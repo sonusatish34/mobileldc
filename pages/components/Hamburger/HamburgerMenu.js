@@ -44,7 +44,6 @@ const HamburgerMenu = () => {
             <p className='flex items-center gap-1 justify-center pl-6'><TbPointFilled /><span>Zero Deposit</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Unlimited Kilometers</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Neatly Washed Car</span></p>
-            {/* <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Choose your Favourite Color Car</span></p> */}
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Check Original Car Photos & Book</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Choose Your Own Hours 36hr, 50hr</span></p>
             <p className='flex items-center gap-1 justify-center'><TbPointFilled /><span>Car Starts 62rs/hr, min 24hrs</span></p>
@@ -52,18 +51,18 @@ const HamburgerMenu = () => {
           </div>
         </Marquee>
         <div className='border-l-2 border-l-black'>
-          <ul className='flex justify-end lg:gap-5 xs:gap-2 px-2'>
+          <ul className='flex justify-end lg:gap-5 xs:gap-3 px-2'>
             <li><Link href={'https://www.facebook.com/selfdrivecarsbylongdrivecars/'} target='_blank' aria-label='Facebook page' title='Visit our Facebook page'>
-              <FaFacebook className='hover:text-blue-500 cursor-pointer lg:size-6' />
+              <FaFacebook className='hover:text-blue-500 cursor-pointer lg:size-6 size-5' />
             </Link></li>
             <li><Link href={'https://www.instagram.com/longdrivecars_official/'} target='_blank' aria-label='Instagram page' title='Visit our Instagram page'>
-              <FaInstagram className='hover:text-blue-500 cursor-pointer lg:size-6' />
+              <FaInstagram className='hover:text-blue-500 cursor-pointer lg:size-6 size-5' />
             </Link></li>
             <li><Link href={'https://in.linkedin.com/company/long-drive-cars'} target='_blank' aria-label='Linkedin page' title='Visit our LinkedIn page'>
-              <SiLinkedin className='hover:text-blue-500 cursor-pointer lg:size-6' />
+              <SiLinkedin className='hover:text-blue-500 cursor-pointer lg:size-6 size-5' />
             </Link></li>
             <li><Link href={'https://www.youtube.com/@longdrivecars_official'} target='_blank' aria-label='Youtube page' title='Visit our Youtube page'>
-              <FaYoutube className='hover:text-blue-500 cursor-pointer lg:size-6' />
+              <FaYoutube className='hover:text-blue-500 cursor-pointer lg:size-6 size-5' />
             </Link></li>
           </ul>
         </div>

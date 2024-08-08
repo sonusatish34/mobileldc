@@ -171,7 +171,6 @@ const CarDetails = () => {
             </div>
           </div>
           <div className='overview pt-10 lg:text-base py-8'>
-            {/* <p className='font-bold text-2xl border-l-4 border-red-900 mb-4 pl-2 '>Car Overview</p> */}
             <ul className='my-2 flex flex-wrap justify-center pb-4'>
               <li className='md:w-32 xl:w-40 w-32  flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2'>
                 <BsFuelPump className='text-green-700 md:size-8 xl:size-10 size-6' />
@@ -188,7 +187,7 @@ const CarDetails = () => {
                 <p>Seater</p>
                 <p className='font-bold'>{caritem?.seater}</p>
               </li>
-              <li className='md:w-32 xl:w-40 w-32flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2'>
+              <li className='md:w-32 xl:w-40 w-32 flex flex-col justify-center gap-2 items-center border-[1px] border-gray-100 py-2'>
                 <TbManualGearbox  className='text-yellow-500 md:size-8 xl:size-10 size-6' />
                 <p>Transmission</p>
                 <p className='font-bold'>{caritem?.transmission_type}</p>
