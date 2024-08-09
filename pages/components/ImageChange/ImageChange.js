@@ -32,9 +32,9 @@ const ImageChange = () => {
       <div className='h-full xs:pt-8 lg:pt-2 xl:pl-4 lg:pl-10  lg:justify-between xs:justify-end flex flex-wrap md:justify-end justify-between bg-white'>
         <div className='lg:w-6/12 md:w-2/4 xl:pt-20 xs:pt-20 pl-12'>
           <div className="lg:text-left text-black font-[500] xl:text-base text-xl font-opensans " data-wow-delay="50ms" data-wow-duration="200ms">
-            <div className='md:w-[480px]'>
-            <h1 className='xl:text-5xl lg:text-4xl xs:text-2xl font-jakarta lg:pb-2 font-bold pb-1'>Self Drive Car Rental </h1>
-            <p className='xl:text-5xl lg:text-4xl xs:text-2xl font-jakarta font-bold'>Starting at <span className='pl-2 text-blue-500'>₹ 62/hr</span></p>
+            <div className='lg:w-[500px] md:h-[222px] flex flex-col justify-center '>
+            <h1 className='xl:text-5xl lg:text-4xl xs:text-2xl lg:pb-2 font-bold pb-1'>Self Drive Car Rental </h1>
+            <p className='xl:text-5xl lg:text-4xl xs:text-2xl  font-bold'>Starting at <span className='pl-2 text-blue-500'>₹ 62/hr</span></p>
             </div>
             <div className='flex xs:flex-wrap xl:pt-16 lg:gap-8 pt-8 gap-2 lg:w-full xs:text-sm md:text-xs xl:text-lg'>
               <div className="xl:w-56 flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-sm border-orange-500 rounded-md">
