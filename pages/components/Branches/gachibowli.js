@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import starlet from '../../images/starletbranch.webp'
+import nexon from '../../images/4.webp'
 function Gachibowli() {
 
     return (
@@ -9,7 +9,7 @@ function Gachibowli() {
             <p className='font-bold text-sm lg:text-3xl py-6 xl:mx-72 lg:mx-80 mx-6'>Discover Hyderabad on Your Terms</p>
             
             <Image
-                src={starlet}
+                src={nexon}
                 height={2000}
                 width={2000}
                 className='py-3 object-cover w-full'

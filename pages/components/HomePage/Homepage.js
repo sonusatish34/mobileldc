@@ -19,14 +19,11 @@ import { FaWhatsapp } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from './HomePage.module.css';
 import { FaSearch } from 'react-icons/fa';
 const DynCallBackForm = dynamic(() => import('../CallBackForm/CallBackForm'));
 const DynNearYou = dynamic(() => import('../NearYou/NearYou'));
 const DynWhyChooseUs = dynamic(() => import('../WhyChooseUs/WhyChooseUs'));
 const DynImageChange = dynamic(() => import('../ImageChange/ImageChange'));
-
-import './HomePage.module.css'
 
 const DynamicFaqComponent = dynamic(() => import('../FaqAccordian/FaqAccordian'));
 export default function Homepage({ data }) {
@@ -109,8 +106,7 @@ export default function Homepage({ data }) {
           <div className="flex items-center text-black justify-center">
 
             <div className="slider-container my-2 ">
-              <Slider className={`${styles.widthscreenset} lg:w-[80vw] w-[70vw]`} {...settings}>
-
+              <Slider className={`widthscreenset lg:w-[80vw] w-[70vw]`} {...settings}>
                 <div>
                   <div onClick={() => { setSearchQuery("mahindra"); scrollToTarget() }} className='my-2 p-6 bg-white rounded-lg  lg:w-28 md:w-24 h-32 w-24 flex justify-center  items-center flex-col hover:border-2  hover:border-blue-700 cursor-pointer '>
                     <Image
@@ -219,7 +215,7 @@ export default function Homepage({ data }) {
       <div><DynNearYou /></div>
       <div>
         <div className='text-center'>
-          <h2 id='explore' className="px-3 font-bold text-2xl font-jakarta pt-8 text-blue-950 mb-2 lg:text-5xl lg:mb-9">Explore Self Drive Car Rentals</h2>
+          <h2 id='explore' className="px-3 font-bold text-2xl pt-8 text-blue-950 mb-2 lg:text-5xl lg:mb-9">Explore Self Drive Car Rentals</h2>
         </div>
         <div className='mb-9 lg:mb-16 flex flex-grow items-center justify-center'>
           <input
@@ -236,7 +232,7 @@ export default function Homepage({ data }) {
       <DynCallBackForm />
       <DynWhyChooseUs />
       <div className='bg-white text-black rounded xl:py-12 lg:px-14 xl:px-14 p-2'>
-        <h2 className='uppercase p-2 mb-4 text-center font-bold xl:text-2xl font-manrope'>Frequently asked questions</h2>
+        <h2 className='uppercase p-2 mb-4 text-center font-bold xl:text-2xl'>Frequently asked questions</h2>
         <DynamicFaqComponent />
       </div>
       <div className='flex p-5 justify-around lg:justify-between lg:p-14 flex-wrap bg-orange-500 rounded-md text-white mx-[14px] lg:mx-[58px] my-3 items-center font-sans'>

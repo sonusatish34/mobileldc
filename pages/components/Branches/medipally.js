@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import i20 from '../../images/i20branch.webp'
+import i20 from '../../images/8.webp'
 function medipally() {
 
     return (

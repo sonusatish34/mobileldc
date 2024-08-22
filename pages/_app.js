@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Head>
-        <link rel="icon" href="/sdcnew.png" />
+        <link rel="icon" href="/sdcnew.webp" />
         <link rel="canonical" href="https://selfdrivecarshyderabad.com"/>        
       </Head>
       <Component {...pageProps} />

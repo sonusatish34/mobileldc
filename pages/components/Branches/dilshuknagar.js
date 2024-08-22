@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import safari from '../../images/dzirebranch.webp'
+import safari from '../../images/2.webp'
 function dilshuknagar() {
 
     return (

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 
-// Import all components dynamically
 const components = {
   ameerpet: dynamic(() => import('../components/Branches/ameerpet'), { ssr: false }),
   dilshuknagar: dynamic(() => import('../components/Branches/dilshuknagar')),
@@ -24,12 +23,11 @@ function Place() {
 
   useEffect(() => {
     if (place) {
-      // Load the component based on the 'place' query parameter
       const component = components[place.toLowerCase()];
       if (component) {
         setComponent(component);
       } else {
-        setComponent(null); // Fallback or empty state
+        setComponent(null);
       }
     }
   }, [place]);

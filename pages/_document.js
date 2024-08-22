@@ -14,15 +14,15 @@ export default function Document() {
 
       <body>
         {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-P3SZC8HS"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
+      <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-P3SZC8HS"
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+          {/* End Google Tag Manager (noscript) */}
         <Main />
         <NextScript />
       </body>

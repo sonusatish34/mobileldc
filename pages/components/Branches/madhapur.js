@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import creta from '../../images/cretabranchw.webp'
+import creta from '../../images/6.webp'
 function madhapur() {
 
     return (

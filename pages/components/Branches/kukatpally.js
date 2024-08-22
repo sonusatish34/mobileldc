@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import thar from '../../images/tharbranch.webp'
+import thar from '../../images/5.webp'
 function kukatpally() {
 
     return (

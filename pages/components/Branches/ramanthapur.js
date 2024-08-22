@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import kushaq from '../../images/kushaqbranch.webp'
+import kushaq from '../../images/10.webp'
 function ramanthapur() {
 
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import tiago from '../../images/Tata-Tiago.webp'
+import tiago from '../../images/1.webp'
 function Ameerpet() {
 
     return (

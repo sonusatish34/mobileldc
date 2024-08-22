@@ -1,35 +1,3 @@
-@font-face {
-  font-family: "Plus Jakarta Sans";
-  src: url("/font/jakarta.woff2") format("woff2");
-  /* Add additional font formats if necessary */
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "DM Sans", sans-serif;
-  src: url("/font/dmsans.woff2") format("woff2");
-  /* Add additional font formats if necessary */
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Manrope", sans-serif;
-  src: url("/font/manrope2.woff2") format("woff2");
-  /* Add additional font formats if necessary */
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url("/font/opensans.woff2") format("woff2");
-  /* Add additional font formats if necessary */
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 body {
   font-family: "ui-sans-serif", "system-ui";
 }
@@ -55,6 +23,11 @@ body {
 }
 .mont-text {
   font-family: "Montserrat", sans-serif;
+}
+.triangleElement {
+  /* width: 760px; */
+  /* height: 500px; */
+  background: linear-gradient(to bottom right, #fff 0%, #fff 50%, orange 50%, orange 80%);
 }
 
 body {

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import xuv500 from '../../images/xuv500branch.webp'
+import xuv500 from '../../images/11.webp'
 function secunderabad() {
 
     return (
@@ -8,8 +8,8 @@ function secunderabad() {
             <h1 className='font-bold text-base lg:text-3xl xl:mx-72 lg:mx-80 mx-6'>Experience the convenience of self-drive cars in Secunderabad  </h1>
             <Image
                 src={xuv500}
-                height={2000}
-                width={2000}
+                height={1000}
+                width={1000}
                 className='py-3 object-cover w-full'
             />
             <div className='xl:mx-72 lg:mx-80 mx-6'>

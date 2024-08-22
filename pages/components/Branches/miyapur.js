@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import innovaa from '../../images/innovabranch.webp'
+import innovaa from '../../images/9.webp'
 function miyapur() {
 
     return (
