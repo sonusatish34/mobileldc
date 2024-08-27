@@ -23,7 +23,7 @@ function CarProducts({ data, searchQuery }) {
         item.maker_model.toLowerCase().includes(searchQuery.toLowerCase())
     );
     // const sortedData = filteredData.sort((a,b)=>a.price_24_hours-b.price_24_hours)
-    const firstItem = filteredData.find((item)=>item.maker_model==='RENAULT KWID')
+    const firstItem = filteredData?.find((item)=>item?.maker_model==='RENAULT KWID')
     // console.log(sortedData,"pne--------");
     
     return (
