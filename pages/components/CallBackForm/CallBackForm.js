@@ -37,8 +37,8 @@ const  CallBackForm = () => {
             <div className='flex lg:mx-[77px] p-5 xl:mx-[98px] xs:mx-7 rounded-md justify-center bg-orange-400  items-center pb-5 lg:pt-5 text-white shadow-md'>
                 <div className='lg:flex lg:flex-col lg:justify-center lg:items-center xl:p-5 lg:w-2/3 xl:w-2/5 xs:p-0 lg:p-0'>
                     <div className='  xl:px-6 lg:py-3'>
-                        <h2 className='md:text-2xl md:font-semibold font-sans sm:text-lg xl:text-2xl font-semibold xs:text-center'>Can't find the perfect car? </h2>
-                        <p className='text-base lg:pl-9 xl:pl-0 xl:text-base font-sans xs:text-center pt-2 xs:pt-0 xs:text-xs font-normal'>Let us help you on a quick call</p>
+                        <p className='capitalize text-sm md:text-2xl md:font-semibold sm:text-lg xl:text-2xl font-semibold text-center pb-2'>Unable to Find Your Favourite Car  We have all type of cars </p>
+                        <p className='text-base lg:pl-9 xl:pl-0 xl:text-base xs:text-center pt-2 xs:pt-0 xs:text-xs font-normal'>Let us help you on a quick call</p>
                     </div>
                     <form onSubmit={handleSubmit} className='rounded-lg text-black text-xs flex pt-4'>
             
