@@ -34,15 +34,15 @@ const ImageChange = () => {
             <h1 className='xl:text-5xl lg:text-4xl xs:text-2xl lg:pb-2 font-bold pb-1'>Self Drive Car Rental </h1>
             <p className='xl:text-5xl lg:text-4xl xs:text-2xl font-bold'>Starting at <span className='pl-2 text-blue-500'>₹ 1488/day</span></p>
             <div className='flex xs:flex-wrap xl:pt-16 lg:gap-8 pt-8 gap-2 lg:w-full xs:text-sm md:text-xs xl:text-lg'>
-              <div className="xl:w-56 flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-sm border-orange-500 rounded-md">
+              <div className="xl:w-56 flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-sm border-orange-500 rounded-md lg:hover:scale-105">
                 <RiMoneyRupeeCircleFill className="bg-orange-200 rounded-md p-1 xs:size-8" size={40} />
                 <p className="ml-2">Zero Deposit</p>
               </div>
-              <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-sm border-orange-500 rounded-md">
+              <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-sm border-orange-500 rounded-md lg:hover:scale-105">
                 <SlSpeedometer className="bg-orange-200 rounded-md p-1 xs:size-8" size={40} />
                 <p className=" lg:ml-2">Unlimited Kilometers</p>
               </div>
-              <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-sm border-orange-500 rounded-md">
+              <div className="flex items-center gap-1 p-2 bg-[#ffffff] border-[2px] shadow-sm border-orange-500 rounded-md lg:hover:scale-105">
                 <FaCar className="bg-orange-200 rounded-md p-1 xs:size-8" size={40} />
                 <p className="ml-2">Check Original Car Photo</p>
               </div>

@@ -8,7 +8,7 @@ import { TbManualGearbox } from 'react-icons/tb';
 import { MdOutlineAirlineSeatReclineExtra } from 'react-icons/md';
 import { FaExchangeAlt } from "react-icons/fa";
 import Link from 'next/link';
-import disc from './images/discountonbook.webp'
+import disc from './images/cashback.webp'
 import { FaSearch } from 'react-icons/fa';
 import StaticData from './components/StaticData/StaticData'
 import { useMemo } from "react";
@@ -34,7 +34,7 @@ export default function car_products({ cars }) {
                 },
                 body: JSON.stringify({
                     'user_phone': mobile,
-                    'user_location': 'Bangalore'
+                    'user_location': 'Hyderabad'
                 })
             });
         }
@@ -288,7 +288,7 @@ export default function car_products({ cars }) {
                     Car Rentals</h2>
                 <div className='mb-9 lg:mb-16 flex flex-grow items-center justify-center'>
                     <input
-                        placeholder='Search for the cars'
+                        placeholder='Search for your favourite car'
                         className='placeholder-black text-black px-4 py-3 rounded-md w-full max-w-56 md:max-w-96 lg:max-w-2xl'
                         type='search'
                         value={searchQuery}
@@ -299,99 +299,74 @@ export default function car_products({ cars }) {
                 <div className="lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-x-8 gap-y-8 flex flex-col gap-2 items-center justify-center lg:max-w-7xl py-4">
                     {filteredData?.map((item, index) => (
                         <React.Fragment key={index}>
-                            <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] lg:w-72 xl:w-80 h-[529px] lg:hover:scale-105">
-                                <div className="relative h-80">
-                                    <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
-                                        <Image
-                                            src={replaceText(item?.car_image_car_right_view)}
-                                            alt={StaticData(String(item?.maker_model.toLowerCase())) + String(item?.maker_model.toLowerCase())}
-                                            title={StaticData(String(item?.maker_model.toLowerCase())) + String(item?.maker_model.toLowerCase())}
-                                            layout="fill"
-                                            objectFit="cover"
-                                            className="rounded-t-lg relative"
-                                            // priority
-                                            loading='lazy'
-                                        />
-                                    </Link>
-                                </div>
+                        <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] md:w-72 h-[500px] lg:hover:scale-105">
+                            <div className="relative h-80">
+                                <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
+                                    <Image
+                                        src={replaceText(item?.car_image_car_right_view)}
+                                        alt={StaticData(String(item?.maker_model.toLowerCase())) + String(item?.maker_model.toLowerCase())}
+                                        title={StaticData(String(item?.maker_model.toLowerCase())) + String(item?.maker_model.toLowerCase())}
+                                        layout="fill"
+                                        objectFit="cover"
+                                        className="rounded-t-lg relative"
+                                        // priority
+                                        loading='lazy'
+                                    />
+                                </Link>
+                            </div>
 
-                                <div className="px-2 pt-4 flex flex-col gap-4 p-1">
-                                    <div className='flex items-baseline justify-between px-2'>
-                                        <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
-                                            <p className="text-gray-700 cursor-pointer font-semibold text-[10px] hover:text-red-600 w-fit">{item.maker_model}</p>
-                                        </Link>
-                                        <p className="text-blue-500 font-bold">₹ {item.price_24_hours * 24}/day</p>
+                            <div className="pt-4 flex flex-col gap-4">
+                                <div className='flex items-baseline justify-between px-2'>
+                                    <Link href={`/${(("car-rental/" + item.maker_model).toLowerCase()).replace(/ /g, '-')}`}>
+                                        <p className="text-gray-700 cursor-pointer font-sans font-semibold text-xs hover:text-red-600 w-fit">{item.maker_model}</p>
+                                    </Link>
+                                    <p className="text-blue-500 font-bold">₹ {item.price_24_hours * 24}/day</p>
+                                </div>
+                                <div className="flex items-center justify-around border-b border-gray-300 text-black font-normal text-base px-2">
+                                    <div className="flex items-center">
+                                        <BsFuelPump size={15} className="mr-1" />
+                                        <span>{item.fuel_type}</span>
                                     </div>
-                                    <div className="flex items-center justify-around border-b border-gray-300 text-black font-normal text-base">
-                                        <div className="flex items-center">
-                                            <BsFuelPump size={15} className="mr-1" />
-                                            <span>{item.fuel_type}</span>
-                                        </div>
-                                        <div className="flex items-center">
-                                            <TbManualGearbox size={15} className="mr-1" />
-                                            <span>{item.transmission_type}</span>
-                                        </div>
-                                        <div className="flex items-center">
-                                            <MdOutlineAirlineSeatReclineExtra size={15} className="mr-1" />
-                                            <span>{item.seater}</span>
-                                        </div>
+                                    <div className="flex items-center">
+                                        <TbManualGearbox size={15} className="mr-1" />
+                                        <span>{item.transmission_type}</span>
                                     </div>
-                                    <div className='text-black flex justify-center font-semibold'>For Booking</div>
-                                    <div className='flex justify-around gap-1 pb-2 text-white'>
-                                        <button className='bg-green-500 rounded-full p-2'>
+                                    <div className="flex items-center">
+                                        <MdOutlineAirlineSeatReclineExtra size={15} className="mr-1" />
+                                        <span>{item.seater}</span>
+                                    </div>
+                                </div>
+                                <div className='pt-2'>
+                                    <p className='text-black text-lg text-center font-semibold pb-2'>For Booking</p>
+                                    <div className="flex justify-around text-white">
+                                        <button className='bg-green-500 w-full rounded-bl-md p-2 flex justify-center'>
                                             <Link href="https://api.whatsapp.com/send?phone=+9666677405&text=Hi%0AI%20am%20looking%20for%20a%20car%20booking." target='_blank'>
-                                                <p className=' flex gap-1 text-sm'><span><FaWhatsapp size={20} /></span> <span>Whatsapp</span></p>
+                                                <p className=' flex gap-1 text-lg items-center'><span><FaWhatsapp size={20} /></span> <span>Whatsapp</span></p>
                                             </Link>
                                         </button>
-                                        <button className='bg-blue-500 rounded-full p-2'>
+                                        <button className='bg-blue-500 w-full rounded-br-md p-2 flex justify-center' >
                                             <Link href="tel:9666677405" target='_blank'>
-                                                <p className=' flex gap-1 text-sm'><span><BiPhoneCall size={20} /></span> <span>Call Us</span></p>
+                                                <p className='flex gap-1 text-lg items-center px-1'><span><BiPhoneCall size={20} /></span> <span>Call Us</span></p>
                                             </Link>
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            {[2,8, 15, 20, 25, 32, 38, 43].includes(index) && (
-                                <div className="bg-orange-400 rounded-lg shadow-lg overflow-hidden flex flex-col xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
-                                    <div className="flex flex-col justify-center items-center">
-                                        <h2 className='text-center '>Unable to Find Your Favourite Car  We have all type of cars </h2>
-                                        <p className='text-center'>Let us help you on a quick call</p>
-                                        <form onSubmit={handleSubmit} className='rounded-lg  text-xs flex p-7'>
-                                            <input
-                                                value={mobile}
-                                                type="text"
-                                                placeholder="Enter mobile number"
-                                                onChange={(e) => {
-                                                    setmobile(e.target.value);
-                                                    if (!pattern.test(e.target.value))
-                                                        setIsError(true);
-                                                    else setIsError(false);
-                                                }}
-                                                maxLength={10}
-                                                className='lg:rounded-md lg:w-full lg:p-3 xs:w-40 xs:rounded-sm xs:p-1'
-                                            />
-
-                                            <button className='bg-green-400 ml-0 border-2 xs:ml-1 xs:p-1  border-gray-400 lg:p-2 lg:text-[10px] text-white lg:w-28  w-fit xs:text-[8px] rounded' type="submit">Get Callback</button>
-                                        </form>
-                                        <div>{isError && mobile.length > 1 && <p className='text-sm text-center '>Please enter a valid number</p>}</div>
-                                    </div>
+                        </div>
+                        {(index + 1) % (4)  === 0  && (
+                            <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center md:w-72 h-[500px]  lg:hover:scale-105">
+                                <div>
+                                    <Image
+                                        src={disc}
+                                        height={1000}
+                                        width={1000}
+                                        alt='discount'
+                                        className="scale-90"
+                                    />
                                 </div>
-                            )}
-                           {(index + 1) % 10 === 0 && (
-                                <div className="bg-orange-100 rounded-lg shadow-lg overflow-hidden flex flex-col  xs:w-[90%] justify-center lg:w-72 xl:w-80 h-[529px]  lg:hover:scale-105">
-                                    <div>
-                                        <Image
-                                            src={disc}
-                                            height={400}
-                                            width={400}
-                                            alt='discount'
-                                            loading='lazy'
-                                        />
-                                    </div>
-                                </div>
-
-                            )}
-                        </React.Fragment>
+                            </div>
+                        )}
+                    </React.Fragment>
                     ))}
                 </div>
             </div>

@@ -34,14 +34,14 @@ const  CallBackForm = () => {
 
     return (
         <div className='bg-white'>
-            <div className='flex lg:mx-[77px] p-5 xl:mx-[98px] xs:mx-7 rounded-md justify-center bg-orange-400  items-center pb-5 lg:pt-5 text-white shadow-md'>
-                <div className='lg:flex lg:flex-col lg:justify-center lg:items-center xl:p-5 lg:w-2/3 xl:w-2/5 xs:p-0 lg:p-0'>
+            <div className='flex lg:mx-[77px] p-5 xl:mx-[98px] xs:mx-4 rounded-md justify-center bg-orange-500  items-center pb-5 lg:pt-5 text-white shadow-md'>
+                <div className='flex flex-col justify-center items-center xl:p-5 lg:w-2/3 xl:w-2/5 xs:p-0 lg:p-0'>
                     <div className='  xl:px-6 lg:py-3'>
-                        <p className='capitalize text-sm md:text-2xl md:font-semibold sm:text-lg xl:text-2xl font-semibold text-center pb-2'>Unable to Find Your Favourite Car  We have all type of cars </p>
-                        <p className='text-base lg:pl-9 xl:pl-0 xl:text-base xs:text-center pt-2 xs:pt-0 xs:text-xs font-normal'>Let us help you on a quick call</p>
+                        <p className='capitalize text-base md:text-2xl md:font-semibold xl:text-2xl font-semibold text-center pb-2'>
+                        <span className='flex flex-col gap-1'><span>Unable to find your favorite car? </span><span>We have all types of cars.</span> </span>   </p>
+                        <p className='text-sm lg:pl-9 xl:pl-0 xl:text-lg xs:text-center pt-0 font-semibold'>Let us help you on a quick call</p>
                     </div>
-                    <form onSubmit={handleSubmit} className='rounded-lg text-black text-xs flex pt-4'>
-            
+                    <form onSubmit={handleSubmit} className='rounded-md text-black text-xs flex pt-4'>
                         <input
                             value={mobile}
                             type="text"
@@ -53,10 +53,10 @@ const  CallBackForm = () => {
                                 else setIsError(false);
                             }}
                             maxLength={10}
-                            className='lg:rounded-md lg:w-full lg:p-3 xs:w-40 xs:rounded-sm xs:p-1'
+                            className='lg:rounded-md lg:w-full lg:p-3 xs:w-40 xs:rounded-sm xs:p-2'
                         />
 
-                        <button className='bg-green-400 ml-0 border-2 xs:ml-1 xs:p-1  border-gray-400 lg:p-2 lg:text-[10px] text-white lg:w-28  w-fit xs:text-[8px] rounded' type="submit">Get Callback</button>
+                        <button className='bg-green-400 ml-0 border-2 xs:ml-1 xs:p-1  border-gray-400 lg:p-2 lg:text-[10px] text-white lg:w-28  w-fit xs:text-xs rounded' type="submit">Get Callback</button>
                     </form>
                     <div>{isError && mobile.length>1 && <p className='text-sm text-center '>Please enter a valid number</p>}</div>
                 </div>
