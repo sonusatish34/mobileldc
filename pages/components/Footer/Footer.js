@@ -16,6 +16,10 @@ function Footer() {
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/ramanthapur'}>Self drive car rental in Ramanthapur</Link></li>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/secunderabad'}>Self drive car rental in Secunderabad</Link></li>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/shamshabad'}>Self drive car rental in Shamshabad</Link></li>
+                        <li className='hover:scale-105'><Link href={'/self-drive-car-rental/mehdipatnam'}>Self drive car rental in Mehdipatanam</Link></li>
+                        <li className='hover:scale-105'><Link href={'/self-drive-car-rental/khajaguda'}>Self drive car rental in Khajaguda</Link></li>
+                        <li className='hover:scale-105'><Link href={'/self-drive-car-rental/hitech'}>Self drive car rental in Hitech</Link></li>
+
                     </ul>
                 </div>
                 <div className=' xl:text-left lg:text-base text-left text-xs font-semibold'>
@@ -25,6 +29,14 @@ function Footer() {
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/kukatpally'}>Self drive car rental in Kukatapally</Link></li>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/ameerpet'}>Self drive car rental in Ameerpet</Link></li>
                         <li className='hover:scale-105'><Link href={'/self-drive-car-rental/ecil'}>Self drive car rental in Ecil</Link></li>
+                        <li className='hover:scale-105'><Link href={'/self-drive-car-rental/patancheru'}>Self drive car rental in Patancheru </Link></li>
+                        <li className='hover:scale-105'><Link href={'/self-drive-car-rental/lbnagar'}>Self drive car rental in LB Nagar </Link></li>
+                        <li className='hover:scale-105'><Link href={'/self-drive-car-rental/nanakramguda'}>Self drive car rental in Nanakramguda </Link></li>
+                        {/* <li className='hover:scale-105'><Link href={'/self-drive-car-rental/tarnaka'}>Self drive car rental in Tarnaka </Link></li> */}
+
+
+
+
                     </ul>
                 </div>
             </div>
